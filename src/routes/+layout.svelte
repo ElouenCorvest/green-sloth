@@ -1,9 +1,9 @@
 <script lang="ts">
   import { base } from "$app/paths";
   import favicon from "$lib/assets/cpbl-favicon.svg";
+  import greenslothLogo from "$lib/assets/greensloth-logo.svg";
   import {
     CollapseToBurger,
-    Footer,
     Navbar,
     NavGH,
     NavItem,
@@ -17,7 +17,7 @@
   <title>GreenSloth</title>
   <meta
     name="description"
-    content="Photosynthesis models at your pace — browse, compare, and explore curated ODE models of photosynthesis."
+    content="Photosynthesis models at your pace - browse, compare, and explore curated ODE models of photosynthesis."
   />
   <link
     rel="icon"
@@ -32,7 +32,7 @@
       class="brand"
     >
       <img
-        src="{base}/img/greensloth_color_complete.svg"
+        src={greenslothLogo}
         alt="GreenSloth"
         class="brand-logo"
       />
@@ -41,9 +41,8 @@
   {/snippet}
   <CollapseToBurger collapseAt="768px">
     <NavItem href="{base}/">Home</NavItem>
-    <NavItem href="{base}/models">Models</NavItem>
+    <NavItem href="{base}/select">Select</NavItem>
     <NavItem href="{base}/compare">Compare</NavItem>
-    <NavItem href="{base}/#how-to-use">How To Use</NavItem>
     <NavItem href="{base}/about">About Us</NavItem>
     <NavItem href="{base}/impressum">Impressum</NavItem>
   </CollapseToBurger>
@@ -51,17 +50,6 @@
 </Navbar>
 
 {@render children()}
-
-<Footer>
-  <p>GreenSloth — Photosynthesis Models at your Pace</p>
-  <p>
-    Computational Life Science Group · RWTH Aachen ·
-    <a
-      href="{base}/impressum"
-      style="color: inherit;">Impressum</a
-    >
-  </p>
-</Footer>
 
 <style>
   .brand {

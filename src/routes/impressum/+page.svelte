@@ -1,14 +1,24 @@
 <script lang="ts">
-  import { base } from "$app/paths";
-  import { H1, H2, H3, Section, SectionHeader, Text } from "@computational-biology-aachen/design";
+  import cpblLogo from "$lib/assets/cpbl-logo.svg";
+  import {
+    H1,
+    H2,
+    H3,
+    Section,
+    SectionHeader,
+    Text,
+  } from "@computational-biology-aachen/design";
 </script>
 
 <SectionHeader>
   <div class="header-row">
     <H1 color="light">Impressum</H1>
-    <a href="https://www.cpbl.rwth-aachen.de/go/id/sazuq/?lidx=1" target="_blank">
+    <a
+      href="https://www.cpbl.rwth-aachen.de/go/id/sazuq/?lidx=1"
+      target="_blank"
+    >
       <img
-        src="{base}/img/rwth_jp_computational_life_science_bild_rgb.svg"
+        src={cpblLogo}
         alt="RWTH Computational Life Science"
         class="rwth-logo"
       />
@@ -16,7 +26,10 @@
   </div>
 </SectionHeader>
 
-<Section variant="light" width="narrow">
+<Section
+  variant="light"
+  width="narrow"
+>
   <H2>Legal Notice</H2>
 
   <H3>Operator of the Website</H3>
@@ -31,9 +44,11 @@
 
   <H3>Contact</H3>
   <Text>
-    Elouen Corvest: <a href="mailto:elouen.corvest@rwth-aachen.de">elouen.corvest@rwth-aachen.de</a
+    Elouen Corvest: <a href="mailto:elouen.corvest@rwth-aachen.de"
+      >elouen.corvest@rwth-aachen.de</a
     ><br />
-    Anna Matuszyńska: <a href="mailto:anna.matuszynska@cpbl.rwth-aachen.de"
+    Anna Matuszyńska:
+    <a href="mailto:anna.matuszynska@cpbl.rwth-aachen.de"
       >anna.matuszynska@cpbl.rwth-aachen.de</a
     >
   </Text>
@@ -42,13 +57,13 @@
 <style>
   .header-row {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: var(--space-6);
-    flex-wrap: wrap;
   }
 
   .rwth-logo {
-    height: 3rem;
     filter: brightness(0) invert(1);
+    height: 3rem;
   }
 </style>

@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "@computational-biology-aachen/design": "github:Computational-Biology-Aachen/design",
+    "@computational-biology-aachen/mxlweb-core": "github:Computational-Biology-Aachen/mxlweb-core",
     "@sveltejs/adapter-static": ">=3.0.10",
     "chroma-js": "^3.1.2",
     "marked": "^18.0.4",
