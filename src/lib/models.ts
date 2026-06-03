@@ -1,43 +1,28 @@
-import type { ModelData } from "./types";
+import type { ModelMeta } from "./types";
 
-export const models: ModelData = {
-  Matuszynska2016: {
-    DOI: "https://doi.org/10.1016/j.bbabio.2016.09.003",
-    tags: {
-      "Part of Photosynthesis": ["PSII", "ATP Synthase", "Cytochrome b6f", "PQ Cycle"],
-      Demonstrations: ["Day Simulation", "PAM Simulation", "Photosynthesis MCA", "Fitting of NPQ"],
-    },
-  },
-  Saadat2021: {
-    DOI: "https://doi.org/10.3389/fpls.2021.750580",
-    tags: {
-      "Part of Photosynthesis": ["PSII", "ATP Synthase", "Cytochrome b6f", "PQ Cycle", "PC", "FNR", "PSI", "CBB Cycle"],
-      Demonstrations: ["Day Simulation", "FvCB Addon", "PAM Simulation", "Photosynthesis MCA", "Fitting of NPQ"],
-    },
-  },
-  Bellasio2019: {
-    DOI: "https://doi.org/10.1007/s11120-018-0601-1",
-    tags: {
-      "Part of Photosynthesis": ["PSII", "CBB Cycle", "ATP Synthase", "FNR"],
-      Demonstrations: ["Day Simulation", "FvCB Addon", "Photosynthesis MCA"],
-    },
-  },
-  Li2021: {
-    DOI: "https://doi.org/10.1038/s41477-021-00947-5",
-    tags: {
-      "Part of Photosynthesis": ["PSII", "ATP Synthase", "Cytochrome b6f", "PQ Cycle", "PC", "FNR", "PSI", "CBB Cycle", "OEC"],
-      Demonstrations: ["PAM Simulation", "Fitting of NPQ"],
-    },
-  },
-  Fuente2024: {
-    DOI: "https://doi.org/10.1016/j.plaphy.2024.109138",
-    tags: {
-      "Part of Photosynthesis": ["OEC", "PQ Cycle", "PSII", "PSI", "ATP Synthase"],
-      Demonstrations: ["Day Simulation", "PAM Simulation", "Photosynthesis MCA", "Fitting of NPQ"],
-    },
-  },
-};
+// Auto-discover models from their co-located files. A model is only listed when
+// it has BOTH a meta.ts and a model.ts — drop a new `models/<slug>/` folder with
+// both and it registers itself; no edit needed here.
+const metaModules = import.meta.glob<{ meta: ModelMeta }>(
+  "./models/*/meta.ts",
+  { eager: true },
+);
+const modelModules = import.meta.glob("./models/*/model.ts");
+
+// Folder name (slug) of every model.ts present.
+const folderRe = /\.\/models\/([^/]+)\/model\.ts$/;
+const buildableSlugs = new Set(
+  Object.keys(modelModules)
+    .map((path) => path.match(folderRe)?.[1])
+    .filter((slug): slug is string => Boolean(slug)),
+);
+
+export const models: Record<string, ModelMeta> = Object.fromEntries(
+  Object.values(metaModules)
+    .map((m) => m.meta)
+    .filter((meta) => buildableSlugs.has(meta.slug))
+    .sort((a, b) => a.title.localeCompare(b.title))
+    .map((meta) => [meta.slug, meta]),
+);
 
 export const modelNames = Object.keys(models);
-
-export const GH_RAW = "https://raw.githubusercontent.com/ElouenCorvest/GreenSloth/refs/heads/main";

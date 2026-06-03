@@ -1,47 +1,18 @@
-export interface ModelInfo {
+/** Default time-course configuration for a model's analysis dashboard. */
+export interface ModelSim {
+  /** Simulation end time (model time units). */
+  tEnd: number;
+  /** Number of output time points. */
+  nTimePoints?: number;
+  /** Variables to plot by default; omitted → all variables. */
+  variables?: string[];
+}
+
+export interface ModelMeta {
+  slug: string;
+  title: string;
   DOI: string;
   tags: Record<string, string[]>;
-}
-
-export interface ModelData {
-  [name: string]: ModelInfo;
-}
-
-export interface GlossaryRow {
-  "Glossary ID": string;
-  "Common Abbr.": string;
-  "Python Var": string;
-}
-
-export interface CsvRow {
-  [key: string]: string;
-}
-
-export interface FigureItem {
-  title: string;
-  imgSrc: string | null;
-  text: string;
-}
-
-export interface MathSection {
-  text: string;
-  math: string | null;
-}
-
-export interface ModelPageData {
-  name: string;
-  doi: string;
-  summary: string;
-  ode: MathSection;
-  derivedComps: MathSection;
-  params: string;
-  derivedParams: MathSection;
-  rates: MathSection;
-  figures: FigureItem[];
-  demonstrations: FigureItem[];
-  compsData: CsvRow[];
-  paramsData: CsvRow[];
-  ratesData: CsvRow[];
-  derivedCompsData: CsvRow[];
-  derivedParamsData: CsvRow[];
+  /** Per-model time-course defaults; falls back to a global default when omitted. */
+  sim?: ModelSim;
 }

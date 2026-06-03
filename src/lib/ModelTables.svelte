@@ -1,0 +1,172 @@
+<!--
+ @component
+ Read-only reference tables for a model, derived purely from a ModelBuilder.
+ Four accordions: Parameters, Variables, Derived (assignments), Reactions.
+-->
+<script lang="ts">
+  import { Accordion, Math } from "@computational-biology-aachen/design";
+  import {
+    getTexNames,
+    stoichToTex,
+    type ModelBuilder,
+  } from "@computational-biology-aachen/mxlweb-core";
+  import { Base } from "@computational-biology-aachen/mxlweb-core/mathml";
+
+  let { model }: { model: ModelBuilder } = $props();
+
+  const texNames = $derived(
+    getTexNames(
+      model.variables,
+      model.parameters,
+      model.assignments,
+      model.reactions,
+    ),
+  );
+
+  function sym(id: string): string {
+    return texNames.get(id) ?? id;
+  }
+
+  function valueTex(value: number | Base): string | null {
+    return value instanceof Base ? value.toTex(texNames) : null;
+  }
+</script>
+
+{#snippet symCell(id: string)}
+  <td class="sym"><Math tex={sym(id)} display={false} /></td>
+{/snippet}
+
+{#if model.parameters.size > 0}
+  <Accordion title="Parameters">
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Symbol</th><th>ID</th><th>Value</th></tr>
+        </thead>
+        <tbody>
+          {#each model.parameters as [id, par] (id)}
+            <tr>
+              {@render symCell(id)}
+              <td class="id">{id}</td>
+              <td class="num">{par.value}</td>
+            </tr>
+          {/each}
+        </tbody>
+      </table>
+    </div>
+  </Accordion>
+{/if}
+
+{#if model.variables.size > 0}
+  <Accordion title="Variables">
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Symbol</th><th>ID</th><th>Initial value</th></tr>
+        </thead>
+        <tbody>
+          {#each model.variables as [id, vari] (id)}
+            <tr>
+              {@render symCell(id)}
+              <td class="id">{id}</td>
+              <td class="num">
+                {#if valueTex(vari.value)}
+                  <Math tex={valueTex(vari.value)!} display={false} />
+                {:else}
+                  {vari.value}
+                {/if}
+              </td>
+            </tr>
+          {/each}
+        </tbody>
+      </table>
+    </div>
+  </Accordion>
+{/if}
+
+{#if model.assignments.size > 0}
+  <Accordion title="Derived quantities">
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Symbol</th><th>ID</th><th>Equation</th></tr>
+        </thead>
+        <tbody>
+          {#each model.assignments as [id, ass] (id)}
+            <tr>
+              {@render symCell(id)}
+              <td class="id">{id}</td>
+              <td class="eq">
+                <Math
+                  tex={`${sym(id)} = ${ass.fn.toTex(texNames)}`}
+                  display={false}
+                />
+              </td>
+            </tr>
+          {/each}
+        </tbody>
+      </table>
+    </div>
+  </Accordion>
+{/if}
+
+{#if model.reactions.size > 0}
+  <Accordion title="Reactions">
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Symbol</th><th>ID</th><th>Rate</th><th>Stoichiometry</th></tr>
+        </thead>
+        <tbody>
+          {#each model.reactions as [id, rxn] (id)}
+            <tr>
+              {@render symCell(id)}
+              <td class="id">{id}</td>
+              <td class="eq"><Math tex={rxn.fn.toTex(texNames)} display={false} /></td>
+              <td class="eq">
+                <Math tex={stoichToTex(rxn.stoichiometry, texNames)} display={false} />
+              </td>
+            </tr>
+          {/each}
+        </tbody>
+      </table>
+    </div>
+  </Accordion>
+{/if}
+
+<style>
+  .table-wrap {
+    overflow-x: auto;
+    padding: var(--space-2);
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.85rem;
+  }
+
+  th,
+  td {
+    border-bottom: 1px solid var(--color-border);
+    padding: 0.35rem 0.75rem;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  th {
+    background: var(--color-surface);
+    font-weight: var(--weight-semibold);
+    white-space: nowrap;
+  }
+
+  .id {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+  }
+
+  .num {
+    font-variant-numeric: tabular-nums;
+  }
+</style>
