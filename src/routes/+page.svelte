@@ -6,9 +6,9 @@
     H1,
     H2,
     Section,
-    Tabs,
     Text,
   } from "@computational-biology-aachen/design";
+  import Bold from "@computational-biology-aachen/design/Bold.svelte";
   import "../app.css";
 </script>
 
@@ -44,7 +44,7 @@
     how, why, and who photosynthesis is, there are still aspects of it that we
     cannot quite grasp. However, with the rise of computational prowess, we have
     developed new ways to examine and understand photosynthesis. Through digital
-    models of photosynthesis!
+    <Bold>models of photosynthesis</Bold>!
   </Text>
   <Text>
     While this field has existed for decades, it has recently gained significant
@@ -74,59 +74,40 @@
     <a href="mailto:elouen.corvest@rwth-aachen.de">Contact us</a> with ideas or models
     to include.
   </Text>
-</Section>
 
-<!-- Slide 3: How To Use -->
-<Section
-  variant="light"
-  width="narrow"
-  ><Tabs
-    tabs={[
-      { key: "search", label: "Search" },
-      { key: "summary", label: "Summary" },
-      { key: "comparison", label: "Comparison" },
-    ]}
-  >
-    {#snippet children(activeKey)}
-      {#if activeKey === "search"}
-        <Text>
-          The first aspect of finding models is searching for them. Most
-          commonly, new models are found by reading scientific literature, which
-          has many positive aspects. However, it takes time and is tiring.
-          Additionally, with the mass of new publications over time, some models
-          will drown under the waves of new information. This is where
-          GreenSloth comes into play, as it highlights already curated and
-          popular models.
-        </Text>
-        <Text>
-          GreenSloth shows its curated models in a <a href="{base}/models"
-            >list</a
-          > with the model's name and scheme. Furthermore, GreenSloth introduces manually
-          curated categories to see where the chosen models overlap. These categories
-          are separated into a tag system to facilitate selecting the right model.
-        </Text>
-      {:else if activeKey === "summary"}
-        <Text>
-          Each of the models presented on GreenSloth comes with a curated
-          summary from the publication and a completed version, which is
-          available for download using the modelbase package. Additionally, some
-          vital model information, like the ODE system, the parameters, etc.,
-          are tabularized for ease of access. Every model on GreenSloth will
-          also include tests to give further insight into the completeness of
-          each model.
-        </Text>
-      {:else}
-        <Text>
-          To help choose between models, GreenSloth lets you compare vital
-          information between two models directly. This enables a quicker and
-          more efficient way to choose which model is best tailored to your
-          specific needs. While most comparisons are done using the information
-          from each model summary, GreenSloth also uses more advanced, newly
-          developed techniques.
-        </Text>
-      {/if}
-    {/snippet}
-  </Tabs>
+  <H2>Search</H2>
+
+  <Text>
+    The first aspect of finding models is searching for them. Most commonly, new
+    models are found by reading scientific literature, which has many positive
+    aspects. However, it takes time and is tiring. Additionally, with the mass
+    of new publications over time, some models will drown under the waves of new
+    information. This is where GreenSloth comes into play, as it highlights
+    already curated and popular models.
+  </Text>
+  <Text>
+    GreenSloth shows its curated models in a <a href="{base}/models">list</a> with
+    the model's name and scheme. Furthermore, GreenSloth introduces manually curated
+    categories to see where the chosen models overlap. These categories are separated
+    into a tag system to facilitate selecting the right model.
+  </Text>
+  <H2>Summary</H2>
+  <Text>
+    Each of the models presented on GreenSloth comes with a curated summary from
+    the publication and a completed version, which is available for download
+    using the modelbase package. Additionally, some vital model information,
+    like the ODE system, the parameters, etc., are tabularized for ease of
+    access. Every model on GreenSloth will also include tests to give further
+    insight into the completeness of each model.
+  </Text>
+  <H2>Comparison</H2>
+  <Text>
+    To help choose between models, GreenSloth lets you compare vital information
+    between two models directly. This enables a quicker and more efficient way
+    to choose which model is best tailored to your specific needs. While most
+    comparisons are done using the information from each model summary,
+    GreenSloth also uses more advanced, newly developed techniques.
+  </Text>
 </Section>
 
 <style>
