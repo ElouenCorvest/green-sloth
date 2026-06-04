@@ -2,18 +2,55 @@
   import ModelDashboard from "$lib/ModelDashboard.svelte";
   import ModelTables from "$lib/ModelTables.svelte";
   import {
+    Bold,
+    Code,
     Figure,
     H1,
     H2,
+    H3,
+    H4,
+    H5,
+    H6,
+    Image,
     InfoBox,
+    Li,
+    Link,
+    Pre,
     Section,
     SectionHeader,
+    Sub,
     Text,
+    Ul,
   } from "@computational-biology-aachen/design";
   import type { ModelBuilder } from "@computational-biology-aachen/mxlweb-core";
+  import Markdown, { type Plugin } from "svelte-exmarkdown";
   import type { PageData } from "./$types";
 
   let { data }: { data: PageData } = $props();
+
+  // Render model markdown with the corporate-design components in place of the
+  // default HTML elements; anything unmapped falls back to plain HTML.
+  const mdPlugins: Plugin[] = [
+    {
+      renderer: {
+        p: Text,
+        h1: H1,
+        h2: H2,
+        h3: H3,
+        h4: H4,
+        h5: H5,
+        h6: H6,
+        a: Link,
+        strong: Bold,
+        img: Image,
+        sub: Sub,
+        ul: Ul,
+        li: Li,
+        code: Code,
+        pre: Pre,
+      },
+    },
+  ];
 
   // Eager glob so the ModelBuilder is available both at prerender (tables) and
   // on the client (interactive dashboard).
@@ -50,13 +87,16 @@
 </SectionHeader>
 
 <!-- Scheme + description -->
-{#if data.schemeUrl || data.descHtml}
+{#if data.schemeUrl || data.desc}
   <Section
     variant="light"
     width="narrow"
   >
-    {#if data.descHtml}
-      <div class="prose">{@html data.descHtml}</div>
+    {#if data.desc}
+      <Markdown
+        md={data.desc}
+        plugins={mdPlugins}
+      />
     {/if}
     {#if data.schemeUrl}
       <H2>Scheme</H2>
@@ -96,13 +136,16 @@
 {/if}
 
 <!-- Curator comment -->
-{#if data.commentHtml}
+{#if data.comment}
   <Section
     variant="surface"
     width="narrow"
   >
     <InfoBox header="Curator's note">
-      <div class="prose">{@html data.commentHtml}</div>
+      <Markdown
+        md={data.comment}
+        plugins={mdPlugins}
+      />
     </InfoBox>
   </Section>
 {/if}
@@ -112,9 +155,5 @@
     color: rgba(255, 255, 255, 0.8);
     font-size: 0.85rem;
     word-break: break-all;
-  }
-
-  .prose :global(img) {
-    max-width: 100%;
   }
 </style>

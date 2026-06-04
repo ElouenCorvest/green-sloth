@@ -1,6 +1,5 @@
 import { models, modelNames } from "$lib/models";
 import { error } from "@sveltejs/kit";
-import { marked } from "marked";
 import type { PageLoad } from "./$types";
 
 export const prerender = true;
@@ -35,19 +34,18 @@ export const load: PageLoad = async ({ params }) => {
     if (slugOf(path) === slug) schemeUrl = url;
   }
 
-  async function renderMd(file: string): Promise<string | null> {
+  async function loadMd(file: string): Promise<string | null> {
     const key = Object.keys(mdModules).find(
       (p) => slugOf(p) === slug && p.endsWith(`/${file}`),
     );
     if (!key) return null;
-    const raw = (await mdModules[key]()) as string;
-    return await marked.parse(raw);
+    return (await mdModules[key]()) as string;
   }
 
-  const [descHtml, commentHtml] = await Promise.all([
-    renderMd("model.md"),
-    renderMd("comment.md"),
+  const [desc, comment] = await Promise.all([
+    loadMd("model.md"),
+    loadMd("comment.md"),
   ]);
 
-  return { slug, meta, schemeUrl, descHtml, commentHtml };
+  return { slug, meta, schemeUrl, desc, comment };
 };
