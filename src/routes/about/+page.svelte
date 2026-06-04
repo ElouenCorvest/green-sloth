@@ -72,6 +72,8 @@
       <ImageRound
         path={elouen}
         alt="Elouen Corvest"
+        objectFit="cover"
+        objectPosition="top"
       />
     </div>
   </div>
