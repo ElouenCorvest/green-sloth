@@ -1,6 +1,7 @@
 <script lang="ts">
   import { base } from "$app/paths";
   import { models } from "$lib/models";
+  import { fuzzyMatch } from "$lib/utils";
   import {
     ButtonTab,
     CardModel,
@@ -38,6 +39,8 @@
   // category → set of active tags
   let active = $state<Record<string, Set<string>>>({});
 
+  let query = $state("");
+
   function toggle(cat: string, tag: string) {
     // plain Set updated immutably below (active is reassigned), so reactivity
     // comes from the reassignment, not from mutating the Set
@@ -60,10 +63,11 @@
     }
   }
 
-  // AND everywhere: a model must carry every selected tag (within and across
-  // categories).
+  // AND everywhere: a model must match the name query (when present) and carry
+  // every selected tag (within and across categories).
   const filtered = $derived(
     Object.entries(models).filter(([, info]) => {
+      if (!fuzzyMatch(info.title, query)) return false;
       for (const [cat, sel] of Object.entries(active)) {
         if (sel.size === 0) continue;
         const modelTags = info.tags[cat] ?? [];
@@ -608,6 +612,12 @@
 </Section>
 
 <Section variant="surface">
+  <input
+    type="search"
+    class="filter"
+    placeholder="Filter models…"
+    bind:value={query}
+  />
   <div class="grid">
     {#each filtered as [slug, info] (slug)}
       <CardModel
@@ -641,6 +651,16 @@
   .empty {
     grid-column: 1 / -1;
     color: var(--color-text-muted);
+  }
+
+  .filter {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    padding: var(--space-2) var(--space-3);
+    width: 100%;
+    color: inherit;
+    font: inherit;
   }
 
   .pills {
