@@ -17,5 +17,14 @@ export const meta: ModelMeta = {
     ],
     Demonstrations: [],
   },
-  analyses: [{ type: "timecourse", tEnd: 100, nTimePoints: 500 }],
+  analyses: [
+    {
+      type: "timecourse",
+      tEnd: 100,
+      nTimePoints: 500,
+      // Variables span several orders of magnitude; auto-split them into
+      // per-magnitude subplots so small-valued species stay readable.
+      plot: { type: "magnitude" },
+    },
+  ],
 };
