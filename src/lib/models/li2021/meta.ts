@@ -2,8 +2,8 @@ import type { ModelMeta } from "$lib/types";
 
 export const meta: ModelMeta = {
   slug: "li2021",
-  title: "Li 2021",
-  DOI: "https://doi.org/10.1038/s41477-021-00947-5",
+  title: "Li 2021, Nat. Plants",
+  DOI: "10.1038/s41477-021-00947-5",
   tags: {
     "Part of Photosynthesis": [
       "PSII",

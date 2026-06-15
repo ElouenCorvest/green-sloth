@@ -85,7 +85,7 @@ export type ModelAnalysis = TimeCourseAnalysis | PamAnalysis;
 export interface ModelMeta {
   slug: string;
   title: string;
-  DOI: string;
+  DOI?: string;
   tags: Record<string, string[]>;
   /** Analyses auto-run on the model's dashboard. */
   analyses: ModelAnalysis[];

@@ -3,8 +3,7 @@ import type { ModelMeta } from "$lib/types";
 // Dissertation (Heinrich-Heine-Universität Düsseldorf, 2016) — no DOI assigned.
 export const meta: ModelMeta = {
   slug: "matuszynska2016_phd",
-  title: "Matuszynska 2016 (PhD)",
-  DOI: "",
+  title: "Matuszynska 2016 (PhD Thesis)",
   tags: {
     "Part of Photosynthesis": [
       "PSII",

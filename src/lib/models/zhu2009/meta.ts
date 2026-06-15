@@ -2,8 +2,8 @@ import type { ModelMeta } from "$lib/types";
 
 export const meta: ModelMeta = {
   slug: "zhu2009",
-  title: "Zhu 2009",
-  DOI: "https://doi.org/10.1016/j.nonrwa.2008.01.021",
+  title: "Zhu 2009, Nonlinear Anal.",
+  DOI: "10.1016/j.nonrwa.2008.01.021",
   tags: {
     "Part of Photosynthesis": ["CBB Cycle"],
     Demonstrations: [],
