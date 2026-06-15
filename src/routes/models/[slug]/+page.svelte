@@ -78,6 +78,25 @@
   }
 
   const model = $derived(initFor(data.slug));
+
+  let citationCount: number | null = $state(null);
+  let citationLoading = $state(false);
+
+  $effect(() => {
+    const doi = data.meta.DOI;
+    if (!doi) return;
+    citationCount = null;
+    citationLoading = true;
+    fetch(`https://api.opencitations.net/index/v1/citation-count/${doi}`)
+      .then((r) => r.json())
+      .then((d: Array<{ count: string }>) => {
+        citationCount = Number(d[0]?.count);
+        citationLoading = false;
+      })
+      .catch(() => {
+        citationLoading = false;
+      });
+  });
 </script>
 
 <svelte:head>
@@ -87,14 +106,26 @@
 <SectionHeader width="narrow">
   <H1 color="light">{data.meta.title}</H1>
   {#if data.meta.DOI}
-    <a
-      href={data.meta.DOI}
-      target="_blank"
-      rel="noreferrer"
-      class="doi"
-    >
-      {data.meta.DOI}
-    </a>
+    <div class="doi-row">
+      <a
+        href="https://doi.org/{data.meta.DOI}"
+        target="_blank"
+        rel="noreferrer"
+        class="doi"
+      >
+        doi: {data.meta.DOI}
+      </a>
+      <a
+        href="https://api.opencitations.net/index/v2/citations/doi:{data.meta
+          .DOI}"
+      >
+        {#if citationLoading}
+          <span class="citation-badge citation-badge--loading">...</span>
+        {:else if citationCount !== null}
+          <span class="citation-badge">{citationCount} citations</span>
+        {/if}</a
+      >
+    </div>
   {/if}
 </SectionHeader>
 
@@ -163,9 +194,30 @@
 {/if}
 
 <style>
+  .doi-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
   .doi {
     color: rgba(255, 255, 255, 0.8);
     font-size: 0.85rem;
     word-break: break-all;
+  }
+
+  .citation-badge {
+    display: inline-block;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.15em 0.6em;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+
+  .citation-badge--loading {
+    color: rgba(255, 255, 255, 0.5);
   }
 </style>
