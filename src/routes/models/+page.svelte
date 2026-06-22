@@ -40,6 +40,25 @@
   let active = $state<Record<string, Set<string>>>({});
 
   let query = $state("");
+  let filterInput = $state<HTMLInputElement>();
+
+  // Intercept the usual search shortcuts so they focus the model filter
+  // instead of the browser's find bar: Ctrl/Cmd+F always, and "/" when the
+  // user isn't already typing into a field.
+  function onWindowKey(e: KeyboardEvent) {
+    const isFind = (e.ctrlKey || e.metaKey) && e.key === "f";
+    const target = e.target as HTMLElement | null;
+    const typing =
+      target?.tagName === "INPUT" ||
+      target?.tagName === "TEXTAREA" ||
+      target?.isContentEditable;
+    const isSlash = e.key === "/" && !typing;
+    if (isFind || isSlash) {
+      e.preventDefault();
+      filterInput?.focus();
+      filterInput?.select();
+    }
+  }
 
   function toggle(cat: string, tag: string) {
     // plain Set updated immutably below (active is reassigned), so reactivity
@@ -77,6 +96,8 @@
     }),
   );
 </script>
+
+<svelte:window onkeydown={onWindowKey} />
 
 <svelte:head>
   <title>Models - GreenSloth</title>
@@ -613,6 +634,7 @@
 
 <Section variant="surface">
   <input
+    bind:this={filterInput}
     type="search"
     class="filter"
     placeholder="Filter models…"
