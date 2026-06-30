@@ -1,0 +1,6657 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Computational-Biology-Aachen/mxl-schemas/main/v1/kinetic-model.schema.json",
+  "spec_version": "1.0",
+  "kind": "kinetic",
+  "model_id": "matuszynska2016_phd",
+  "model": {
+    "variables": {
+      "atp": {
+        "value": {
+          "type": "Num",
+          "value": 1.6999999999999997
+        },
+        "texName": "atp"
+      },
+      "pq_ox": {
+        "value": {
+          "type": "Num",
+          "value": 4.706348349506148
+        },
+        "texName": "pq\\_ox"
+      },
+      "pc_ox": {
+        "value": {
+          "type": "Num",
+          "value": 3.9414515288091567
+        },
+        "texName": "pc\\_ox"
+      },
+      "fd_ox": {
+        "value": {
+          "type": "Num",
+          "value": 3.7761613271207324
+        },
+        "texName": "fd\\_ox"
+      },
+      "protons_lumen": {
+        "value": {
+          "type": "Num",
+          "value": 7.737821100836988
+        },
+        "texName": "protons\\_lumen"
+      },
+      "lhc": {
+        "value": {
+          "type": "Num",
+          "value": 0.5105293511676007
+        },
+        "texName": "lhc"
+      },
+      "psbs_de": {
+        "value": {
+          "type": "Num",
+          "value": 0.5000000001374878
+        },
+        "texName": "psbs\\_de"
+      },
+      "vx": {
+        "value": {
+          "type": "Num",
+          "value": 0.09090909090907397
+        },
+        "texName": "vx"
+      }
+    },
+    "parameters": {
+      "pH": {
+        "value": {
+          "type": "Num",
+          "value": 7.9
+        },
+        "texName": "pH"
+      },
+      "PPFD": {
+        "value": {
+          "type": "Num",
+          "value": 100
+        },
+        "texName": "PPFD",
+        "slider": {
+          "min": "50",
+          "max": "500",
+          "step": "10"
+        }
+      },
+      "nadph": {
+        "value": {
+          "type": "Num",
+          "value": 0.6
+        },
+        "texName": "nadph"
+      },
+      "O2_lumen": {
+        "value": {
+          "type": "Num",
+          "value": 8
+        },
+        "texName": "O2\\_lumen"
+      },
+      "bH": {
+        "value": {
+          "type": "Num",
+          "value": 100
+        },
+        "texName": "bH"
+      },
+      "F": {
+        "value": {
+          "type": "Num",
+          "value": 96.485
+        },
+        "texName": "F"
+      },
+      "E_0_PC": {
+        "value": {
+          "type": "Num",
+          "value": 0.38
+        },
+        "texName": "E^0\\_PC"
+      },
+      "E_0_P700": {
+        "value": {
+          "type": "Num",
+          "value": 0.48
+        },
+        "texName": "E^0\\_P700"
+      },
+      "E_0_FA": {
+        "value": {
+          "type": "Num",
+          "value": -0.55
+        },
+        "texName": "E^0\\_FA"
+      },
+      "E_0_Fd": {
+        "value": {
+          "type": "Num",
+          "value": -0.43
+        },
+        "texName": "E^0\\_Fd"
+      },
+      "E_0_NADP": {
+        "value": {
+          "type": "Num",
+          "value": -0.113
+        },
+        "texName": "E^0\\_NADP"
+      },
+      "NADP_": {
+        "value": {
+          "type": "Num",
+          "value": 0.8
+        },
+        "texName": "NADP*"
+      },
+      "R": {
+        "value": {
+          "type": "Num",
+          "value": 0.0083
+        },
+        "texName": "R"
+      },
+      "T": {
+        "value": {
+          "type": "Num",
+          "value": 298
+        },
+        "texName": "T"
+      },
+      "A_P": {
+        "value": {
+          "type": "Num",
+          "value": 2.55
+        },
+        "texName": "A*P"
+      },
+      "Carotenoids_tot": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "Carotenoids\\_tot"
+      },
+      "Fd_": {
+        "value": {
+          "type": "Num",
+          "value": 5
+        },
+        "texName": "Fd*"
+      },
+      "PC_tot": {
+        "value": {
+          "type": "Num",
+          "value": 4
+        },
+        "texName": "PC\\_tot"
+      },
+      "PSBS_tot": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "PSBS\\_tot"
+      },
+      "LHC_tot": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "LHC\\_tot"
+      },
+      "gamma0": {
+        "value": {
+          "type": "Num",
+          "value": 0.1
+        },
+        "texName": "gamma0"
+      },
+      "gamma1": {
+        "value": {
+          "type": "Num",
+          "value": 0.25
+        },
+        "texName": "gamma1"
+      },
+      "gamma2": {
+        "value": {
+          "type": "Num",
+          "value": 0.6
+        },
+        "texName": "gamma2"
+      },
+      "gamma3": {
+        "value": {
+          "type": "Num",
+          "value": 0.15
+        },
+        "texName": "gamma3"
+      },
+      "kZSat": {
+        "value": {
+          "type": "Num",
+          "value": 0.12
+        },
+        "texName": "kZSat"
+      },
+      "E_0_QA": {
+        "value": {
+          "type": "Num",
+          "value": -0.14
+        },
+        "texName": "E^0\\_QA"
+      },
+      "E_0_PQ": {
+        "value": {
+          "type": "Num",
+          "value": 0.354
+        },
+        "texName": "E^0\\_PQ"
+      },
+      "PQ_tot": {
+        "value": {
+          "type": "Num",
+          "value": 17.5
+        },
+        "texName": "PQ\\_tot"
+      },
+      "staticAntII": {
+        "value": {
+          "type": "Num",
+          "value": 0.1
+        },
+        "texName": "staticAntII"
+      },
+      "staticAntI": {
+        "value": {
+          "type": "Num",
+          "value": 0.37
+        },
+        "texName": "staticAntI"
+      },
+      "kf_atp_synthase": {
+        "value": {
+          "type": "Num",
+          "value": 20
+        },
+        "texName": "kf\\_atp\\_synthase"
+      },
+      "HPR": {
+        "value": {
+          "type": "Num",
+          "value": 4.666666666666667
+        },
+        "texName": "HPR"
+      },
+      "Pi_mol": {
+        "value": {
+          "type": "Num",
+          "value": 0.01
+        },
+        "texName": "Pi\\_mol"
+      },
+      "DeltaG0_ATP": {
+        "value": {
+          "type": "Num",
+          "value": 30.6
+        },
+        "texName": "DeltaG0\\_ATP"
+      },
+      "kcat_b6f": {
+        "value": {
+          "type": "Num",
+          "value": 2.5
+        },
+        "texName": "kcat\\_b6f"
+      },
+      "kh_lhc_protonation": {
+        "value": {
+          "type": "Num",
+          "value": 3
+        },
+        "texName": "kh\\_lhc\\_protonation"
+      },
+      "kf_lhc_protonation": {
+        "value": {
+          "type": "Num",
+          "value": 0.0096
+        },
+        "texName": "kf\\_lhc\\_protonation"
+      },
+      "ksat_lhc_protonation": {
+        "value": {
+          "type": "Num",
+          "value": 5.8
+        },
+        "texName": "ksat\\_lhc\\_protonation"
+      },
+      "kf_lhc_deprotonation": {
+        "value": {
+          "type": "Num",
+          "value": 0.0096
+        },
+        "texName": "kf\\_lhc\\_deprotonation"
+      },
+      "kf_cyclic_electron_flow": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "kf\\_cyclic\\_electron\\_flow"
+      },
+      "kf_violaxanthin_deepoxidase": {
+        "value": {
+          "type": "Num",
+          "value": 0.0024
+        },
+        "texName": "kf\\_violaxanthin\\_deepoxidase"
+      },
+      "kh_violaxanthin_deepoxidase": {
+        "value": {
+          "type": "Num",
+          "value": 5
+        },
+        "texName": "kh\\_violaxanthin\\_deepoxidase"
+      },
+      "ksat_violaxanthin_deepoxidase": {
+        "value": {
+          "type": "Num",
+          "value": 5.8
+        },
+        "texName": "ksat\\_violaxanthin\\_deepoxidase"
+      },
+      "kf_zeaxanthin_epoxidase": {
+        "value": {
+          "type": "Num",
+          "value": 0.00024
+        },
+        "texName": "kf\\_zeaxanthin\\_epoxidase"
+      },
+      "E0_fnr": {
+        "value": {
+          "type": "Num",
+          "value": 3
+        },
+        "texName": "E0\\_fnr"
+      },
+      "kcat_fnr": {
+        "value": {
+          "type": "Num",
+          "value": 500
+        },
+        "texName": "kcat\\_fnr"
+      },
+      "km_fnr_fd_red": {
+        "value": {
+          "type": "Num",
+          "value": 1.56
+        },
+        "texName": "km\\_fnr\\_fd\\_red"
+      },
+      "km_fnr_nadp": {
+        "value": {
+          "type": "Num",
+          "value": 0.22
+        },
+        "texName": "km\\_fnr\\_nadp"
+      },
+      "kf_ndh": {
+        "value": {
+          "type": "Num",
+          "value": 0.002
+        },
+        "texName": "kf\\_ndh"
+      },
+      "PSII_total": {
+        "value": {
+          "type": "Num",
+          "value": 2.5
+        },
+        "texName": "PSII\\_total"
+      },
+      "PSI_total": {
+        "value": {
+          "type": "Num",
+          "value": 2.5
+        },
+        "texName": "PSI\\_total"
+      },
+      "kH0": {
+        "value": {
+          "type": "Num",
+          "value": 500000000
+        },
+        "texName": "kH0"
+      },
+      "kPQred": {
+        "value": {
+          "type": "Num",
+          "value": 250
+        },
+        "texName": "kPQred"
+      },
+      "kPCox": {
+        "value": {
+          "type": "Num",
+          "value": 2500
+        },
+        "texName": "kPCox"
+      },
+      "kFdred": {
+        "value": {
+          "type": "Num",
+          "value": 250000
+        },
+        "texName": "kFdred"
+      },
+      "k2": {
+        "value": {
+          "type": "Num",
+          "value": 5000000000
+        },
+        "texName": "k2"
+      },
+      "kH": {
+        "value": {
+          "type": "Num",
+          "value": 5000000000
+        },
+        "texName": "kH"
+      },
+      "kF": {
+        "value": {
+          "type": "Num",
+          "value": 625000000
+        },
+        "texName": "kF"
+      },
+      "convf": {
+        "value": {
+          "type": "Num",
+          "value": 0.032
+        },
+        "texName": "convf"
+      },
+      "kf_proton_leak": {
+        "value": {
+          "type": "Num",
+          "value": 10
+        },
+        "texName": "kf\\_proton\\_leak"
+      },
+      "kPTOX": {
+        "value": {
+          "type": "Num",
+          "value": 0.01
+        },
+        "texName": "kPTOX"
+      },
+      "kStt7": {
+        "value": {
+          "type": "Num",
+          "value": 0.0035
+        },
+        "texName": "kStt7"
+      },
+      "km_lhc_state_transition_12": {
+        "value": {
+          "type": "Num",
+          "value": 0.2
+        },
+        "texName": "km\\_lhc\\_state\\_transition\\_12"
+      },
+      "n_ST": {
+        "value": {
+          "type": "Num",
+          "value": 2
+        },
+        "texName": "n\\_ST"
+      },
+      "kPph1": {
+        "value": {
+          "type": "Num",
+          "value": 0.0013
+        },
+        "texName": "kPph1"
+      },
+      "kf_ex_atp": {
+        "value": {
+          "type": "Num",
+          "value": 10
+        },
+        "texName": "kf\\_ex\\_atp"
+      },
+      "k_H": {
+        "value": {
+          "type": "Num",
+          "value": 5000000000
+        },
+        "texName": "k\\_H"
+      },
+      "k_F": {
+        "value": {
+          "type": "Num",
+          "value": 625000000
+        },
+        "texName": "k\\_F"
+      },
+      "k_P": {
+        "value": {
+          "type": "Num",
+          "value": 5000000000
+        },
+        "texName": "k\\_P"
+      }
+    },
+    "reactions": {
+      "atp_synthase": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "kf_atp_synthase"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "adp"
+                },
+                {
+                  "type": "Minus",
+                  "children": [
+                    {
+                      "type": "Divide",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "atp"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "keq_atp_synthase"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "atp": {
+            "type": "Num",
+            "value": 1
+          },
+          "protons_lumen": {
+            "type": "Minus",
+            "children": [
+              {
+                "type": "Divide",
+                "children": [
+                  {
+                    "type": "Name",
+                    "value": "HPR"
+                  },
+                  {
+                    "type": "Name",
+                    "value": "bH"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "texName": "atp\\_synthase"
+      },
+      "b6f": {
+        "fn": {
+          "type": "Max",
+          "children": [
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "kcat_b6f"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "kcat_b6f"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "pq_red"
+                        },
+                        {
+                          "type": "Pow",
+                          "left": {
+                            "type": "Name",
+                            "value": "pc_ox"
+                          },
+                          "right": {
+                            "type": "Num",
+                            "value": 2
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Minus",
+                      "children": [
+                        {
+                          "type": "Divide",
+                          "children": [
+                            {
+                              "type": "Mul",
+                              "children": [
+                                {
+                                  "type": "Name",
+                                  "value": "pq_ox"
+                                },
+                                {
+                                  "type": "Pow",
+                                  "left": {
+                                    "type": "Name",
+                                    "value": "pc_red"
+                                  },
+                                  "right": {
+                                    "type": "Num",
+                                    "value": 2
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Name",
+                              "value": "keq_b6f"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "pc_ox": {
+            "type": "Num",
+            "value": -2
+          },
+          "pq_ox": {
+            "type": "Num",
+            "value": 1
+          },
+          "protons_lumen": {
+            "type": "Divide",
+            "children": [
+              {
+                "type": "Num",
+                "value": 4
+              },
+              {
+                "type": "Name",
+                "value": "bH"
+              }
+            ]
+          }
+        },
+        "texName": "b6f"
+      },
+      "lhc_protonation": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "kf_lhc_protonation"
+                },
+                {
+                  "type": "Name",
+                  "value": "psbs_de"
+                },
+                {
+                  "type": "Pow",
+                  "left": {
+                    "type": "Name",
+                    "value": "protons_lumen"
+                  },
+                  "right": {
+                    "type": "Name",
+                    "value": "kh_lhc_protonation"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Pow",
+                  "left": {
+                    "type": "Name",
+                    "value": "protons_lumen"
+                  },
+                  "right": {
+                    "type": "Name",
+                    "value": "kh_lhc_protonation"
+                  }
+                },
+                {
+                  "type": "Pow",
+                  "left": {
+                    "type": "Mul",
+                    "children": [
+                      {
+                        "type": "Num",
+                        "value": 4000
+                      },
+                      {
+                        "type": "Pow",
+                        "left": {
+                          "type": "Num",
+                          "value": 10
+                        },
+                        "right": {
+                          "type": "Minus",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "ksat_lhc_protonation"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "right": {
+                    "type": "Name",
+                    "value": "kh_lhc_protonation"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "psbs_de": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "lhc\\_protonation"
+      },
+      "lhc_deprotonation": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "kf_lhc_deprotonation"
+            },
+            {
+              "type": "Name",
+              "value": "psbs_pr"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "psbs_de": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "lhc\\_deprotonation"
+      },
+      "cyclic_electron_flow": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "kf_cyclic_electron_flow"
+            },
+            {
+              "type": "Name",
+              "value": "pq_ox"
+            },
+            {
+              "type": "Pow",
+              "left": {
+                "type": "Name",
+                "value": "fd_red"
+              },
+              "right": {
+                "type": "Num",
+                "value": 2
+              }
+            }
+          ]
+        },
+        "stoichiometry": {
+          "pq_ox": {
+            "type": "Num",
+            "value": -1
+          },
+          "fd_ox": {
+            "type": "Num",
+            "value": 2
+          }
+        },
+        "texName": "cyclic\\_electron\\_flow"
+      },
+      "violaxanthin_deepoxidase": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "kf_violaxanthin_deepoxidase"
+                },
+                {
+                  "type": "Name",
+                  "value": "vx"
+                },
+                {
+                  "type": "Pow",
+                  "left": {
+                    "type": "Name",
+                    "value": "protons_lumen"
+                  },
+                  "right": {
+                    "type": "Name",
+                    "value": "kh_violaxanthin_deepoxidase"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Pow",
+                  "left": {
+                    "type": "Name",
+                    "value": "protons_lumen"
+                  },
+                  "right": {
+                    "type": "Name",
+                    "value": "kh_violaxanthin_deepoxidase"
+                  }
+                },
+                {
+                  "type": "Pow",
+                  "left": {
+                    "type": "Mul",
+                    "children": [
+                      {
+                        "type": "Num",
+                        "value": 4000
+                      },
+                      {
+                        "type": "Pow",
+                        "left": {
+                          "type": "Num",
+                          "value": 10
+                        },
+                        "right": {
+                          "type": "Minus",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "ksat_violaxanthin_deepoxidase"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "right": {
+                    "type": "Name",
+                    "value": "kh_violaxanthin_deepoxidase"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "vx": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "violaxanthin\\_deepoxidase"
+      },
+      "zeaxanthin_epoxidase": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "kf_zeaxanthin_epoxidase"
+            },
+            {
+              "type": "Name",
+              "value": "zx"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "vx": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "zeaxanthin\\_epoxidase"
+      },
+      "fnr": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "vmax_fnr"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Divide",
+                      "children": [
+                        {
+                          "type": "Mul",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "nadp"
+                            },
+                            {
+                              "type": "Pow",
+                              "left": {
+                                "type": "Divide",
+                                "children": [
+                                  {
+                                    "type": "Name",
+                                    "value": "fd_red"
+                                  },
+                                  {
+                                    "type": "Name",
+                                    "value": "km_fnr_fd_red"
+                                  }
+                                ]
+                              },
+                              "right": {
+                                "type": "Num",
+                                "value": 2
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Name",
+                          "value": "km_fnr_nadp"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Minus",
+                      "children": [
+                        {
+                          "type": "Divide",
+                          "children": [
+                            {
+                              "type": "Mul",
+                              "children": [
+                                {
+                                  "type": "Name",
+                                  "value": "nadph"
+                                },
+                                {
+                                  "type": "Pow",
+                                  "left": {
+                                    "type": "Divide",
+                                    "children": [
+                                      {
+                                        "type": "Name",
+                                        "value": "fd_ox"
+                                      },
+                                      {
+                                        "type": "Name",
+                                        "value": "km_fnr_fd_red"
+                                      }
+                                    ]
+                                  },
+                                  "right": {
+                                    "type": "Num",
+                                    "value": 2
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Mul",
+                              "children": [
+                                {
+                                  "type": "Name",
+                                  "value": "keq_fnr"
+                                },
+                                {
+                                  "type": "Name",
+                                  "value": "km_fnr_nadp"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": -1
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 1
+                        },
+                        {
+                          "type": "Divide",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "nadp"
+                            },
+                            {
+                              "type": "Name",
+                              "value": "km_fnr_nadp"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 1
+                        },
+                        {
+                          "type": "Pow",
+                          "left": {
+                            "type": "Divide",
+                            "children": [
+                              {
+                                "type": "Name",
+                                "value": "fd_red"
+                              },
+                              {
+                                "type": "Name",
+                                "value": "km_fnr_fd_red"
+                              }
+                            ]
+                          },
+                          "right": {
+                            "type": "Num",
+                            "value": 2
+                          }
+                        },
+                        {
+                          "type": "Divide",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "fd_red"
+                            },
+                            {
+                              "type": "Name",
+                              "value": "km_fnr_fd_red"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 1
+                        },
+                        {
+                          "type": "Divide",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "nadph"
+                            },
+                            {
+                              "type": "Name",
+                              "value": "km_fnr_nadp"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 1
+                        },
+                        {
+                          "type": "Pow",
+                          "left": {
+                            "type": "Divide",
+                            "children": [
+                              {
+                                "type": "Name",
+                                "value": "fd_ox"
+                              },
+                              {
+                                "type": "Name",
+                                "value": "km_fnr_fd_red"
+                              }
+                            ]
+                          },
+                          "right": {
+                            "type": "Num",
+                            "value": 2
+                          }
+                        },
+                        {
+                          "type": "Divide",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "fd_ox"
+                            },
+                            {
+                              "type": "Name",
+                              "value": "km_fnr_fd_red"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "fd_ox": {
+            "type": "Num",
+            "value": 2
+          }
+        },
+        "texName": "fnr"
+      },
+      "ndh": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "kf_ndh"
+            },
+            {
+              "type": "Name",
+              "value": "pq_ox"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "pq_ox": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "ndh"
+      },
+      "PSII": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Num",
+              "value": 0.5
+            },
+            {
+              "type": "Name",
+              "value": "B1"
+            },
+            {
+              "type": "Name",
+              "value": "k2"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "pq_ox": {
+            "type": "Num",
+            "value": -1
+          },
+          "protons_lumen": {
+            "type": "Divide",
+            "children": [
+              {
+                "type": "Num",
+                "value": 2
+              },
+              {
+                "type": "Name",
+                "value": "bH"
+              }
+            ]
+          }
+        },
+        "texName": "PSII"
+      },
+      "PSI": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "A1"
+            },
+            {
+              "type": "Name",
+              "value": "PPFD"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 1
+                },
+                {
+                  "type": "Minus",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "fd_ox": {
+            "type": "Num",
+            "value": -1
+          },
+          "pc_ox": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "PSI"
+      },
+      "proton_leak": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "kf_proton_leak"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "protons_lumen"
+                },
+                {
+                  "type": "Minus",
+                  "children": [
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 4000
+                        },
+                        {
+                          "type": "Pow",
+                          "left": {
+                            "type": "Num",
+                            "value": 10
+                          },
+                          "right": {
+                            "type": "Minus",
+                            "children": [
+                              {
+                                "type": "Name",
+                                "value": "pH"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "protons_lumen": {
+            "type": "Minus",
+            "children": [
+              {
+                "type": "Divide",
+                "children": [
+                  {
+                    "type": "Num",
+                    "value": 1
+                  },
+                  {
+                    "type": "Name",
+                    "value": "bH"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "texName": "proton\\_leak"
+      },
+      "PTOX": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "O2_lumen"
+            },
+            {
+              "type": "Name",
+              "value": "kPTOX"
+            },
+            {
+              "type": "Name",
+              "value": "pq_red"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "pq_ox": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "PTOX"
+      },
+      "lhc_state_transition_12": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 1
+                },
+                {
+                  "type": "Name",
+                  "value": "kStt7"
+                },
+                {
+                  "type": "Name",
+                  "value": "lhc"
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 1
+                },
+                {
+                  "type": "Pow",
+                  "left": {
+                    "type": "Divide",
+                    "children": [
+                      {
+                        "type": "Name",
+                        "value": "pq_ox"
+                      },
+                      {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Name",
+                            "value": "PQ_tot"
+                          },
+                          {
+                            "type": "Name",
+                            "value": "km_lhc_state_transition_12"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "right": {
+                    "type": "Name",
+                    "value": "n_ST"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "lhc": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "lhc\\_state\\_transition\\_12"
+      },
+      "lhc_state_transition_21": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "kPph1"
+            },
+            {
+              "type": "Name",
+              "value": "lhc_prot"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "lhc": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "lhc\\_state\\_transition\\_21"
+      },
+      "ex_atp": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "atp"
+            },
+            {
+              "type": "Name",
+              "value": "kf_ex_atp"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "atp": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "ex\\_atp"
+      }
+    },
+    "derived": {
+      "nadp": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "NADP_"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "nadph"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "nadp"
+      },
+      "RT": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "R"
+            },
+            {
+              "type": "Name",
+              "value": "T"
+            }
+          ]
+        },
+        "texName": "RT"
+      },
+      "adp": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "A_P"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "atp"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "adp"
+      },
+      "dG_pH": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Num",
+              "value": 2.302585092994046
+            },
+            {
+              "type": "Name",
+              "value": "R"
+            },
+            {
+              "type": "Name",
+              "value": "T"
+            }
+          ]
+        },
+        "texName": "dG\\_pH"
+      },
+      "pH_lumen": {
+        "fn": {
+          "type": "Minus",
+          "children": [
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Ln",
+                  "child": {
+                    "type": "Mul",
+                    "children": [
+                      {
+                        "type": "Num",
+                        "value": 0.00025
+                      },
+                      {
+                        "type": "Name",
+                        "value": "protons_lumen"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "Ln",
+                  "child": {
+                    "type": "Num",
+                    "value": 10
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "pH\\_lumen"
+      },
+      "zx": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Carotenoids_tot"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "vx"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "zx"
+      },
+      "fd_red": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Fd_"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "fd_ox"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "fd\\_red"
+      },
+      "pc_red": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "PC_tot"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "pc_ox"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "pc\\_red"
+      },
+      "psbs_pr": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "PSBS_tot"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "psbs_de"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "psbs\\_pr"
+      },
+      "lhc_prot": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "LHC_tot"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "lhc"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "lhc\\_prot"
+      },
+      "Q": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "gamma0"
+                },
+                {
+                  "type": "Name",
+                  "value": "psbs_de"
+                },
+                {
+                  "type": "Name",
+                  "value": "vx"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "gamma1"
+                },
+                {
+                  "type": "Name",
+                  "value": "psbs_pr"
+                },
+                {
+                  "type": "Name",
+                  "value": "vx"
+                }
+              ]
+            },
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "gamma2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "psbs_pr"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "zx"
+                    }
+                  ]
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kZSat"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "zx"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "gamma3"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "psbs_de"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "zx"
+                    }
+                  ]
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kZSat"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "zx"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "Q"
+      },
+      "keq_pq_red": {
+        "fn": {
+          "type": "Exp",
+          "child": {
+            "type": "Divide",
+            "children": [
+              {
+                "type": "Add",
+                "children": [
+                  {
+                    "type": "Mul",
+                    "children": [
+                      {
+                        "type": "Num",
+                        "value": 2
+                      },
+                      {
+                        "type": "Name",
+                        "value": "E_0_PQ"
+                      },
+                      {
+                        "type": "Name",
+                        "value": "F"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Minus",
+                    "children": [
+                      {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Num",
+                            "value": 2
+                          },
+                          {
+                            "type": "Name",
+                            "value": "E_0_QA"
+                          },
+                          {
+                            "type": "Name",
+                            "value": "F"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Minus",
+                    "children": [
+                      {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Num",
+                            "value": 2
+                          },
+                          {
+                            "type": "Name",
+                            "value": "dG_pH"
+                          },
+                          {
+                            "type": "Name",
+                            "value": "pH"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "Name",
+                "value": "RT"
+              }
+            ]
+          }
+        },
+        "texName": "keq\\_pq\\_red"
+      },
+      "pq_red": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "PQ_tot"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "pq_ox"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "pq\\_red"
+      },
+      "PSII_cross_section": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "staticAntII"
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "lhc"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 1
+                    },
+                    {
+                      "type": "Minus",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "staticAntI"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Minus",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "staticAntII"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "PSII\\_cross\\_section"
+      },
+      "keq_atp_synthase": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Pi_mol"
+            },
+            {
+              "type": "Exp",
+              "child": {
+                "type": "Divide",
+                "children": [
+                  {
+                    "type": "Add",
+                    "children": [
+                      {
+                        "type": "Minus",
+                        "children": [
+                          {
+                            "type": "Name",
+                            "value": "DeltaG0_ATP"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Name",
+                            "value": "HPR"
+                          },
+                          {
+                            "type": "Name",
+                            "value": "dG_pH"
+                          },
+                          {
+                            "type": "Add",
+                            "children": [
+                              {
+                                "type": "Name",
+                                "value": "pH"
+                              },
+                              {
+                                "type": "Minus",
+                                "children": [
+                                  {
+                                    "type": "Name",
+                                    "value": "pH_lumen"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Name",
+                    "value": "RT"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "texName": "keq\\_atp\\_synthase"
+      },
+      "keq_b6f": {
+        "fn": {
+          "type": "Exp",
+          "child": {
+            "type": "Divide",
+            "children": [
+              {
+                "type": "Add",
+                "children": [
+                  {
+                    "type": "Mul",
+                    "children": [
+                      {
+                        "type": "Num",
+                        "value": 2
+                      },
+                      {
+                        "type": "Name",
+                        "value": "E_0_PC"
+                      },
+                      {
+                        "type": "Name",
+                        "value": "F"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Mul",
+                    "children": [
+                      {
+                        "type": "Num",
+                        "value": 2
+                      },
+                      {
+                        "type": "Name",
+                        "value": "dG_pH"
+                      },
+                      {
+                        "type": "Name",
+                        "value": "pH_lumen"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Minus",
+                    "children": [
+                      {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Num",
+                            "value": 2
+                          },
+                          {
+                            "type": "Name",
+                            "value": "E_0_PQ"
+                          },
+                          {
+                            "type": "Name",
+                            "value": "F"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Minus",
+                    "children": [
+                      {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Num",
+                            "value": 2
+                          },
+                          {
+                            "type": "Name",
+                            "value": "dG_pH"
+                          },
+                          {
+                            "type": "Add",
+                            "children": [
+                              {
+                                "type": "Name",
+                                "value": "pH"
+                              },
+                              {
+                                "type": "Minus",
+                                "children": [
+                                  {
+                                    "type": "Name",
+                                    "value": "pH_lumen"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "Name",
+                "value": "RT"
+              }
+            ]
+          }
+        },
+        "texName": "keq\\_b6f"
+      },
+      "keq_fnr": {
+        "fn": {
+          "type": "Exp",
+          "child": {
+            "type": "Divide",
+            "children": [
+              {
+                "type": "Add",
+                "children": [
+                  {
+                    "type": "Minus",
+                    "children": [
+                      {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Name",
+                            "value": "dG_pH"
+                          },
+                          {
+                            "type": "Name",
+                            "value": "pH"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Mul",
+                    "children": [
+                      {
+                        "type": "Num",
+                        "value": 2
+                      },
+                      {
+                        "type": "Name",
+                        "value": "E_0_NADP"
+                      },
+                      {
+                        "type": "Name",
+                        "value": "F"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Minus",
+                    "children": [
+                      {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Num",
+                            "value": 2
+                          },
+                          {
+                            "type": "Name",
+                            "value": "E_0_Fd"
+                          },
+                          {
+                            "type": "Name",
+                            "value": "F"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "Name",
+                "value": "RT"
+              }
+            ]
+          }
+        },
+        "texName": "keq\\_fnr"
+      },
+      "vmax_fnr": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "E0_fnr"
+            },
+            {
+              "type": "Name",
+              "value": "kcat_fnr"
+            }
+          ]
+        },
+        "texName": "vmax\\_fnr"
+      },
+      "keq_PCP700": {
+        "fn": {
+          "type": "Exp",
+          "child": {
+            "type": "Divide",
+            "children": [
+              {
+                "type": "Add",
+                "children": [
+                  {
+                    "type": "Mul",
+                    "children": [
+                      {
+                        "type": "Name",
+                        "value": "E_0_P700"
+                      },
+                      {
+                        "type": "Name",
+                        "value": "F"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Minus",
+                    "children": [
+                      {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Name",
+                            "value": "E_0_PC"
+                          },
+                          {
+                            "type": "Name",
+                            "value": "F"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "Name",
+                "value": "RT"
+              }
+            ]
+          }
+        },
+        "texName": "keq\\_PCP700"
+      },
+      "keq_ferredoxin_reductase": {
+        "fn": {
+          "type": "Exp",
+          "child": {
+            "type": "Divide",
+            "children": [
+              {
+                "type": "Add",
+                "children": [
+                  {
+                    "type": "Mul",
+                    "children": [
+                      {
+                        "type": "Name",
+                        "value": "E_0_Fd"
+                      },
+                      {
+                        "type": "Name",
+                        "value": "F"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Minus",
+                    "children": [
+                      {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Name",
+                            "value": "E_0_FA"
+                          },
+                          {
+                            "type": "Name",
+                            "value": "F"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "Name",
+                "value": "RT"
+              }
+            ]
+          }
+        },
+        "texName": "keq\\_ferredoxin\\_reductase"
+      },
+      "A1": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Name",
+              "value": "PSI_total"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 1
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 1
+                        },
+                        {
+                          "type": "Divide",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "fd_red"
+                            },
+                            {
+                              "type": "Mul",
+                              "children": [
+                                {
+                                  "type": "Name",
+                                  "value": "fd_ox"
+                                },
+                                {
+                                  "type": "Name",
+                                  "value": "keq_ferredoxin_reductase"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Divide",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "pc_ox"
+                            },
+                            {
+                              "type": "Mul",
+                              "children": [
+                                {
+                                  "type": "Name",
+                                  "value": "keq_PCP700"
+                                },
+                                {
+                                  "type": "Name",
+                                  "value": "pc_red"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Divide",
+                          "children": [
+                            {
+                              "type": "Mul",
+                              "children": [
+                                {
+                                  "type": "Name",
+                                  "value": "PPFD"
+                                },
+                                {
+                                  "type": "Add",
+                                  "children": [
+                                    {
+                                      "type": "Num",
+                                      "value": 1
+                                    },
+                                    {
+                                      "type": "Minus",
+                                      "children": [
+                                        {
+                                          "type": "Name",
+                                          "value": "PSII_cross_section"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Mul",
+                              "children": [
+                                {
+                                  "type": "Name",
+                                  "value": "kPCox"
+                                },
+                                {
+                                  "type": "Name",
+                                  "value": "pc_red"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Divide",
+                  "children": [
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "PPFD"
+                        },
+                        {
+                          "type": "Add",
+                          "children": [
+                            {
+                              "type": "Num",
+                              "value": 1
+                            },
+                            {
+                              "type": "Minus",
+                              "children": [
+                                {
+                                  "type": "Name",
+                                  "value": "PSII_cross_section"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "fd_ox"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kFdred"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "A1"
+      },
+      "B0": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PSII_total"
+                },
+                {
+                  "type": "Name",
+                  "value": "kPQred"
+                },
+                {
+                  "type": "Name",
+                  "value": "keq_pq_red"
+                },
+                {
+                  "type": "Name",
+                  "value": "pq_ox"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kF"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH0"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "k2"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "k2"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH0"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Pow",
+                          "left": {
+                            "type": "Name",
+                            "value": "Q"
+                          },
+                          "right": {
+                            "type": "Num",
+                            "value": 2
+                          }
+                        },
+                        {
+                          "type": "Pow",
+                          "left": {
+                            "type": "Name",
+                            "value": "kH"
+                          },
+                          "right": {
+                            "type": "Num",
+                            "value": 2
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 2
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kF"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH0"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "Q"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k2"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 2
+                        },
+                        {
+                          "type": "Name",
+                          "value": "Q"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kF"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 2
+                        },
+                        {
+                          "type": "Name",
+                          "value": "Q"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH0"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kF"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH0"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "PPFD"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "PSII_cross_section"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kF"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH0"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "Q"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "Q"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "ps2states"
+      },
+      "B1": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PPFD"
+                },
+                {
+                  "type": "Name",
+                  "value": "PSII_cross_section"
+                },
+                {
+                  "type": "Name",
+                  "value": "PSII_total"
+                },
+                {
+                  "type": "Name",
+                  "value": "kPQred"
+                },
+                {
+                  "type": "Name",
+                  "value": "keq_pq_red"
+                },
+                {
+                  "type": "Name",
+                  "value": "pq_ox"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "Q"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kF"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH0"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "PPFD"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "PSII_cross_section"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kF"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH0"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "Q"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "Q"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "ps2states"
+      },
+      "B2": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PSII_total"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "kPQred"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "pq_red"
+                        },
+                        {
+                          "type": "Pow",
+                          "left": {
+                            "type": "Name",
+                            "value": "kF"
+                          },
+                          "right": {
+                            "type": "Num",
+                            "value": 2
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "kPQred"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "pq_red"
+                        },
+                        {
+                          "type": "Pow",
+                          "left": {
+                            "type": "Name",
+                            "value": "kH0"
+                          },
+                          "right": {
+                            "type": "Num",
+                            "value": 2
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "k2"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kF"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kPQred"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "pq_red"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "k2"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH0"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kPQred"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "pq_red"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "kPQred"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "pq_red"
+                        },
+                        {
+                          "type": "Pow",
+                          "left": {
+                            "type": "Name",
+                            "value": "Q"
+                          },
+                          "right": {
+                            "type": "Num",
+                            "value": 2
+                          }
+                        },
+                        {
+                          "type": "Pow",
+                          "left": {
+                            "type": "Name",
+                            "value": "kH"
+                          },
+                          "right": {
+                            "type": "Num",
+                            "value": 2
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 2
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kF"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH0"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kPQred"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "pq_red"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "PPFD"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "PSII_cross_section"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k2"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kF"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "keq_pq_red"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "PPFD"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "PSII_cross_section"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k2"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH0"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "keq_pq_red"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "Q"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k2"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kPQred"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "pq_red"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 2
+                        },
+                        {
+                          "type": "Name",
+                          "value": "Q"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kF"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kPQred"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "pq_red"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 2
+                        },
+                        {
+                          "type": "Name",
+                          "value": "Q"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH0"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kPQred"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "pq_red"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "PPFD"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "PSII_cross_section"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "Q"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k2"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "keq_pq_red"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kF"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH0"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "PPFD"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "PSII_cross_section"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kF"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH0"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "Q"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "Q"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "ps2states"
+      },
+      "B3": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PPFD"
+                },
+                {
+                  "type": "Name",
+                  "value": "PSII_cross_section"
+                },
+                {
+                  "type": "Name",
+                  "value": "PSII_total"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "k2"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kPQred"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "pq_red"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "kF"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kPQred"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "pq_red"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "kH0"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kPQred"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "pq_red"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "PPFD"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "PSII_cross_section"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k2"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "keq_pq_red"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "Q"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kPQred"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "pq_red"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kF"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH0"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "PPFD"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "PSII_cross_section"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kF"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH0"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "Q"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "Q"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_red"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_pq_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pq_ox"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "ps2states"
+      },
+      "Fluo": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "B0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k_F"
+                    }
+                  ]
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k_F"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k_P"
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "Q"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k_H"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "B2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k_F"
+                    }
+                  ]
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k_F"
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "Q"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k_H"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "Fluo"
+      }
+    },
+    "readouts": {}
+  }
+}

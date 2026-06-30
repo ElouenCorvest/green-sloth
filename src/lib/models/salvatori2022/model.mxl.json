@@ -1,0 +1,611 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Computational-Biology-Aachen/mxl-schemas/main/v1/kinetic-model.schema.json",
+  "spec_version": "1.0",
+  "kind": "kinetic",
+  "model_id": "salvatori2022",
+  "model": {
+    "variables": {
+      "E_PSII": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "E\\_PSII"
+      },
+      "Q": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "Q"
+      },
+      "P_NPQ": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "P\\_NPQ"
+      },
+      "NADP": {
+        "value": {
+          "type": "Num",
+          "value": 5
+        },
+        "texName": "NADP"
+      },
+      "NADPH": {
+        "value": {
+          "type": "Num",
+          "value": 5
+        },
+        "texName": "NADPH"
+      },
+      "R": {
+        "value": {
+          "type": "Num",
+          "value": 0.001
+        },
+        "texName": "R"
+      }
+    },
+    "parameters": {
+      "PAR": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "PAR"
+      },
+      "alpha": {
+        "value": {
+          "type": "Num",
+          "value": 0.78
+        },
+        "texName": "alpha"
+      },
+      "c_in": {
+        "value": {
+          "type": "Num",
+          "value": 0.23
+        },
+        "texName": "c\\_in"
+      },
+      "Ec_PSII": {
+        "value": {
+          "type": "Num",
+          "value": 157.56
+        },
+        "texName": "Ec\\_PSII"
+      },
+      "v_ETR": {
+        "value": {
+          "type": "Num",
+          "value": 0.78
+        },
+        "texName": "v\\_ETR"
+      },
+      "v_d": {
+        "value": {
+          "type": "Num",
+          "value": 0.08
+        },
+        "texName": "v\\_d"
+      },
+      "Qc": {
+        "value": {
+          "type": "Num",
+          "value": 0.07
+        },
+        "texName": "Qc"
+      },
+      "v_NPQ": {
+        "value": {
+          "type": "Num",
+          "value": 70.58
+        },
+        "texName": "v\\_NPQ"
+      },
+      "v_p": {
+        "value": {
+          "type": "Num",
+          "value": 0.07
+        },
+        "texName": "v\\_p"
+      },
+      "v_C": {
+        "value": {
+          "type": "Num",
+          "value": 11.75
+        },
+        "texName": "v\\_C"
+      },
+      "eta_NADPH": {
+        "value": {
+          "type": "Num",
+          "value": 5.07
+        },
+        "texName": "eta\\_NADPH"
+      },
+      "eta_NADP": {
+        "value": {
+          "type": "Num",
+          "value": 0.89
+        },
+        "texName": "eta\\_NADP"
+      },
+      "v_R": {
+        "value": {
+          "type": "Num",
+          "value": 0.00089
+        },
+        "texName": "v\\_R"
+      },
+      "d": {
+        "value": {
+          "type": "Num",
+          "value": 8.4
+        },
+        "texName": "d"
+      },
+      "c_y": {
+        "value": {
+          "type": "Num",
+          "value": -4
+        },
+        "texName": "c\\_y"
+      }
+    },
+    "reactions": {
+      "Energy_input": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "PAR"
+            },
+            {
+              "type": "Name",
+              "value": "alpha"
+            },
+            {
+              "type": "Name",
+              "value": "c_in"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 1
+                },
+                {
+                  "type": "Minus",
+                  "children": [
+                    {
+                      "type": "Divide",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "E_PSII"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "Ec_PSII"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "E_PSII": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "Energy\\_input"
+      },
+      "ETR_out": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "E_PSII"
+            },
+            {
+              "type": "Name",
+              "value": "NADP"
+            },
+            {
+              "type": "Name",
+              "value": "v_ETR"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "E_PSII": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "ETR\\_out"
+      },
+      "ETR_in": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "E_PSII"
+            },
+            {
+              "type": "Name",
+              "value": "NADP"
+            },
+            {
+              "type": "Name",
+              "value": "eta_NADP"
+            },
+            {
+              "type": "Name",
+              "value": "v_ETR"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "NADP": {
+            "type": "Num",
+            "value": -1
+          },
+          "NADPH": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "ETR\\_in"
+      },
+      "energy_dissipation": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "E_PSII"
+            },
+            {
+              "type": "Name",
+              "value": "P_NPQ"
+            },
+            {
+              "type": "Name",
+              "value": "v_d"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 1
+                },
+                {
+                  "type": "Minus",
+                  "children": [
+                    {
+                      "type": "Divide",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "Q"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "Qc"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "E_PSII": {
+            "type": "Num",
+            "value": -1
+          },
+          "Q": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "energy\\_dissipation"
+      },
+      "NPQ": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Q"
+            },
+            {
+              "type": "Name",
+              "value": "v_NPQ"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Q": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "NPQ"
+      },
+      "NPQ_activation": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "v_p"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 1
+                    },
+                    {
+                      "type": "Minus",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "P_NPQ"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "LessThan",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "c_y"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Minus",
+                      "children": [
+                        {
+                          "type": "Mul",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "E_PSII"
+                            },
+                            {
+                              "type": "Name",
+                              "value": "NADP"
+                            },
+                            {
+                              "type": "Name",
+                              "value": "v_ETR"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "PAR"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "alpha"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "c_in"
+                        },
+                        {
+                          "type": "Add",
+                          "children": [
+                            {
+                              "type": "Num",
+                              "value": 1
+                            },
+                            {
+                              "type": "Minus",
+                              "children": [
+                                {
+                                  "type": "Divide",
+                                  "children": [
+                                    {
+                                      "type": "Name",
+                                      "value": "E_PSII"
+                                    },
+                                    {
+                                      "type": "Name",
+                                      "value": "Ec_PSII"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Num",
+              "value": 0
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P_NPQ": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "NPQ\\_activation"
+      },
+      "Carbon_assimilation": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "NADPH"
+            },
+            {
+              "type": "Name",
+              "value": "R"
+            },
+            {
+              "type": "Name",
+              "value": "eta_NADPH"
+            },
+            {
+              "type": "Name",
+              "value": "v_C"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "NADPH": {
+            "type": "Num",
+            "value": -1
+          },
+          "NADP": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "Carbon\\_assimilation"
+      },
+      "RuBisCO_activation": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "d"
+            },
+            {
+              "type": "Name",
+              "value": "v_R"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 1
+                },
+                {
+                  "type": "Minus",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "R"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "R": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "RuBisCO\\_activation"
+      }
+    },
+    "derived": {
+      "pH": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Name",
+              "value": "NADPH"
+            },
+            {
+              "type": "Name",
+              "value": "NADP"
+            }
+          ]
+        },
+        "texName": "pH"
+      },
+      "ETR": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "E_PSII"
+            },
+            {
+              "type": "Name",
+              "value": "NADP"
+            },
+            {
+              "type": "Name",
+              "value": "v_ETR"
+            }
+          ]
+        },
+        "texName": "ETR"
+      },
+      "A": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "NADPH"
+            },
+            {
+              "type": "Name",
+              "value": "R"
+            },
+            {
+              "type": "Name",
+              "value": "v_C"
+            }
+          ]
+        },
+        "texName": "A"
+      }
+    },
+    "readouts": {}
+  }
+}

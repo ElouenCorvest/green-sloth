@@ -1,0 +1,583 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Computational-Biology-Aachen/mxl-schemas/main/v1/kinetic-model.schema.json",
+  "spec_version": "1.0",
+  "kind": "kinetic",
+  "model_id": "zhu2009",
+  "model": {
+    "variables": {
+      "RuBP": {
+        "value": {
+          "type": "Num",
+          "value": 2
+        },
+        "texName": "RuBP"
+      },
+      "PGA": {
+        "value": {
+          "type": "Num",
+          "value": 2.4
+        },
+        "texName": "PGA"
+      },
+      "DPGA": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "DPGA"
+      },
+      "Ru5P": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "Ru5P"
+      },
+      "GAP": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "GAP"
+      }
+    },
+    "parameters": {
+      "V1_max": {
+        "value": {
+          "type": "Num",
+          "value": 3.78
+        },
+        "texName": "V1\\_max",
+        "slider": {
+          "min": "1.9",
+          "max": "7.6",
+          "step": "0.1"
+        }
+      },
+      "V2_max": {
+        "value": {
+          "type": "Num",
+          "value": 11.75
+        },
+        "texName": "V2\\_max",
+        "slider": {
+          "min": "5.9",
+          "max": "23.5",
+          "step": "0.1"
+        }
+      },
+      "V3_max": {
+        "value": {
+          "type": "Num",
+          "value": 5.04
+        },
+        "texName": "V3\\_max",
+        "slider": {
+          "min": "2.5",
+          "max": "10.1",
+          "step": "0.1"
+        }
+      },
+      "V4_max": {
+        "value": {
+          "type": "Num",
+          "value": 3.05
+        },
+        "texName": "V4\\_max",
+        "slider": {
+          "min": "1.5",
+          "max": "6.1",
+          "step": "0.1"
+        }
+      },
+      "V5_max": {
+        "value": {
+          "type": "Num",
+          "value": 3
+        },
+        "texName": "V5\\_max",
+        "slider": {
+          "min": "1.5",
+          "max": "6",
+          "step": "0.1"
+        }
+      },
+      "V6_max": {
+        "value": {
+          "type": "Num",
+          "value": 0.1
+        },
+        "texName": "V6\\_max",
+        "slider": {
+          "min": "0.1",
+          "max": "0.2",
+          "step": "0.1"
+        }
+      },
+      "V13_max": {
+        "value": {
+          "type": "Num",
+          "value": 8
+        },
+        "texName": "V13\\_max",
+        "slider": {
+          "min": "4.0",
+          "max": "16",
+          "step": "0.1"
+        }
+      },
+      "K_m1": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "K\\_m1"
+      },
+      "K_m21": {
+        "value": {
+          "type": "Num",
+          "value": 0.24
+        },
+        "texName": "K\\_m21"
+      },
+      "K_m22": {
+        "value": {
+          "type": "Num",
+          "value": 0.39
+        },
+        "texName": "K\\_m22"
+      },
+      "K_m3": {
+        "value": {
+          "type": "Num",
+          "value": 0.5
+        },
+        "texName": "K\\_m3"
+      },
+      "K_m4": {
+        "value": {
+          "type": "Num",
+          "value": 0.84
+        },
+        "texName": "K\\_m4"
+      },
+      "K_m51": {
+        "value": {
+          "type": "Num",
+          "value": 0.75
+        },
+        "texName": "K\\_m51"
+      },
+      "K_m52": {
+        "value": {
+          "type": "Num",
+          "value": 0.275
+        },
+        "texName": "K\\_m52"
+      },
+      "K_m6": {
+        "value": {
+          "type": "Num",
+          "value": 5
+        },
+        "texName": "K\\_m6"
+      },
+      "K_m131": {
+        "value": {
+          "type": "Num",
+          "value": 0.15
+        },
+        "texName": "K\\_m131"
+      },
+      "K_m132": {
+        "value": {
+          "type": "Num",
+          "value": 0.059
+        },
+        "texName": "K\\_m132"
+      },
+      "ATP": {
+        "value": {
+          "type": "Num",
+          "value": 0.2
+        },
+        "texName": "ATP",
+        "slider": {
+          "min": "0.1",
+          "max": "0.4",
+          "step": "0.1"
+        }
+      }
+    },
+    "reactions": {
+      "v1": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "RuBP"
+                },
+                {
+                  "type": "Name",
+                  "value": "V1_max"
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "K_m1"
+                },
+                {
+                  "type": "Name",
+                  "value": "RuBP"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "RuBP": {
+            "type": "Num",
+            "value": -1
+          },
+          "PGA": {
+            "type": "Num",
+            "value": 2
+          }
+        },
+        "texName": "v1"
+      },
+      "v2": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "ATP"
+                },
+                {
+                  "type": "Name",
+                  "value": "PGA"
+                },
+                {
+                  "type": "Name",
+                  "value": "V2_max"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "ATP"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "K_m22"
+                    }
+                  ]
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "K_m21"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PGA"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "PGA": {
+            "type": "Num",
+            "value": -1
+          },
+          "DPGA": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v2"
+      },
+      "v3": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "DPGA"
+                },
+                {
+                  "type": "Name",
+                  "value": "V3_max"
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "DPGA"
+                },
+                {
+                  "type": "Name",
+                  "value": "K_m3"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "DPGA": {
+            "type": "Num",
+            "value": -1
+          },
+          "GAP": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v3"
+      },
+      "v4": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "GAP"
+                },
+                {
+                  "type": "Name",
+                  "value": "V4_max"
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "GAP"
+                },
+                {
+                  "type": "Name",
+                  "value": "K_m4"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "GAP": {
+            "type": "Num",
+            "value": -1
+          },
+          "Ru5P": {
+            "type": "Num",
+            "value": 0.6
+          }
+        },
+        "texName": "v4"
+      },
+      "v5": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "ATP"
+                },
+                {
+                  "type": "Name",
+                  "value": "PGA"
+                },
+                {
+                  "type": "Name",
+                  "value": "V5_max"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "ATP"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "K_m52"
+                    }
+                  ]
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "K_m51"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PGA"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "PGA": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "v5"
+      },
+      "v6": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "GAP"
+                },
+                {
+                  "type": "Name",
+                  "value": "V6_max"
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "GAP"
+                },
+                {
+                  "type": "Name",
+                  "value": "K_m6"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "GAP": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "v6"
+      },
+      "v13": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "ATP"
+                },
+                {
+                  "type": "Name",
+                  "value": "Ru5P"
+                },
+                {
+                  "type": "Name",
+                  "value": "V13_max"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "ATP"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "K_m132"
+                    }
+                  ]
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "K_m131"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Ru5P"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Ru5P": {
+            "type": "Num",
+            "value": -1
+          },
+          "RuBP": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v13"
+      }
+    },
+    "derived": {},
+    "readouts": {}
+  }
+}

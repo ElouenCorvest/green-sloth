@@ -1,0 +1,2984 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Computational-Biology-Aachen/mxl-schemas/main/v1/kinetic-model.schema.json",
+  "spec_version": "1.0",
+  "kind": "kinetic",
+  "model_id": "li2021",
+  "model": {
+    "variables": {
+      "QA_red": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "QA\\_red"
+      },
+      "PQH_2": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "PQH\\_2"
+      },
+      "pH_lumen": {
+        "value": {
+          "type": "Num",
+          "value": 7.8
+        },
+        "texName": "pH\\_lumen"
+      },
+      "Dpsi": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "Dpsi"
+      },
+      "K_lu": {
+        "value": {
+          "type": "Num",
+          "value": 0.1
+        },
+        "texName": "K\\_lu"
+      },
+      "PC_ox": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "PC\\_ox"
+      },
+      "Y2": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "Y2"
+      },
+      "Zx": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "Zx"
+      },
+      "singO2": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "singO2"
+      },
+      "Fd_red": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "Fd\\_red"
+      },
+      "NADPH_st": {
+        "value": {
+          "type": "Num",
+          "value": 1.5
+        },
+        "texName": "NADPH\\_st"
+      },
+      "Cl_lu": {
+        "value": {
+          "type": "Num",
+          "value": 0.04
+        },
+        "texName": "Cl\\_lu"
+      },
+      "Cl_st": {
+        "value": {
+          "type": "Num",
+          "value": 0.04
+        },
+        "texName": "Cl\\_st"
+      }
+    },
+    "parameters": {
+      "PPFD": {
+        "value": {
+          "type": "Num",
+          "value": 50
+        },
+        "texName": "PPFD"
+      },
+      "k_recomb": {
+        "value": {
+          "type": "Num",
+          "value": 0.33
+        },
+        "texName": "k\\_recomb"
+      },
+      "phi_triplet": {
+        "value": {
+          "type": "Num",
+          "value": 0.45
+        },
+        "texName": "phi\\_triplet"
+      },
+      "phi_1O2": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "phi\\_1O2"
+      },
+      "sigma0_II": {
+        "value": {
+          "type": "Num",
+          "value": 0.5
+        },
+        "texName": "sigma0\\_II"
+      },
+      "c_b6f": {
+        "value": {
+          "type": "Num",
+          "value": 0.433
+        },
+        "texName": "c\\_b6f"
+      },
+      "pKa_reg": {
+        "value": {
+          "type": "Num",
+          "value": 6.2
+        },
+        "texName": "pKa\\_reg"
+      },
+      "Em_PC_pH7": {
+        "value": {
+          "type": "Num",
+          "value": 0.37
+        },
+        "texName": "Em\\_PC\\_pH7"
+      },
+      "Em_PQH2_pH7": {
+        "value": {
+          "type": "Num",
+          "value": 0.11
+        },
+        "texName": "Em\\_PQH2\\_pH7"
+      },
+      "Vmax_b6f": {
+        "value": {
+          "type": "Num",
+          "value": 300
+        },
+        "texName": "Vmax\\_b6f"
+      },
+      "pKa_PsbS": {
+        "value": {
+          "type": "Num",
+          "value": 6.2
+        },
+        "texName": "pKa\\_PsbS"
+      },
+      "NPQ_max": {
+        "value": {
+          "type": "Num",
+          "value": 3
+        },
+        "texName": "NPQ\\_max"
+      },
+      "pH_st": {
+        "value": {
+          "type": "Num",
+          "value": 7.8
+        },
+        "texName": "pH\\_st"
+      },
+      "Em_Fd": {
+        "value": {
+          "type": "Num",
+          "value": -0.42
+        },
+        "texName": "Em\\_Fd"
+      },
+      "k_NDH1": {
+        "value": {
+          "type": "Num",
+          "value": 1000
+        },
+        "texName": "k\\_NDH1"
+      },
+      "Vmax_PGR": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "Vmax\\_PGR"
+      },
+      "sigma0_I": {
+        "value": {
+          "type": "Num",
+          "value": 0.5
+        },
+        "texName": "sigma0\\_I"
+      },
+      "k_QA": {
+        "value": {
+          "type": "Num",
+          "value": 1000
+        },
+        "texName": "k\\_QA"
+      },
+      "Keq_QA": {
+        "value": {
+          "type": "Num",
+          "value": 200
+        },
+        "texName": "Keq\\_QA"
+      },
+      "k_PCtoP700": {
+        "value": {
+          "type": "Num",
+          "value": 5000
+        },
+        "texName": "k\\_PCtoP700"
+      },
+      "k_FdtoNADP": {
+        "value": {
+          "type": "Num",
+          "value": 1000
+        },
+        "texName": "k\\_FdtoNADP"
+      },
+      "K_st": {
+        "value": {
+          "type": "Num",
+          "value": 0.1
+        },
+        "texName": "K\\_st"
+      },
+      "k_KEA3": {
+        "value": {
+          "type": "Num",
+          "value": 2500000
+        },
+        "texName": "k\\_KEA3"
+      },
+      "P_K": {
+        "value": {
+          "type": "Num",
+          "value": 150
+        },
+        "texName": "P\\_K"
+      },
+      "ipt_lu": {
+        "value": {
+          "type": "Num",
+          "value": 0.000587
+        },
+        "texName": "ipt\\_lu"
+      },
+      "k_VCCN1": {
+        "value": {
+          "type": "Num",
+          "value": 12
+        },
+        "texName": "k\\_VCCN1"
+      },
+      "k_ClCe": {
+        "value": {
+          "type": "Num",
+          "value": 800000
+        },
+        "texName": "k\\_ClCe"
+      },
+      "HPR": {
+        "value": {
+          "type": "Num",
+          "value": 4.666666666666667
+        },
+        "texName": "HPR"
+      },
+      "Vmax_ATPsynth": {
+        "value": {
+          "type": "Num",
+          "value": 200
+        },
+        "texName": "Vmax\\_ATPsynth"
+      },
+      "b_H": {
+        "value": {
+          "type": "Num",
+          "value": 0.014
+        },
+        "texName": "b\\_H"
+      },
+      "vpc": {
+        "value": {
+          "type": "Num",
+          "value": 0.047
+        },
+        "texName": "vpc"
+      },
+      "k_EZ": {
+        "value": {
+          "type": "Num",
+          "value": 0.004
+        },
+        "texName": "k\\_EZ"
+      },
+      "nh_VDE": {
+        "value": {
+          "type": "Num",
+          "value": 4
+        },
+        "texName": "nh\\_VDE"
+      },
+      "pKa_VDE": {
+        "value": {
+          "type": "Num",
+          "value": 5.65
+        },
+        "texName": "pKa\\_VDE"
+      },
+      "Vmax_VDE": {
+        "value": {
+          "type": "Num",
+          "value": 0.08
+        },
+        "texName": "Vmax\\_VDE"
+      },
+      "k_leak": {
+        "value": {
+          "type": "Num",
+          "value": 30000000
+        },
+        "texName": "k\\_leak"
+      },
+      "QA_total": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "QA\\_total"
+      },
+      "PQ_tot": {
+        "value": {
+          "type": "Num",
+          "value": 7
+        },
+        "texName": "PQ\\_tot"
+      },
+      "P700_total": {
+        "value": {
+          "type": "Num",
+          "value": 0.667
+        },
+        "texName": "P700\\_total"
+      },
+      "PC_tot": {
+        "value": {
+          "type": "Num",
+          "value": 2
+        },
+        "texName": "PC\\_tot"
+      },
+      "Fd_tot": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "Fd\\_tot"
+      },
+      "NADP_tot": {
+        "value": {
+          "type": "Num",
+          "value": 5
+        },
+        "texName": "NADP\\_tot"
+      },
+      "Carotenoids_tot": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "Carotenoids\\_tot"
+      }
+    },
+    "reactions": {
+      "vPSII_recomb": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "QA_red"
+            },
+            {
+              "type": "Name",
+              "value": "k_recomb"
+            },
+            {
+              "type": "Pow",
+              "left": {
+                "type": "Num",
+                "value": 10
+              },
+              "right": {
+                "type": "Add",
+                "children": [
+                  {
+                    "type": "Num",
+                    "value": 7
+                  },
+                  {
+                    "type": "Mul",
+                    "children": [
+                      {
+                        "type": "Num",
+                        "value": 16.666666666666668
+                      },
+                      {
+                        "type": "Name",
+                        "value": "Dpsi"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Minus",
+                    "children": [
+                      {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Num",
+                            "value": 1
+                          },
+                          {
+                            "type": "Name",
+                            "value": "pH_lumen"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "stoichiometry": {
+          "singO2": {
+            "type": "Mul",
+            "children": [
+              {
+                "type": "Name",
+                "value": "phi_1O2"
+              },
+              {
+                "type": "Name",
+                "value": "phi_triplet"
+              }
+            ]
+          },
+          "QA_red": {
+            "type": "Num",
+            "value": -1
+          },
+          "pH_lumen": {
+            "type": "Divide",
+            "children": [
+              {
+                "type": "Name",
+                "value": "ipt_lu"
+              },
+              {
+                "type": "Name",
+                "value": "b_H"
+              }
+            ]
+          },
+          "Dpsi": {
+            "type": "Minus",
+            "children": [
+              {
+                "type": "Name",
+                "value": "vpc"
+              }
+            ]
+          }
+        },
+        "texName": "vPSII\\_recomb"
+      },
+      "vPSII_ChSep": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "PhiPSII"
+            },
+            {
+              "type": "Name",
+              "value": "light_per_L"
+            },
+            {
+              "type": "Name",
+              "value": "sigma0_II"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "QA_red": {
+            "type": "Num",
+            "value": 1
+          },
+          "pH_lumen": {
+            "type": "Minus",
+            "children": [
+              {
+                "type": "Divide",
+                "children": [
+                  {
+                    "type": "Name",
+                    "value": "ipt_lu"
+                  },
+                  {
+                    "type": "Name",
+                    "value": "b_H"
+                  }
+                ]
+              }
+            ]
+          },
+          "Dpsi": {
+            "type": "Name",
+            "value": "vpc"
+          }
+        },
+        "texName": "vPSII\\_ChSep"
+      },
+      "v_PSII": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "PQ"
+            },
+            {
+              "type": "Name",
+              "value": "QA_red"
+            },
+            {
+              "type": "Name",
+              "value": "k_QA"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "QA_red": {
+            "type": "Num",
+            "value": -1
+          },
+          "PQH_2": {
+            "type": "Num",
+            "value": 0.5
+          }
+        },
+        "texName": "v\\_PSII"
+      },
+      "v_PQ": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PQH_2"
+                },
+                {
+                  "type": "Name",
+                  "value": "QA"
+                },
+                {
+                  "type": "Name",
+                  "value": "k_QA"
+                }
+              ]
+            },
+            {
+              "type": "Name",
+              "value": "Keq_QA"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "QA_red": {
+            "type": "Num",
+            "value": 1
+          },
+          "PQH_2": {
+            "type": "Num",
+            "value": -0.5
+          }
+        },
+        "texName": "v\\_PQ"
+      },
+      "v_b6f": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PC_ox"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PQH_2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Vmax_b6f"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "c_b6f"
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 1
+                        },
+                        {
+                          "type": "Minus",
+                          "children": [
+                            {
+                              "type": "Divide",
+                              "children": [
+                                {
+                                  "type": "Num",
+                                  "value": 1
+                                },
+                                {
+                                  "type": "Add",
+                                  "children": [
+                                    {
+                                      "type": "Num",
+                                      "value": 1
+                                    },
+                                    {
+                                      "type": "Pow",
+                                      "left": {
+                                        "type": "Num",
+                                        "value": 10
+                                      },
+                                      "right": {
+                                        "type": "Add",
+                                        "children": [
+                                          {
+                                            "type": "Name",
+                                            "value": "pH_lumen"
+                                          },
+                                          {
+                                            "type": "Minus",
+                                            "children": [
+                                              {
+                                                "type": "Name",
+                                                "value": "pKa_reg"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PQ"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PQH_2"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PC_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Vmax_b6f"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "c_b6f"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Num",
+                        "value": 10
+                      },
+                      "right": {
+                        "type": "Add",
+                        "children": [
+                          {
+                            "type": "Num",
+                            "value": 7
+                          },
+                          {
+                            "type": "Mul",
+                            "children": [
+                              {
+                                "type": "Num",
+                                "value": 16.666666666666668
+                              },
+                              {
+                                "type": "Name",
+                                "value": "Em_PQH2_pH7"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "Mul",
+                            "children": [
+                              {
+                                "type": "Num",
+                                "value": 16.666666666666668
+                              },
+                              {
+                                "type": "Name",
+                                "value": "pmf"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "Minus",
+                            "children": [
+                              {
+                                "type": "Mul",
+                                "children": [
+                                  {
+                                    "type": "Num",
+                                    "value": 1
+                                  },
+                                  {
+                                    "type": "Name",
+                                    "value": "pH_lumen"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "Minus",
+                            "children": [
+                              {
+                                "type": "Mul",
+                                "children": [
+                                  {
+                                    "type": "Num",
+                                    "value": 16.666666666666668
+                                  },
+                                  {
+                                    "type": "Name",
+                                    "value": "Em_PC_pH7"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 1
+                        },
+                        {
+                          "type": "Minus",
+                          "children": [
+                            {
+                              "type": "Divide",
+                              "children": [
+                                {
+                                  "type": "Num",
+                                  "value": 1
+                                },
+                                {
+                                  "type": "Add",
+                                  "children": [
+                                    {
+                                      "type": "Num",
+                                      "value": 1
+                                    },
+                                    {
+                                      "type": "Pow",
+                                      "left": {
+                                        "type": "Num",
+                                        "value": 10
+                                      },
+                                      "right": {
+                                        "type": "Add",
+                                        "children": [
+                                          {
+                                            "type": "Name",
+                                            "value": "pH_lumen"
+                                          },
+                                          {
+                                            "type": "Minus",
+                                            "children": [
+                                              {
+                                                "type": "Name",
+                                                "value": "pKa_reg"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 1
+                        },
+                        {
+                          "type": "Minus",
+                          "children": [
+                            {
+                              "type": "Divide",
+                              "children": [
+                                {
+                                  "type": "Name",
+                                  "value": "PQH_2"
+                                },
+                                {
+                                  "type": "Add",
+                                  "children": [
+                                    {
+                                      "type": "Name",
+                                      "value": "PQ"
+                                    },
+                                    {
+                                      "type": "Name",
+                                      "value": "PQH_2"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "PQH_2": {
+            "type": "Num",
+            "value": -0.5
+          },
+          "PC_ox": {
+            "type": "Num",
+            "value": -1
+          },
+          "pH_lumen": {
+            "type": "Minus",
+            "children": [
+              {
+                "type": "Divide",
+                "children": [
+                  {
+                    "type": "Mul",
+                    "children": [
+                      {
+                        "type": "Num",
+                        "value": 2
+                      },
+                      {
+                        "type": "Name",
+                        "value": "ipt_lu"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Name",
+                    "value": "b_H"
+                  }
+                ]
+              }
+            ]
+          },
+          "Dpsi": {
+            "type": "Name",
+            "value": "vpc"
+          }
+        },
+        "texName": "v\\_b6f"
+      },
+      "v_NDH": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "Fd_red"
+                },
+                {
+                  "type": "Name",
+                  "value": "PQ"
+                },
+                {
+                  "type": "Name",
+                  "value": "k_NDH1"
+                }
+              ]
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Fd_ox"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PQH_2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k_NDH1"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Num",
+                        "value": 10
+                      },
+                      "right": {
+                        "type": "Add",
+                        "children": [
+                          {
+                            "type": "Num",
+                            "value": -7
+                          },
+                          {
+                            "type": "Mul",
+                            "children": [
+                              {
+                                "type": "Num",
+                                "value": 1
+                              },
+                              {
+                                "type": "Name",
+                                "value": "pH_st"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "Mul",
+                            "children": [
+                              {
+                                "type": "Num",
+                                "value": 16.666666666666668
+                              },
+                              {
+                                "type": "Name",
+                                "value": "Em_Fd"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "Mul",
+                            "children": [
+                              {
+                                "type": "Num",
+                                "value": 33.333333333333336
+                              },
+                              {
+                                "type": "Name",
+                                "value": "pmf"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "Minus",
+                            "children": [
+                              {
+                                "type": "Mul",
+                                "children": [
+                                  {
+                                    "type": "Num",
+                                    "value": 16.666666666666668
+                                  },
+                                  {
+                                    "type": "Name",
+                                    "value": "Em_PQH2_pH7"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "PQH_2": {
+            "type": "Num",
+            "value": 0.5
+          },
+          "Fd_red": {
+            "type": "Num",
+            "value": -1
+          },
+          "pH_lumen": {
+            "type": "Minus",
+            "children": [
+              {
+                "type": "Divide",
+                "children": [
+                  {
+                    "type": "Mul",
+                    "children": [
+                      {
+                        "type": "Num",
+                        "value": 2
+                      },
+                      {
+                        "type": "Name",
+                        "value": "ipt_lu"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Name",
+                    "value": "b_H"
+                  }
+                ]
+              }
+            ]
+          },
+          "Dpsi": {
+            "type": "Mul",
+            "children": [
+              {
+                "type": "Num",
+                "value": 2
+              },
+              {
+                "type": "Name",
+                "value": "vpc"
+              }
+            ]
+          }
+        },
+        "texName": "v\\_NDH"
+      },
+      "v_PGR": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PQ"
+                },
+                {
+                  "type": "Name",
+                  "value": "Vmax_PGR"
+                },
+                {
+                  "type": "Pow",
+                  "left": {
+                    "type": "Name",
+                    "value": "Fd_red"
+                  },
+                  "right": {
+                    "type": "Num",
+                    "value": 4
+                  }
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 0.00010000000000000002
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "Fd_red"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 4
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PQ"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PQH_2"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "PQH_2": {
+            "type": "Num",
+            "value": 0.5
+          },
+          "Fd_red": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "v\\_PGR"
+      },
+      "PSI_ChSep": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Fd_ox"
+            },
+            {
+              "type": "Name",
+              "value": "Y0"
+            },
+            {
+              "type": "Name",
+              "value": "light_per_L"
+            },
+            {
+              "type": "Name",
+              "value": "sigma0_I"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Y2": {
+            "type": "Num",
+            "value": 1
+          },
+          "Fd_red": {
+            "type": "Num",
+            "value": 1
+          },
+          "Dpsi": {
+            "type": "Name",
+            "value": "vpc"
+          }
+        },
+        "texName": "PSI\\_ChSep"
+      },
+      "v_PSI_PCoxid": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "PC_red"
+            },
+            {
+              "type": "Name",
+              "value": "Y2"
+            },
+            {
+              "type": "Name",
+              "value": "k_PCtoP700"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Y2": {
+            "type": "Num",
+            "value": -1
+          },
+          "PC_ox": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v\\_PSI\\_PCoxid"
+      },
+      "v_FNR": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Fd_red"
+            },
+            {
+              "type": "Name",
+              "value": "NADP_st"
+            },
+            {
+              "type": "Name",
+              "value": "k_FdtoNADP"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Fd_red": {
+            "type": "Num",
+            "value": -1
+          },
+          "NADPH_st": {
+            "type": "Num",
+            "value": 0.5
+          }
+        },
+        "texName": "v\\_FNR"
+      },
+      "v_Mehler": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 0.00106
+                },
+                {
+                  "type": "Name",
+                  "value": "Fd_red"
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "Fd_ox"
+                },
+                {
+                  "type": "Name",
+                  "value": "Fd_red"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Fd_red": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "v\\_Mehler"
+      },
+      "v_CBB": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Num",
+              "value": 0.9712326548170112
+            },
+            {
+              "type": "Name",
+              "value": "kCBB"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 1
+                },
+                {
+                  "type": "Minus",
+                  "children": [
+                    {
+                      "type": "Exp",
+                      "child": {
+                        "type": "Minus",
+                        "children": [
+                          {
+                            "type": "Mul",
+                            "children": [
+                              {
+                                "type": "Num",
+                                "value": 0.0016666666666666668
+                              },
+                              {
+                                "type": "Name",
+                                "value": "time"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": -0.22314355131420976
+                },
+                {
+                  "type": "Ln",
+                  "child": {
+                    "type": "Divide",
+                    "children": [
+                      {
+                        "type": "Name",
+                        "value": "NADPH_st"
+                      },
+                      {
+                        "type": "Name",
+                        "value": "NADP_st"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "NADPH_st": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "v\\_CBB"
+      },
+      "v_KEA3": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "k_KEA3"
+            },
+            {
+              "type": "Name",
+              "value": "pH_act"
+            },
+            {
+              "type": "Name",
+              "value": "qL_act"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "H_lumen"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "K_st"
+                    }
+                  ]
+                },
+                {
+                  "type": "Minus",
+                  "children": [
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "H_st"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "K_lu"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "K_lu": {
+            "type": "Name",
+            "value": "ipt_lu"
+          },
+          "pH_lumen": {
+            "type": "Divide",
+            "children": [
+              {
+                "type": "Name",
+                "value": "ipt_lu"
+              },
+              {
+                "type": "Name",
+                "value": "b_H"
+              }
+            ]
+          }
+        },
+        "texName": "v\\_KEA3"
+      },
+      "v_VKC": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Num",
+              "value": 0.5
+            },
+            {
+              "type": "Name",
+              "value": "P_K"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "Dpsi"
+                },
+                {
+                  "type": "Minus",
+                  "children": [
+                    {
+                      "type": "Divide",
+                      "children": [
+                        {
+                          "type": "Mul",
+                          "children": [
+                            {
+                              "type": "Num",
+                              "value": 0.06
+                            },
+                            {
+                              "type": "Ln",
+                              "child": {
+                                "type": "Divide",
+                                "children": [
+                                  {
+                                    "type": "Name",
+                                    "value": "K_st"
+                                  },
+                                  {
+                                    "type": "Name",
+                                    "value": "K_lu"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Ln",
+                          "child": {
+                            "type": "Num",
+                            "value": 10
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "K_lu"
+                },
+                {
+                  "type": "Name",
+                  "value": "K_st"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "K_lu": {
+            "type": "Minus",
+            "children": [
+              {
+                "type": "Name",
+                "value": "ipt_lu"
+              }
+            ]
+          },
+          "Dpsi": {
+            "type": "Minus",
+            "children": [
+              {
+                "type": "Name",
+                "value": "vpc"
+              }
+            ]
+          }
+        },
+        "texName": "v\\_VKC"
+      },
+      "v_VCCN1": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Num",
+              "value": 0.5
+            },
+            {
+              "type": "Name",
+              "value": "k_VCCN1"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "Cl_lu"
+                },
+                {
+                  "type": "Name",
+                  "value": "Cl_st"
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 332
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "driving_force_Cl"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 3
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 3.6
+                    },
+                    {
+                      "type": "Name",
+                      "value": "driving_force_Cl"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 30.8
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "driving_force_Cl"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Cl_lu": {
+            "type": "Name",
+            "value": "ipt_lu"
+          },
+          "Cl_st": {
+            "type": "Minus",
+            "children": [
+              {
+                "type": "Mul",
+                "children": [
+                  {
+                    "type": "Num",
+                    "value": 0.1
+                  },
+                  {
+                    "type": "Name",
+                    "value": "ipt_lu"
+                  }
+                ]
+              }
+            ]
+          },
+          "Dpsi": {
+            "type": "Minus",
+            "children": [
+              {
+                "type": "Name",
+                "value": "vpc"
+              }
+            ]
+          }
+        },
+        "texName": "v\\_VCCN1"
+      },
+      "v_ClCe": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Num",
+              "value": 0.25
+            },
+            {
+              "type": "Name",
+              "value": "k_ClCe"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "Cl_lu"
+                },
+                {
+                  "type": "Name",
+                  "value": "Cl_st"
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "H_lumen"
+                },
+                {
+                  "type": "Name",
+                  "value": "H_st"
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "pmf"
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "driving_force_Cl"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Cl_lu": {
+            "type": "Mul",
+            "children": [
+              {
+                "type": "Num",
+                "value": 2
+              },
+              {
+                "type": "Name",
+                "value": "ipt_lu"
+              }
+            ]
+          },
+          "Cl_st": {
+            "type": "Minus",
+            "children": [
+              {
+                "type": "Mul",
+                "children": [
+                  {
+                    "type": "Num",
+                    "value": 0.2
+                  },
+                  {
+                    "type": "Name",
+                    "value": "ipt_lu"
+                  }
+                ]
+              }
+            ]
+          },
+          "pH_lumen": {
+            "type": "Divide",
+            "children": [
+              {
+                "type": "Name",
+                "value": "ipt_lu"
+              },
+              {
+                "type": "Name",
+                "value": "b_H"
+              }
+            ]
+          },
+          "Dpsi": {
+            "type": "Minus",
+            "children": [
+              {
+                "type": "Mul",
+                "children": [
+                  {
+                    "type": "Num",
+                    "value": 3
+                  },
+                  {
+                    "type": "Name",
+                    "value": "vpc"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "texName": "v\\_ClCe"
+      },
+      "v_Leak": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "H_lumen"
+            },
+            {
+              "type": "Name",
+              "value": "k_leak"
+            },
+            {
+              "type": "Name",
+              "value": "pmf"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "pH_lumen": {
+            "type": "Divide",
+            "children": [
+              {
+                "type": "Name",
+                "value": "ipt_lu"
+              },
+              {
+                "type": "Name",
+                "value": "b_H"
+              }
+            ]
+          },
+          "Dpsi": {
+            "type": "Minus",
+            "children": [
+              {
+                "type": "Name",
+                "value": "vpc"
+              }
+            ]
+          }
+        },
+        "texName": "v\\_Leak"
+      },
+      "v_pmf_protons_activity": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "HPR"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Vmax_ATPsynth"
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 1
+                        },
+                        {
+                          "type": "Minus",
+                          "children": [
+                            {
+                              "type": "Divide",
+                              "children": [
+                                {
+                                  "type": "Num",
+                                  "value": 1
+                                },
+                                {
+                                  "type": "Add",
+                                  "children": [
+                                    {
+                                      "type": "Num",
+                                      "value": 1
+                                    },
+                                    {
+                                      "type": "Pow",
+                                      "left": {
+                                        "type": "Num",
+                                        "value": 10
+                                      },
+                                      "right": {
+                                        "type": "Add",
+                                        "children": [
+                                          {
+                                            "type": "Num",
+                                            "value": -5.1000000000000005
+                                          },
+                                          {
+                                            "type": "Mul",
+                                            "children": [
+                                              {
+                                                "type": "Num",
+                                                "value": 25
+                                              },
+                                              {
+                                                "type": "Name",
+                                                "value": "pmf"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 0.8
+                        },
+                        {
+                          "type": "Minus",
+                          "children": [
+                            {
+                              "type": "Divide",
+                              "children": [
+                                {
+                                  "type": "Mul",
+                                  "children": [
+                                    {
+                                      "type": "Num",
+                                      "value": 1.0793299047744327e-9
+                                    },
+                                    {
+                                      "type": "Pow",
+                                      "left": {
+                                        "type": "Name",
+                                        "value": "time"
+                                      },
+                                      "right": {
+                                        "type": "Num",
+                                        "value": 4
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "Add",
+                                  "children": [
+                                    {
+                                      "type": "Num",
+                                      "value": 1
+                                    },
+                                    {
+                                      "type": "Mul",
+                                      "children": [
+                                        {
+                                          "type": "Num",
+                                          "value": 1.349162380968041e-9
+                                        },
+                                        {
+                                          "type": "Pow",
+                                          "left": {
+                                            "type": "Name",
+                                            "value": "time"
+                                          },
+                                          "right": {
+                                            "type": "Num",
+                                            "value": 4
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "HPR"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Vmax_ATPsynth"
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 1
+                        },
+                        {
+                          "type": "Minus",
+                          "children": [
+                            {
+                              "type": "Divide",
+                              "children": [
+                                {
+                                  "type": "Num",
+                                  "value": 1
+                                },
+                                {
+                                  "type": "Add",
+                                  "children": [
+                                    {
+                                      "type": "Num",
+                                      "value": 1
+                                    },
+                                    {
+                                      "type": "Pow",
+                                      "left": {
+                                        "type": "Num",
+                                        "value": 10
+                                      },
+                                      "right": {
+                                        "type": "Add",
+                                        "children": [
+                                          {
+                                            "type": "Num",
+                                            "value": -3.3000000000000003
+                                          },
+                                          {
+                                            "type": "Mul",
+                                            "children": [
+                                              {
+                                                "type": "Num",
+                                                "value": 25
+                                              },
+                                              {
+                                                "type": "Name",
+                                                "value": "pmf"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 0.2
+                        },
+                        {
+                          "type": "Divide",
+                          "children": [
+                            {
+                              "type": "Mul",
+                              "children": [
+                                {
+                                  "type": "Num",
+                                  "value": 1.0793299047744327e-9
+                                },
+                                {
+                                  "type": "Pow",
+                                  "left": {
+                                    "type": "Name",
+                                    "value": "time"
+                                  },
+                                  "right": {
+                                    "type": "Num",
+                                    "value": 4
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Add",
+                              "children": [
+                                {
+                                  "type": "Num",
+                                  "value": 1
+                                },
+                                {
+                                  "type": "Mul",
+                                  "children": [
+                                    {
+                                      "type": "Num",
+                                      "value": 1.349162380968041e-9
+                                    },
+                                    {
+                                      "type": "Pow",
+                                      "left": {
+                                        "type": "Name",
+                                        "value": "time"
+                                      },
+                                      "right": {
+                                        "type": "Num",
+                                        "value": 4
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "GreaterThan",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "light_per_L"
+                },
+                {
+                  "type": "Num",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "type": "Num",
+              "value": 0
+            }
+          ]
+        },
+        "stoichiometry": {
+          "pH_lumen": {
+            "type": "Divide",
+            "children": [
+              {
+                "type": "Name",
+                "value": "ipt_lu"
+              },
+              {
+                "type": "Name",
+                "value": "b_H"
+              }
+            ]
+          },
+          "Dpsi": {
+            "type": "Minus",
+            "children": [
+              {
+                "type": "Name",
+                "value": "vpc"
+              }
+            ]
+          }
+        },
+        "texName": "v\\_pmf\\_protons\\_activity"
+      },
+      "v_Epox": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Zx"
+            },
+            {
+              "type": "Name",
+              "value": "k_EZ"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Zx": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "v\\_Epox"
+      },
+      "v_Deepox": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 1
+                },
+                {
+                  "type": "Name",
+                  "value": "Vmax_VDE"
+                },
+                {
+                  "type": "Name",
+                  "value": "Vx"
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 1
+                },
+                {
+                  "type": "Pow",
+                  "left": {
+                    "type": "Num",
+                    "value": 10
+                  },
+                  "right": {
+                    "type": "Mul",
+                    "children": [
+                      {
+                        "type": "Name",
+                        "value": "nh_VDE"
+                      },
+                      {
+                        "type": "Add",
+                        "children": [
+                          {
+                            "type": "Name",
+                            "value": "pH_lumen"
+                          },
+                          {
+                            "type": "Minus",
+                            "children": [
+                              {
+                                "type": "Name",
+                                "value": "pKa_VDE"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Zx": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v\\_Deepox"
+      }
+    },
+    "derived": {
+      "QA": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "QA_total"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "QA_red"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "QA"
+      },
+      "Y0": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "P700_total"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "Y2"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "Y0"
+      },
+      "PQ": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "PQ_tot"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PQH_2"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "PQ"
+      },
+      "PC_red": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "PC_tot"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PC_ox"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "PC\\_red"
+      },
+      "Fd_ox": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Fd_tot"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "Fd_red"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "Fd\\_ox"
+      },
+      "NADP_st": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "NADP_tot"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "NADPH_st"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "NADP\\_st"
+      },
+      "Vx": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Carotenoids_tot"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "Zx"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "Vx"
+      },
+      "light_per_L": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Num",
+              "value": 1.2
+            },
+            {
+              "type": "Name",
+              "value": "PPFD"
+            }
+          ]
+        },
+        "texName": "light\\_per\\_L"
+      },
+      "driving_force_Cl": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Dpsi"
+            },
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 0.06
+                    },
+                    {
+                      "type": "Ln",
+                      "child": {
+                        "type": "Divide",
+                        "children": [
+                          {
+                            "type": "Name",
+                            "value": "Cl_st"
+                          },
+                          {
+                            "type": "Name",
+                            "value": "Cl_lu"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Ln",
+                  "child": {
+                    "type": "Num",
+                    "value": 10
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "driving\\_force\\_Cl"
+      },
+      "PsbSP": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Num",
+              "value": 1
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 1
+                },
+                {
+                  "type": "Pow",
+                  "left": {
+                    "type": "Num",
+                    "value": 10
+                  },
+                  "right": {
+                    "type": "Add",
+                    "children": [
+                      {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Num",
+                            "value": 3
+                          },
+                          {
+                            "type": "Name",
+                            "value": "pH_lumen"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "Minus",
+                        "children": [
+                          {
+                            "type": "Mul",
+                            "children": [
+                              {
+                                "type": "Num",
+                                "value": 3
+                              },
+                              {
+                                "type": "Name",
+                                "value": "pKa_PsbS"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "PsbSP"
+      },
+      "NPQ": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 0.5
+                },
+                {
+                  "type": "Name",
+                  "value": "NPQ_max"
+                },
+                {
+                  "type": "Name",
+                  "value": "PsbSP"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 0.1
+                },
+                {
+                  "type": "Name",
+                  "value": "NPQ_max"
+                },
+                {
+                  "type": "Name",
+                  "value": "Zx"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 0.4
+                },
+                {
+                  "type": "Name",
+                  "value": "NPQ_max"
+                },
+                {
+                  "type": "Name",
+                  "value": "PsbSP"
+                },
+                {
+                  "type": "Name",
+                  "value": "Zx"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "NPQ"
+      },
+      "PhiPSII": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Num",
+              "value": 1
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 1
+                },
+                {
+                  "type": "Divide",
+                  "children": [
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 0.20491803278688525
+                        },
+                        {
+                          "type": "Mul",
+                          "children": [
+                            {
+                              "type": "Num",
+                              "value": 0.20491803278688525
+                            },
+                            {
+                              "type": "Name",
+                              "value": "NPQ"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "PhiPSII"
+      },
+      "H_lumen": {
+        "fn": {
+          "type": "Pow",
+          "left": {
+            "type": "Num",
+            "value": 10
+          },
+          "right": {
+            "type": "Minus",
+            "children": [
+              {
+                "type": "Mul",
+                "children": [
+                  {
+                    "type": "Num",
+                    "value": 1
+                  },
+                  {
+                    "type": "Name",
+                    "value": "pH_lumen"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "texName": "H\\_lumen"
+      },
+      "H_st": {
+        "fn": {
+          "type": "Pow",
+          "left": {
+            "type": "Num",
+            "value": 10
+          },
+          "right": {
+            "type": "Minus",
+            "children": [
+              {
+                "type": "Mul",
+                "children": [
+                  {
+                    "type": "Num",
+                    "value": 1
+                  },
+                  {
+                    "type": "Name",
+                    "value": "pH_st"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "texName": "H\\_st"
+      },
+      "pmf": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Dpsi"
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 0.06
+                },
+                {
+                  "type": "Name",
+                  "value": "pH_st"
+                }
+              ]
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 0.06
+                    },
+                    {
+                      "type": "Name",
+                      "value": "pH_lumen"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "pmf"
+      },
+      "kCBB": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 60
+                },
+                {
+                  "type": "Name",
+                  "value": "PPFD"
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 250
+                },
+                {
+                  "type": "Name",
+                  "value": "PPFD"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "kCBB"
+      },
+      "delta_pH": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "pH_st"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "pH_lumen"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "delta\\_pH"
+      },
+      "delta_pH_inVolts": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Num",
+              "value": 0.06
+            },
+            {
+              "type": "Name",
+              "value": "delta_pH"
+            }
+          ]
+        },
+        "texName": "delta\\_pH\\_inVolts"
+      },
+      "qL_act": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Pow",
+              "left": {
+                "type": "Name",
+                "value": "QA"
+              },
+              "right": {
+                "type": "Num",
+                "value": 3
+              }
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 0.0033749999999999995
+                },
+                {
+                  "type": "Pow",
+                  "left": {
+                    "type": "Name",
+                    "value": "QA"
+                  },
+                  "right": {
+                    "type": "Num",
+                    "value": 3
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "qL\\_act"
+      },
+      "pH_act": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Num",
+              "value": 1
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 1
+                },
+                {
+                  "type": "Pow",
+                  "left": {
+                    "type": "Num",
+                    "value": 10
+                  },
+                  "right": {
+                    "type": "Add",
+                    "children": [
+                      {
+                        "type": "Num",
+                        "value": -6
+                      },
+                      {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Num",
+                            "value": 1
+                          },
+                          {
+                            "type": "Name",
+                            "value": "pH_lumen"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "pH\\_act"
+      }
+    },
+    "readouts": {}
+  }
+}

@@ -1,0 +1,6501 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Computational-Biology-Aachen/mxl-schemas/main/v1/kinetic-model.schema.json",
+  "spec_version": "1.0",
+  "kind": "kinetic",
+  "model_id": "ebenhoeh2014",
+  "model": {
+    "variables": {
+      "Plastoquinone_oxidised": {
+        "value": {
+          "type": "Num",
+          "value": 17.5
+        },
+        "texName": "Plastoquinone (oxidised)"
+      },
+      "Plastocyanine_oxidised": {
+        "value": {
+          "type": "Num",
+          "value": 0.0202
+        },
+        "texName": "Plastocyanine (oxidised)"
+      },
+      "Ferredoxine_oxidised": {
+        "value": {
+          "type": "Num",
+          "value": 5
+        },
+        "texName": "Ferredoxine (oxidised)"
+      },
+      "ATP": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "ATP"
+      },
+      "NADPH": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "NADPH"
+      },
+      "protons_lumen": {
+        "value": {
+          "type": "Num",
+          "value": 0.00025238293779207717
+        },
+        "texName": "protons\\_lumen"
+      },
+      "Light_minus_harvesting_complex": {
+        "value": {
+          "type": "Num",
+          "value": 0.9
+        },
+        "texName": "Light-harvesting complex"
+      }
+    },
+    "parameters": {
+      "pH": {
+        "value": {
+          "type": "Num",
+          "value": 7.8
+        },
+        "texName": "pH"
+      },
+      "PPFD": {
+        "value": {
+          "type": "Num",
+          "value": 100
+        },
+        "texName": "PPFD"
+      },
+      "cPPFD": {
+        "value": {
+          "type": "Num",
+          "value": 0.3333333333333333
+        },
+        "texName": "cPPFD"
+      },
+      "PSII_total": {
+        "value": {
+          "type": "Num",
+          "value": 2.5
+        },
+        "texName": "PSII\\_total"
+      },
+      "PSI_total": {
+        "value": {
+          "type": "Num",
+          "value": 2.5
+        },
+        "texName": "PSI\\_total"
+      },
+      "PQ_tot": {
+        "value": {
+          "type": "Num",
+          "value": 17.5
+        },
+        "texName": "PQ\\_tot"
+      },
+      "PC_tot": {
+        "value": {
+          "type": "Num",
+          "value": 4
+        },
+        "texName": "PC\\_tot"
+      },
+      "Fd_star": {
+        "value": {
+          "type": "Num",
+          "value": 5
+        },
+        "texName": "Fd*"
+      },
+      "NADP_star": {
+        "value": {
+          "type": "Num",
+          "value": 25
+        },
+        "texName": "NADP*"
+      },
+      "A_star_P": {
+        "value": {
+          "type": "Num",
+          "value": 60
+        },
+        "texName": "A*P"
+      },
+      "LHC_tot": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "LHC\\_tot"
+      },
+      "F": {
+        "value": {
+          "type": "Num",
+          "value": 96.485
+        },
+        "texName": "F"
+      },
+      "R": {
+        "value": {
+          "type": "Num",
+          "value": 0.0083
+        },
+        "texName": "R"
+      },
+      "T": {
+        "value": {
+          "type": "Num",
+          "value": 298
+        },
+        "texName": "T"
+      },
+      "bH": {
+        "value": {
+          "type": "Num",
+          "value": 100
+        },
+        "texName": "bH"
+      },
+      "E0_QA": {
+        "value": {
+          "type": "Num",
+          "value": -0.14
+        },
+        "texName": "E^0\\_QA"
+      },
+      "E0_PQ": {
+        "value": {
+          "type": "Num",
+          "value": 0.354
+        },
+        "texName": "E^0\\_PQ"
+      },
+      "E0_PC": {
+        "value": {
+          "type": "Num",
+          "value": 0.38
+        },
+        "texName": "E^0\\_PC"
+      },
+      "E0_P700": {
+        "value": {
+          "type": "Num",
+          "value": 0.48
+        },
+        "texName": "E^0\\_P700"
+      },
+      "E0_FA": {
+        "value": {
+          "type": "Num",
+          "value": -0.55
+        },
+        "texName": "E^0\\_FA"
+      },
+      "E0_Fd": {
+        "value": {
+          "type": "Num",
+          "value": -0.43
+        },
+        "texName": "E^0\\_Fd"
+      },
+      "E0_NADP": {
+        "value": {
+          "type": "Num",
+          "value": -0.113
+        },
+        "texName": "E^0\\_NADP"
+      },
+      "kH0": {
+        "value": {
+          "type": "Num",
+          "value": 500000000
+        },
+        "texName": "kH0"
+      },
+      "kH": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "kH"
+      },
+      "kF": {
+        "value": {
+          "type": "Num",
+          "value": 62500000
+        },
+        "texName": "kF"
+      },
+      "k2": {
+        "value": {
+          "type": "Num",
+          "value": 1200000000
+        },
+        "texName": "k2"
+      },
+      "Q": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "Q"
+      },
+      "staticAntI": {
+        "value": {
+          "type": "Num",
+          "value": 0.2
+        },
+        "texName": "staticAntI"
+      },
+      "staticAntII": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "staticAntII"
+      },
+      "kf_atp_synthase": {
+        "value": {
+          "type": "Num",
+          "value": 20
+        },
+        "texName": "kf\\_atp\\_synthase"
+      },
+      "kf_atp_consumption": {
+        "value": {
+          "type": "Num",
+          "value": 10
+        },
+        "texName": "kf\\_atp\\_consumption"
+      },
+      "Pi_mol": {
+        "value": {
+          "type": "Num",
+          "value": 0.01
+        },
+        "texName": "Pi\\_mol"
+      },
+      "DeltaG0_ATP": {
+        "value": {
+          "type": "Num",
+          "value": 30.6
+        },
+        "texName": "DeltaG0\\_ATP"
+      },
+      "HPR": {
+        "value": {
+          "type": "Num",
+          "value": 4.666666666666667
+        },
+        "texName": "HPR"
+      },
+      "kf_nadph_consumption": {
+        "value": {
+          "type": "Num",
+          "value": 15
+        },
+        "texName": "kf\\_nadph\\_consumption"
+      },
+      "kf_proton_leak": {
+        "value": {
+          "type": "Num",
+          "value": 0.01
+        },
+        "texName": "kf\\_proton\\_leak"
+      },
+      "kPQred": {
+        "value": {
+          "type": "Num",
+          "value": 250
+        },
+        "texName": "kPQred"
+      },
+      "kcat_b6f": {
+        "value": {
+          "type": "Num",
+          "value": 2.5
+        },
+        "texName": "kcat\\_b6f"
+      },
+      "kPTOX": {
+        "value": {
+          "type": "Num",
+          "value": 0.01
+        },
+        "texName": "kPTOX"
+      },
+      "kPCox": {
+        "value": {
+          "type": "Num",
+          "value": 2500
+        },
+        "texName": "kPCox"
+      },
+      "kFdred": {
+        "value": {
+          "type": "Num",
+          "value": 250000
+        },
+        "texName": "kFdred"
+      },
+      "kcat_fnr": {
+        "value": {
+          "type": "Num",
+          "value": 500
+        },
+        "texName": "kcat\\_fnr"
+      },
+      "E0_fnr": {
+        "value": {
+          "type": "Num",
+          "value": 3
+        },
+        "texName": "E0\\_fnr"
+      },
+      "km_fnr_Ferredoxine_reduced": {
+        "value": {
+          "type": "Num",
+          "value": 1.56
+        },
+        "texName": "km\\_fnr\\_Ferredoxine (reduced)"
+      },
+      "km_fnr_NADP": {
+        "value": {
+          "type": "Num",
+          "value": 0.22
+        },
+        "texName": "km\\_fnr\\_NADP"
+      },
+      "kf_cyclic_electron_flow": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "kf\\_cyclic\\_electron\\_flow"
+      },
+      "O2_dissolved_lumen": {
+        "value": {
+          "type": "Num",
+          "value": 8
+        },
+        "texName": "O2 (dissolved)\\_lumen"
+      },
+      "kf_ndh": {
+        "value": {
+          "type": "Num",
+          "value": 0.004
+        },
+        "texName": "kf\\_ndh"
+      },
+      "kStt7": {
+        "value": {
+          "type": "Num",
+          "value": 0.0035
+        },
+        "texName": "kStt7"
+      },
+      "kPph1": {
+        "value": {
+          "type": "Num",
+          "value": 0.0013
+        },
+        "texName": "kPph1"
+      },
+      "km_lhc_state_transition_12": {
+        "value": {
+          "type": "Num",
+          "value": 0.2
+        },
+        "texName": "km\\_lhc\\_state\\_transition\\_12"
+      },
+      "n_ST": {
+        "value": {
+          "type": "Num",
+          "value": 2
+        },
+        "texName": "n\\_ST"
+      }
+    },
+    "reactions": {
+      "PSII": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Num",
+              "value": 0.5
+            },
+            {
+              "type": "Name",
+              "value": "B1"
+            },
+            {
+              "type": "Name",
+              "value": "k2"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Plastoquinone_oxidised": {
+            "type": "Num",
+            "value": -1
+          },
+          "protons_lumen": {
+            "type": "Divide",
+            "children": [
+              {
+                "type": "Num",
+                "value": 2
+              },
+              {
+                "type": "Name",
+                "value": "bH"
+              }
+            ]
+          }
+        },
+        "texName": "PSII"
+      },
+      "PSI": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "A1"
+            },
+            {
+              "type": "Name",
+              "value": "PPFD"
+            },
+            {
+              "type": "Name",
+              "value": "cPPFD"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 1
+                },
+                {
+                  "type": "Minus",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Ferredoxine_oxidised": {
+            "type": "Num",
+            "value": -1
+          },
+          "Plastocyanine_oxidised": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "PSI"
+      },
+      "PTOX": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "O2_dissolved_lumen"
+            },
+            {
+              "type": "Name",
+              "value": "Plastoquinone_reduced"
+            },
+            {
+              "type": "Name",
+              "value": "kPTOX"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Plastoquinone_oxidised": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "PTOX"
+      },
+      "ndh": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Plastoquinone_oxidised"
+            },
+            {
+              "type": "Name",
+              "value": "kf_ndh"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Plastoquinone_oxidised": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "ndh"
+      },
+      "b6f": {
+        "fn": {
+          "type": "Max",
+          "children": [
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "kcat_b6f"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "kcat_b6f"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "Plastoquinone_reduced"
+                        },
+                        {
+                          "type": "Pow",
+                          "left": {
+                            "type": "Name",
+                            "value": "Plastocyanine_oxidised"
+                          },
+                          "right": {
+                            "type": "Num",
+                            "value": 2
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Minus",
+                      "children": [
+                        {
+                          "type": "Divide",
+                          "children": [
+                            {
+                              "type": "Mul",
+                              "children": [
+                                {
+                                  "type": "Name",
+                                  "value": "Plastoquinone_oxidised"
+                                },
+                                {
+                                  "type": "Pow",
+                                  "left": {
+                                    "type": "Name",
+                                    "value": "Plastocyanine_reduced"
+                                  },
+                                  "right": {
+                                    "type": "Num",
+                                    "value": 2
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Name",
+                              "value": "keq_b6f"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Plastocyanine_oxidised": {
+            "type": "Num",
+            "value": -2
+          },
+          "Plastoquinone_oxidised": {
+            "type": "Num",
+            "value": 1
+          },
+          "protons_lumen": {
+            "type": "Divide",
+            "children": [
+              {
+                "type": "Num",
+                "value": 4
+              },
+              {
+                "type": "Name",
+                "value": "bH"
+              }
+            ]
+          }
+        },
+        "texName": "b6f"
+      },
+      "cyclic_electron_flow": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Plastoquinone_oxidised"
+            },
+            {
+              "type": "Name",
+              "value": "kf_cyclic_electron_flow"
+            },
+            {
+              "type": "Pow",
+              "left": {
+                "type": "Name",
+                "value": "Ferredoxine_reduced"
+              },
+              "right": {
+                "type": "Num",
+                "value": 2
+              }
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Plastoquinone_oxidised": {
+            "type": "Num",
+            "value": -1
+          },
+          "Ferredoxine_oxidised": {
+            "type": "Num",
+            "value": 2
+          }
+        },
+        "texName": "cyclic\\_electron\\_flow"
+      },
+      "fnr": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "vmax_fnr"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Divide",
+                      "children": [
+                        {
+                          "type": "Mul",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "NADP"
+                            },
+                            {
+                              "type": "Pow",
+                              "left": {
+                                "type": "Divide",
+                                "children": [
+                                  {
+                                    "type": "Name",
+                                    "value": "Ferredoxine_reduced"
+                                  },
+                                  {
+                                    "type": "Name",
+                                    "value": "km_fnr_Ferredoxine_reduced"
+                                  }
+                                ]
+                              },
+                              "right": {
+                                "type": "Num",
+                                "value": 2
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Name",
+                          "value": "km_fnr_NADP"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Minus",
+                      "children": [
+                        {
+                          "type": "Divide",
+                          "children": [
+                            {
+                              "type": "Mul",
+                              "children": [
+                                {
+                                  "type": "Name",
+                                  "value": "NADPH"
+                                },
+                                {
+                                  "type": "Pow",
+                                  "left": {
+                                    "type": "Divide",
+                                    "children": [
+                                      {
+                                        "type": "Name",
+                                        "value": "Ferredoxine_oxidised"
+                                      },
+                                      {
+                                        "type": "Name",
+                                        "value": "km_fnr_Ferredoxine_reduced"
+                                      }
+                                    ]
+                                  },
+                                  "right": {
+                                    "type": "Num",
+                                    "value": 2
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Mul",
+                              "children": [
+                                {
+                                  "type": "Name",
+                                  "value": "keq_fnr"
+                                },
+                                {
+                                  "type": "Name",
+                                  "value": "km_fnr_NADP"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": -1
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 1
+                        },
+                        {
+                          "type": "Divide",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "NADP"
+                            },
+                            {
+                              "type": "Name",
+                              "value": "km_fnr_NADP"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 1
+                        },
+                        {
+                          "type": "Pow",
+                          "left": {
+                            "type": "Divide",
+                            "children": [
+                              {
+                                "type": "Name",
+                                "value": "Ferredoxine_reduced"
+                              },
+                              {
+                                "type": "Name",
+                                "value": "km_fnr_Ferredoxine_reduced"
+                              }
+                            ]
+                          },
+                          "right": {
+                            "type": "Num",
+                            "value": 2
+                          }
+                        },
+                        {
+                          "type": "Divide",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "Ferredoxine_reduced"
+                            },
+                            {
+                              "type": "Name",
+                              "value": "km_fnr_Ferredoxine_reduced"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 1
+                        },
+                        {
+                          "type": "Divide",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "NADPH"
+                            },
+                            {
+                              "type": "Name",
+                              "value": "km_fnr_NADP"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 1
+                        },
+                        {
+                          "type": "Pow",
+                          "left": {
+                            "type": "Divide",
+                            "children": [
+                              {
+                                "type": "Name",
+                                "value": "Ferredoxine_oxidised"
+                              },
+                              {
+                                "type": "Name",
+                                "value": "km_fnr_Ferredoxine_reduced"
+                              }
+                            ]
+                          },
+                          "right": {
+                            "type": "Num",
+                            "value": 2
+                          }
+                        },
+                        {
+                          "type": "Divide",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "Ferredoxine_oxidised"
+                            },
+                            {
+                              "type": "Name",
+                              "value": "km_fnr_Ferredoxine_reduced"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Ferredoxine_oxidised": {
+            "type": "Num",
+            "value": 2
+          },
+          "NADPH": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "fnr"
+      },
+      "proton_leak": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "kf_proton_leak"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "protons_lumen"
+                },
+                {
+                  "type": "Minus",
+                  "children": [
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 4000
+                        },
+                        {
+                          "type": "Pow",
+                          "left": {
+                            "type": "Num",
+                            "value": 10
+                          },
+                          "right": {
+                            "type": "Minus",
+                            "children": [
+                              {
+                                "type": "Name",
+                                "value": "pH"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "protons_lumen": {
+            "type": "Minus",
+            "children": [
+              {
+                "type": "Divide",
+                "children": [
+                  {
+                    "type": "Num",
+                    "value": 1
+                  },
+                  {
+                    "type": "Name",
+                    "value": "bH"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "texName": "proton\\_leak"
+      },
+      "lhc_state_transition_12": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 1
+                },
+                {
+                  "type": "Name",
+                  "value": "Light_minus_harvesting_complex"
+                },
+                {
+                  "type": "Name",
+                  "value": "kStt7"
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 1
+                },
+                {
+                  "type": "Pow",
+                  "left": {
+                    "type": "Divide",
+                    "children": [
+                      {
+                        "type": "Name",
+                        "value": "Plastoquinone_oxidised"
+                      },
+                      {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Name",
+                            "value": "PQ_tot"
+                          },
+                          {
+                            "type": "Name",
+                            "value": "km_lhc_state_transition_12"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "right": {
+                    "type": "Name",
+                    "value": "n_ST"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Light_minus_harvesting_complex": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "lhc\\_state\\_transition\\_12"
+      },
+      "lhc_state_transition_21": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Light_minus_harvesting_complex_protonated"
+            },
+            {
+              "type": "Name",
+              "value": "kPph1"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Light_minus_harvesting_complex": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "lhc\\_state\\_transition\\_21"
+      },
+      "atp_synthase": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "kf_atp_synthase"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "ADP"
+                },
+                {
+                  "type": "Minus",
+                  "children": [
+                    {
+                      "type": "Divide",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "ATP"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "keq_atp_synthase"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "ATP": {
+            "type": "Num",
+            "value": 1
+          },
+          "protons_lumen": {
+            "type": "Minus",
+            "children": [
+              {
+                "type": "Divide",
+                "children": [
+                  {
+                    "type": "Name",
+                    "value": "HPR"
+                  },
+                  {
+                    "type": "Name",
+                    "value": "bH"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "texName": "atp\\_synthase"
+      },
+      "atp_consumption": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "ATP"
+            },
+            {
+              "type": "Name",
+              "value": "kf_atp_consumption"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "ATP": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "atp\\_consumption"
+      },
+      "nadph_consumption": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "NADPH"
+            },
+            {
+              "type": "Name",
+              "value": "kf_nadph_consumption"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "NADPH": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "nadph\\_consumption"
+      }
+    },
+    "derived": {
+      "RT": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "R"
+            },
+            {
+              "type": "Name",
+              "value": "T"
+            }
+          ]
+        },
+        "texName": "RT"
+      },
+      "dG_pH": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Num",
+              "value": 2.302585092994046
+            },
+            {
+              "type": "Name",
+              "value": "R"
+            },
+            {
+              "type": "Name",
+              "value": "T"
+            }
+          ]
+        },
+        "texName": "dG\\_pH"
+      },
+      "pH_lumen": {
+        "fn": {
+          "type": "Minus",
+          "children": [
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Ln",
+                  "child": {
+                    "type": "Max",
+                    "children": [
+                      {
+                        "type": "Num",
+                        "value": 1e-14
+                      },
+                      {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Num",
+                            "value": 0.00025
+                          },
+                          {
+                            "type": "Name",
+                            "value": "protons_lumen"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "Ln",
+                  "child": {
+                    "type": "Num",
+                    "value": 10
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "pH\\_lumen"
+      },
+      "Plastoquinone_reduced": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "PQ_tot"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "Plastoquinone_oxidised"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "Plastoquinone (reduced)"
+      },
+      "Plastocyanine_reduced": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "PC_tot"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "Plastocyanine_oxidised"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "Plastocyanine (reduced)"
+      },
+      "Ferredoxine_reduced": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Fd_star"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "Ferredoxine_oxidised"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "Ferredoxine (reduced)"
+      },
+      "ADP": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "A_star_P"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "ATP"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "ADP"
+      },
+      "NADP": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "NADP_star"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "NADPH"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "NADP"
+      },
+      "Light_minus_harvesting_complex_protonated": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "LHC_tot"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "Light_minus_harvesting_complex"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "Light-harvesting complex (protonated)"
+      },
+      "PSII_cross_section": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "staticAntII"
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "Light_minus_harvesting_complex"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 1
+                    },
+                    {
+                      "type": "Minus",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "staticAntI"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Minus",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "staticAntII"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "PSII\\_cross\\_section"
+      },
+      "keq_Plastoquinone_reduced": {
+        "fn": {
+          "type": "Exp",
+          "child": {
+            "type": "Divide",
+            "children": [
+              {
+                "type": "Add",
+                "children": [
+                  {
+                    "type": "Mul",
+                    "children": [
+                      {
+                        "type": "Num",
+                        "value": 2
+                      },
+                      {
+                        "type": "Name",
+                        "value": "E0_PQ"
+                      },
+                      {
+                        "type": "Name",
+                        "value": "F"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Minus",
+                    "children": [
+                      {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Num",
+                            "value": 2
+                          },
+                          {
+                            "type": "Name",
+                            "value": "E0_QA"
+                          },
+                          {
+                            "type": "Name",
+                            "value": "F"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Minus",
+                    "children": [
+                      {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Num",
+                            "value": 2
+                          },
+                          {
+                            "type": "Name",
+                            "value": "dG_pH"
+                          },
+                          {
+                            "type": "Name",
+                            "value": "pH"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "Name",
+                "value": "RT"
+              }
+            ]
+          }
+        },
+        "texName": "keq\\_Plastoquinone (reduced)"
+      },
+      "keq_atp_synthase": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Pi_mol"
+            },
+            {
+              "type": "Exp",
+              "child": {
+                "type": "Divide",
+                "children": [
+                  {
+                    "type": "Add",
+                    "children": [
+                      {
+                        "type": "Minus",
+                        "children": [
+                          {
+                            "type": "Name",
+                            "value": "DeltaG0_ATP"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Name",
+                            "value": "HPR"
+                          },
+                          {
+                            "type": "Name",
+                            "value": "dG_pH"
+                          },
+                          {
+                            "type": "Add",
+                            "children": [
+                              {
+                                "type": "Name",
+                                "value": "pH"
+                              },
+                              {
+                                "type": "Minus",
+                                "children": [
+                                  {
+                                    "type": "Name",
+                                    "value": "pH_lumen"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Name",
+                    "value": "RT"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "texName": "keq\\_atp\\_synthase"
+      },
+      "keq_b6f": {
+        "fn": {
+          "type": "Exp",
+          "child": {
+            "type": "Divide",
+            "children": [
+              {
+                "type": "Add",
+                "children": [
+                  {
+                    "type": "Mul",
+                    "children": [
+                      {
+                        "type": "Num",
+                        "value": 2
+                      },
+                      {
+                        "type": "Name",
+                        "value": "E0_PC"
+                      },
+                      {
+                        "type": "Name",
+                        "value": "F"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Mul",
+                    "children": [
+                      {
+                        "type": "Num",
+                        "value": 2
+                      },
+                      {
+                        "type": "Name",
+                        "value": "dG_pH"
+                      },
+                      {
+                        "type": "Name",
+                        "value": "pH_lumen"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Minus",
+                    "children": [
+                      {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Num",
+                            "value": 2
+                          },
+                          {
+                            "type": "Name",
+                            "value": "E0_PQ"
+                          },
+                          {
+                            "type": "Name",
+                            "value": "F"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Minus",
+                    "children": [
+                      {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Num",
+                            "value": 2
+                          },
+                          {
+                            "type": "Name",
+                            "value": "dG_pH"
+                          },
+                          {
+                            "type": "Add",
+                            "children": [
+                              {
+                                "type": "Name",
+                                "value": "pH"
+                              },
+                              {
+                                "type": "Minus",
+                                "children": [
+                                  {
+                                    "type": "Name",
+                                    "value": "pH_lumen"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "Name",
+                "value": "RT"
+              }
+            ]
+          }
+        },
+        "texName": "keq\\_b6f"
+      },
+      "keq_fnr": {
+        "fn": {
+          "type": "Exp",
+          "child": {
+            "type": "Divide",
+            "children": [
+              {
+                "type": "Add",
+                "children": [
+                  {
+                    "type": "Minus",
+                    "children": [
+                      {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Name",
+                            "value": "dG_pH"
+                          },
+                          {
+                            "type": "Name",
+                            "value": "pH"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Mul",
+                    "children": [
+                      {
+                        "type": "Num",
+                        "value": 2
+                      },
+                      {
+                        "type": "Name",
+                        "value": "E0_NADP"
+                      },
+                      {
+                        "type": "Name",
+                        "value": "F"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Minus",
+                    "children": [
+                      {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Num",
+                            "value": 2
+                          },
+                          {
+                            "type": "Name",
+                            "value": "E0_Fd"
+                          },
+                          {
+                            "type": "Name",
+                            "value": "F"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "Name",
+                "value": "RT"
+              }
+            ]
+          }
+        },
+        "texName": "keq\\_fnr"
+      },
+      "vmax_fnr": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "E0_fnr"
+            },
+            {
+              "type": "Name",
+              "value": "kcat_fnr"
+            }
+          ]
+        },
+        "texName": "vmax\\_fnr"
+      },
+      "keq_PCP700": {
+        "fn": {
+          "type": "Exp",
+          "child": {
+            "type": "Divide",
+            "children": [
+              {
+                "type": "Add",
+                "children": [
+                  {
+                    "type": "Mul",
+                    "children": [
+                      {
+                        "type": "Name",
+                        "value": "E0_P700"
+                      },
+                      {
+                        "type": "Name",
+                        "value": "F"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Minus",
+                    "children": [
+                      {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Name",
+                            "value": "E0_PC"
+                          },
+                          {
+                            "type": "Name",
+                            "value": "F"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "Name",
+                "value": "RT"
+              }
+            ]
+          }
+        },
+        "texName": "keq\\_PCP700"
+      },
+      "keq_ferredoxin_reductase": {
+        "fn": {
+          "type": "Exp",
+          "child": {
+            "type": "Divide",
+            "children": [
+              {
+                "type": "Add",
+                "children": [
+                  {
+                    "type": "Mul",
+                    "children": [
+                      {
+                        "type": "Name",
+                        "value": "E0_Fd"
+                      },
+                      {
+                        "type": "Name",
+                        "value": "F"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Minus",
+                    "children": [
+                      {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Name",
+                            "value": "E0_FA"
+                          },
+                          {
+                            "type": "Name",
+                            "value": "F"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "Name",
+                "value": "RT"
+              }
+            ]
+          }
+        },
+        "texName": "keq\\_ferredoxin\\_reductase"
+      },
+      "A1": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Name",
+              "value": "PSI_total"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 1
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 1
+                        },
+                        {
+                          "type": "Divide",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "Ferredoxine_reduced"
+                            },
+                            {
+                              "type": "Mul",
+                              "children": [
+                                {
+                                  "type": "Name",
+                                  "value": "Ferredoxine_oxidised"
+                                },
+                                {
+                                  "type": "Name",
+                                  "value": "keq_ferredoxin_reductase"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Divide",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "Plastocyanine_oxidised"
+                            },
+                            {
+                              "type": "Mul",
+                              "children": [
+                                {
+                                  "type": "Name",
+                                  "value": "Plastocyanine_reduced"
+                                },
+                                {
+                                  "type": "Name",
+                                  "value": "keq_PCP700"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Divide",
+                          "children": [
+                            {
+                              "type": "Mul",
+                              "children": [
+                                {
+                                  "type": "Name",
+                                  "value": "PPFD"
+                                },
+                                {
+                                  "type": "Name",
+                                  "value": "cPPFD"
+                                },
+                                {
+                                  "type": "Add",
+                                  "children": [
+                                    {
+                                      "type": "Num",
+                                      "value": 1
+                                    },
+                                    {
+                                      "type": "Minus",
+                                      "children": [
+                                        {
+                                          "type": "Name",
+                                          "value": "PSII_cross_section"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Mul",
+                              "children": [
+                                {
+                                  "type": "Name",
+                                  "value": "Plastocyanine_reduced"
+                                },
+                                {
+                                  "type": "Name",
+                                  "value": "kPCox"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Divide",
+                  "children": [
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "PPFD"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "cPPFD"
+                        },
+                        {
+                          "type": "Add",
+                          "children": [
+                            {
+                              "type": "Num",
+                              "value": 1
+                            },
+                            {
+                              "type": "Minus",
+                              "children": [
+                                {
+                                  "type": "Name",
+                                  "value": "PSII_cross_section"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "Ferredoxine_oxidised"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kFdred"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "A1"
+      },
+      "B0": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PSII_total"
+                },
+                {
+                  "type": "Name",
+                  "value": "Plastoquinone_oxidised"
+                },
+                {
+                  "type": "Name",
+                  "value": "kPQred"
+                },
+                {
+                  "type": "Name",
+                  "value": "keq_Plastoquinone_reduced"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kF"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH0"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "k2"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "k2"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH0"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Pow",
+                          "left": {
+                            "type": "Name",
+                            "value": "Q"
+                          },
+                          "right": {
+                            "type": "Num",
+                            "value": 2
+                          }
+                        },
+                        {
+                          "type": "Pow",
+                          "left": {
+                            "type": "Name",
+                            "value": "kH"
+                          },
+                          "right": {
+                            "type": "Num",
+                            "value": 2
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 2
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kF"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH0"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "Q"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k2"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 2
+                        },
+                        {
+                          "type": "Name",
+                          "value": "Q"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kF"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 2
+                        },
+                        {
+                          "type": "Name",
+                          "value": "Q"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH0"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kF"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH0"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kF"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH0"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "Q"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "PSII_cross_section"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Name",
+                            "value": "PPFD"
+                          },
+                          {
+                            "type": "Name",
+                            "value": "cPPFD"
+                          }
+                        ]
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "Q"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "B0"
+      },
+      "B1": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PPFD"
+                },
+                {
+                  "type": "Name",
+                  "value": "PSII_cross_section"
+                },
+                {
+                  "type": "Name",
+                  "value": "PSII_total"
+                },
+                {
+                  "type": "Name",
+                  "value": "Plastoquinone_oxidised"
+                },
+                {
+                  "type": "Name",
+                  "value": "cPPFD"
+                },
+                {
+                  "type": "Name",
+                  "value": "kPQred"
+                },
+                {
+                  "type": "Name",
+                  "value": "keq_Plastoquinone_reduced"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "Q"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kF"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH0"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kF"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH0"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "Q"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "PSII_cross_section"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Name",
+                            "value": "PPFD"
+                          },
+                          {
+                            "type": "Name",
+                            "value": "cPPFD"
+                          }
+                        ]
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "Q"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "B1"
+      },
+      "B2": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PSII_total"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "Plastoquinone_reduced"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kPQred"
+                        },
+                        {
+                          "type": "Pow",
+                          "left": {
+                            "type": "Name",
+                            "value": "kF"
+                          },
+                          "right": {
+                            "type": "Num",
+                            "value": 2
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "Plastoquinone_reduced"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kPQred"
+                        },
+                        {
+                          "type": "Pow",
+                          "left": {
+                            "type": "Name",
+                            "value": "kH0"
+                          },
+                          "right": {
+                            "type": "Num",
+                            "value": 2
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "Plastoquinone_reduced"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k2"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kF"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kPQred"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "Plastoquinone_reduced"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k2"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH0"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kPQred"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "Plastoquinone_reduced"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kPQred"
+                        },
+                        {
+                          "type": "Pow",
+                          "left": {
+                            "type": "Name",
+                            "value": "Q"
+                          },
+                          "right": {
+                            "type": "Num",
+                            "value": 2
+                          }
+                        },
+                        {
+                          "type": "Pow",
+                          "left": {
+                            "type": "Name",
+                            "value": "kH"
+                          },
+                          "right": {
+                            "type": "Num",
+                            "value": 2
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 2
+                        },
+                        {
+                          "type": "Name",
+                          "value": "Plastoquinone_reduced"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kF"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH0"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kPQred"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "Plastoquinone_reduced"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "Q"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k2"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kPQred"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 2
+                        },
+                        {
+                          "type": "Name",
+                          "value": "Plastoquinone_reduced"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "Q"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kF"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kPQred"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 2
+                        },
+                        {
+                          "type": "Name",
+                          "value": "Plastoquinone_reduced"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "Q"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH0"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kPQred"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "PPFD"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "PSII_cross_section"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "cPPFD"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k2"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kF"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "keq_Plastoquinone_reduced"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "PPFD"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "PSII_cross_section"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "cPPFD"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k2"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH0"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "keq_Plastoquinone_reduced"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "PPFD"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "PSII_cross_section"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "Q"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "cPPFD"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k2"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "keq_Plastoquinone_reduced"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kF"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH0"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kF"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH0"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "Q"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "PSII_cross_section"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Name",
+                            "value": "PPFD"
+                          },
+                          {
+                            "type": "Name",
+                            "value": "cPPFD"
+                          }
+                        ]
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "Q"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "B2"
+      },
+      "B3": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PPFD"
+                },
+                {
+                  "type": "Name",
+                  "value": "PSII_cross_section"
+                },
+                {
+                  "type": "Name",
+                  "value": "PSII_total"
+                },
+                {
+                  "type": "Name",
+                  "value": "cPPFD"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "Plastoquinone_reduced"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k2"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kPQred"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "Plastoquinone_reduced"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kF"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kPQred"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "Plastoquinone_reduced"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH0"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kPQred"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "Plastoquinone_reduced"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "Q"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kH"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "kPQred"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "PPFD"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "PSII_cross_section"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "cPPFD"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k2"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "keq_Plastoquinone_reduced"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kF"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH0"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kF"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH0"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "Q"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "PSII_cross_section"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Mul",
+                        "children": [
+                          {
+                            "type": "Name",
+                            "value": "PPFD"
+                          },
+                          {
+                            "type": "Name",
+                            "value": "cPPFD"
+                          }
+                        ]
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "Q"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "Pow",
+                      "left": {
+                        "type": "Name",
+                        "value": "kH"
+                      },
+                      "right": {
+                        "type": "Num",
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 2
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Plastoquinone_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "cPPFD"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kPQred"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "keq_Plastoquinone_reduced"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "B3"
+      },
+      "PQ_red_div_tot": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Plastoquinone_reduced"
+            },
+            {
+              "type": "Name",
+              "value": "PQ_tot"
+            }
+          ]
+        },
+        "texName": "PQ\\_red/tot"
+      },
+      "Fd_red_div_tot": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Ferredoxine_reduced"
+            },
+            {
+              "type": "Name",
+              "value": "Fd_star"
+            }
+          ]
+        },
+        "texName": "Fd\\_red/tot"
+      },
+      "PC_red_div_tot": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Plastocyanine_reduced"
+            },
+            {
+              "type": "Name",
+              "value": "PC_tot"
+            }
+          ]
+        },
+        "texName": "PC\\_red/tot"
+      },
+      "NADPH_div_tot": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Name",
+              "value": "NADPH"
+            },
+            {
+              "type": "Name",
+              "value": "NADP_star"
+            }
+          ]
+        },
+        "texName": "NADPH/tot"
+      },
+      "ATP_div_tot": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Name",
+              "value": "ATP"
+            },
+            {
+              "type": "Name",
+              "value": "A_star_P"
+            }
+          ]
+        },
+        "texName": "ATP/tot"
+      },
+      "Fluo": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "B0"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    }
+                  ]
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "B2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSII_cross_section"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    }
+                  ]
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kF"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kH0"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "Fluo"
+      }
+    },
+    "readouts": {}
+  }
+}

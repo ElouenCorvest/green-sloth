@@ -26,7 +26,7 @@ function slugOf(path: string): string | undefined {
 export const load: PageLoad = async ({ params }) => {
   const slug = params.slug;
   const meta = models[slug];
-  // models only contains slugs with BOTH meta.ts and model.ts.
+  // models only contains slugs with a meta.ts and a loadable model file.
   if (!meta) error(404, `Model "${slug}" not found`);
 
   let schemeUrl: string | null = null;

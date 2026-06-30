@@ -1,0 +1,1234 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Computational-Biology-Aachen/mxl-schemas/main/v1/kinetic-model.schema.json",
+  "spec_version": "1.0",
+  "kind": "kinetic",
+  "model_id": "fuente2024",
+  "model": {
+    "variables": {
+      "Q_active": {
+        "value": {
+          "type": "Num",
+          "value": 1.6044277821745498e-23
+        },
+        "texName": "Q\\_active"
+      },
+      "PQ": {
+        "value": {
+          "type": "Num",
+          "value": 3.537090541057567
+        },
+        "texName": "PQ"
+      },
+      "PSI_ox": {
+        "value": {
+          "type": "Num",
+          "value": 0.197310072778891
+        },
+        "texName": "PSI\\_ox"
+      },
+      "H_lumen": {
+        "value": {
+          "type": "Num",
+          "value": 0.4120700665522831
+        },
+        "texName": "H\\_lumen"
+      },
+      "ATP_st": {
+        "value": {
+          "type": "Num",
+          "value": 144.95412072145785
+        },
+        "texName": "ATP\\_st"
+      }
+    },
+    "parameters": {
+      "stoic_PSII": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "stoic\\_PSII"
+      },
+      "stoic_PSI": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "stoic\\_PSI"
+      },
+      "PQ_tot": {
+        "value": {
+          "type": "Num",
+          "value": 7
+        },
+        "texName": "PQ\\_tot"
+      },
+      "H_stroma": {
+        "value": {
+          "type": "Num",
+          "value": 0.015848931924611134
+        },
+        "texName": "H\\_stroma"
+      },
+      "AP_tot": {
+        "value": {
+          "type": "Num",
+          "value": 1000
+        },
+        "texName": "AP\\_tot"
+      },
+      "V_lumen": {
+        "value": {
+          "type": "Num",
+          "value": 2.62e-21
+        },
+        "texName": "V\\_lumen"
+      },
+      "V_stroma": {
+        "value": {
+          "type": "Num",
+          "value": 2.09e-20
+        },
+        "texName": "V\\_stroma"
+      },
+      "sigma_PSI_0": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "sigma\\_PSI\\_0"
+      },
+      "k1p": {
+        "value": {
+          "type": "Num",
+          "value": 25000
+        },
+        "texName": "k1p"
+      },
+      "k1m": {
+        "value": {
+          "type": "Num",
+          "value": 2500
+        },
+        "texName": "k1m"
+      },
+      "k2p": {
+        "value": {
+          "type": "Num",
+          "value": 100
+        },
+        "texName": "k2p"
+      },
+      "k2m": {
+        "value": {
+          "type": "Num",
+          "value": 10
+        },
+        "texName": "k2m"
+      },
+      "k3": {
+        "value": {
+          "type": "Num",
+          "value": 0.05
+        },
+        "texName": "k3"
+      },
+      "k4": {
+        "value": {
+          "type": "Num",
+          "value": 0.004
+        },
+        "texName": "k4"
+      },
+      "k5": {
+        "value": {
+          "type": "Num",
+          "value": 100
+        },
+        "texName": "k5"
+      },
+      "k6": {
+        "value": {
+          "type": "Num",
+          "value": 10
+        },
+        "texName": "k6"
+      },
+      "k7": {
+        "value": {
+          "type": "Num",
+          "value": 500
+        },
+        "texName": "k7"
+      },
+      "k_X": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "k\\_X"
+      },
+      "L_PSI": {
+        "value": {
+          "type": "Num",
+          "value": 10000
+        },
+        "texName": "L\\_PSI"
+      },
+      "bH": {
+        "value": {
+          "type": "Num",
+          "value": 0.01
+        },
+        "texName": "bH"
+      },
+      "NPQ_max": {
+        "value": {
+          "type": "Num",
+          "value": 0.6
+        },
+        "texName": "NPQ\\_max"
+      },
+      "cEqP": {
+        "value": {
+          "type": "Num",
+          "value": 4.3e-8
+        },
+        "texName": "cEqP"
+      },
+      "keq_NPQ": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "keq\\_NPQ"
+      },
+      "n_NPQ": {
+        "value": {
+          "type": "Num",
+          "value": 5.3
+        },
+        "texName": "n\\_NPQ"
+      },
+      "N_A": {
+        "value": {
+          "type": "Num",
+          "value": 602214076000000000
+        },
+        "texName": "N\\_A"
+      },
+      "PPFD": {
+        "value": {
+          "type": "Num",
+          "value": 50
+        },
+        "texName": "PPFD"
+      },
+      "PPFD_add": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "PPFD\\_add"
+      },
+      "f": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "f"
+      },
+      "PSI_total": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "PSI\\_total"
+      },
+      "Fluo_0": {
+        "value": {
+          "type": "Num",
+          "value": 0.25
+        },
+        "texName": "Fluo\\_0"
+      },
+      "Q_total": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "Q\\_total"
+      }
+    },
+    "reactions": {
+      "v_PSII_O2": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "osc_light"
+            },
+            {
+              "type": "Name",
+              "value": "sigma_PSII"
+            },
+            {
+              "type": "Name",
+              "value": "stoic_PSII"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 1
+                },
+                {
+                  "type": "Minus",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "RCII_closed"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "H_lumen": {
+            "type": "Divide",
+            "children": [
+              {
+                "type": "Name",
+                "value": "bH"
+              },
+              {
+                "type": "Mul",
+                "children": [
+                  {
+                    "type": "Name",
+                    "value": "N_A"
+                  },
+                  {
+                    "type": "Name",
+                    "value": "V_lumen"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "texName": "v\\_PSII\\_O2"
+      },
+      "v_PSI": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "L_PSI"
+                },
+                {
+                  "type": "Name",
+                  "value": "osc_light"
+                },
+                {
+                  "type": "Name",
+                  "value": "sigma_PSI_0"
+                },
+                {
+                  "type": "Name",
+                  "value": "stoic_PSI"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "stoic_PSI"
+                    },
+                    {
+                      "type": "Minus",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "PSI_ox"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "L_PSI"
+                },
+                {
+                  "type": "Name",
+                  "value": "osc_light"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "PSI_ox": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v\\_PSI"
+      },
+      "v_PSII_PQ": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PQ"
+                },
+                {
+                  "type": "Name",
+                  "value": "RCII_closed"
+                },
+                {
+                  "type": "Name",
+                  "value": "k1p"
+                }
+              ]
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PQH_2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "RCII_open"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k1m"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "PQ": {
+            "type": "Num",
+            "value": -0.5
+          }
+        },
+        "texName": "v\\_PSII\\_PQ"
+      },
+      "v_PQH2_PSI": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PQH_2"
+                },
+                {
+                  "type": "Name",
+                  "value": "PSI_ox"
+                },
+                {
+                  "type": "Name",
+                  "value": "k2p"
+                }
+              ]
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PQ"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "PSI_red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k2m"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "PQ": {
+            "type": "Num",
+            "value": 0.5
+          },
+          "PSI_ox": {
+            "type": "Num",
+            "value": -1
+          },
+          "H_lumen": {
+            "type": "Divide",
+            "children": [
+              {
+                "type": "Name",
+                "value": "bH"
+              },
+              {
+                "type": "Mul",
+                "children": [
+                  {
+                    "type": "Name",
+                    "value": "N_A"
+                  },
+                  {
+                    "type": "Name",
+                    "value": "V_lumen"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "texName": "v\\_PQH2\\_PSI"
+      },
+      "v3": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k3"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 1
+                    },
+                    {
+                      "type": "Minus",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "Q_active"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 1
+                },
+                {
+                  "type": "Pow",
+                  "left": {
+                    "type": "Divide",
+                    "children": [
+                      {
+                        "type": "Name",
+                        "value": "keq_NPQ"
+                      },
+                      {
+                        "type": "Name",
+                        "value": "H_lumen"
+                      }
+                    ]
+                  },
+                  "right": {
+                    "type": "Name",
+                    "value": "n_NPQ"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Q_active": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v3"
+      },
+      "v4": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Q_active"
+            },
+            {
+              "type": "Name",
+              "value": "k4"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Q_active": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "v4"
+      },
+      "v_ATPsynth": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "k5"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "ADP_st"
+                },
+                {
+                  "type": "Minus",
+                  "children": [
+                    {
+                      "type": "Divide",
+                      "children": [
+                        {
+                          "type": "Mul",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "ATP_st"
+                            },
+                            {
+                              "type": "Pow",
+                              "left": {
+                                "type": "Divide",
+                                "children": [
+                                  {
+                                    "type": "Name",
+                                    "value": "H_stroma"
+                                  },
+                                  {
+                                    "type": "Name",
+                                    "value": "H_lumen"
+                                  }
+                                ]
+                              },
+                              "right": {
+                                "type": "Num",
+                                "value": 4.666666666666667
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Name",
+                          "value": "cEqP"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "ATP_st": {
+            "type": "Num",
+            "value": 1
+          },
+          "H_lumen": {
+            "type": "Minus",
+            "children": [
+              {
+                "type": "Divide",
+                "children": [
+                  {
+                    "type": "Mul",
+                    "children": [
+                      {
+                        "type": "Num",
+                        "value": 4.666666666666667
+                      },
+                      {
+                        "type": "Name",
+                        "value": "V_stroma"
+                      },
+                      {
+                        "type": "Name",
+                        "value": "bH"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Name",
+                    "value": "V_lumen"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "texName": "v\\_ATPsynth"
+      },
+      "v_ATPcons": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "ATP_st"
+            },
+            {
+              "type": "Name",
+              "value": "k6"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "ATP_st": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "v\\_ATPcons"
+      },
+      "v_Leak": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "k7"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "H_lumen"
+                },
+                {
+                  "type": "Minus",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "H_stroma"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "H_lumen": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "v\\_Leak"
+      },
+      "v_PQ": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "PQH_2"
+            },
+            {
+              "type": "Name",
+              "value": "k_X"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "PQ": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v\\_PQ"
+      }
+    },
+    "derived": {
+      "Q_inactive": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Q_total"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "Q_active"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "Q\\_inactive"
+      },
+      "PQH_2": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "PQ_tot"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PQ"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "PQH\\_2"
+      },
+      "PSI_red": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "PSI_total"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PSI_ox"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "PSI\\_red"
+      },
+      "ADP_st": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "AP_tot"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "ATP_st"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "ADP\\_st"
+      },
+      "osc_light": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "PPFD"
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PPFD_add"
+                },
+                {
+                  "type": "Cos",
+                  "child": {
+                    "type": "Mul",
+                    "children": [
+                      {
+                        "type": "Num",
+                        "value": 2
+                      },
+                      {
+                        "type": "Num",
+                        "value": 3.141592653589793
+                      },
+                      {
+                        "type": "Name",
+                        "value": "f"
+                      },
+                      {
+                        "type": "Name",
+                        "value": "time"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "osc\\_light"
+      },
+      "sigma_PSII": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Num",
+              "value": 1
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "NPQ_max"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Q_active"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "sigma\\_PSII"
+      },
+      "RCII_closed": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Num",
+              "value": 1
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 1
+                },
+                {
+                  "type": "Divide",
+                  "children": [
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "PQ"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k1p"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Mul",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "PQH_2"
+                            },
+                            {
+                              "type": "Name",
+                              "value": "k1m"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Mul",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "osc_light"
+                            },
+                            {
+                              "type": "Name",
+                              "value": "sigma_PSII"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "RCII\\_closed"
+      },
+      "RCII_open": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PQ"
+                },
+                {
+                  "type": "Name",
+                  "value": "k1p"
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "sigma_PSII"
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PQ"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k1p"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PQH_2"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k1m"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "RCII\\_open"
+      },
+      "Fluo": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "sigma_PSII"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "Fluo_0"
+                },
+                {
+                  "type": "Name",
+                  "value": "RCII_closed"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "Fluo"
+      },
+      "NPQ": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "NPQ_max"
+                },
+                {
+                  "type": "Name",
+                  "value": "Q_active"
+                }
+              ]
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 1
+                },
+                {
+                  "type": "Minus",
+                  "children": [
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "NPQ_max"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "Q_active"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "NPQ"
+      },
+      "O2": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Num",
+              "value": 0.25
+            },
+            {
+              "type": "Name",
+              "value": "PSI_total"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "PQ"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "RCII_closed"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "k1p"
+                    }
+                  ]
+                },
+                {
+                  "type": "Minus",
+                  "children": [
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "PQH_2"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k1m"
+                        },
+                        {
+                          "type": "Add",
+                          "children": [
+                            {
+                              "type": "Num",
+                              "value": 1
+                            },
+                            {
+                              "type": "Minus",
+                              "children": [
+                                {
+                                  "type": "Name",
+                                  "value": "RCII_closed"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "O2"
+      }
+    },
+    "readouts": {}
+  }
+}

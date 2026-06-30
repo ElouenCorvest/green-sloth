@@ -1,0 +1,1436 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Computational-Biology-Aachen/mxl-schemas/main/v1/kinetic-model.schema.json",
+  "spec_version": "1.0",
+  "kind": "kinetic",
+  "model_id": "lazar1997",
+  "model": {
+    "variables": {
+      "y1": {
+        "value": {
+          "type": "Num",
+          "value": 0.66
+        },
+        "texName": "y1"
+      },
+      "y2": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "y2"
+      },
+      "y3": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "y3"
+      },
+      "y4": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "y4"
+      },
+      "y5": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "y5"
+      },
+      "y6": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "y6"
+      },
+      "y7": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "y7"
+      },
+      "y8": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "y8"
+      },
+      "y9": {
+        "value": {
+          "type": "Num",
+          "value": 7
+        },
+        "texName": "y9"
+      },
+      "y10": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "y10"
+      },
+      "y11": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "y11"
+      },
+      "y12": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "y12"
+      },
+      "y13": {
+        "value": {
+          "type": "Num",
+          "value": 0.22
+        },
+        "texName": "y13"
+      },
+      "y14": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "y14"
+      },
+      "y15": {
+        "value": {
+          "type": "Num",
+          "value": 0.12
+        },
+        "texName": "y15"
+      }
+    },
+    "parameters": {
+      "k1": {
+        "value": {
+          "type": "Num",
+          "value": 1666
+        },
+        "texName": "k1"
+      },
+      "k2": {
+        "value": {
+          "type": "Num",
+          "value": 1250
+        },
+        "texName": "k2"
+      },
+      "k3": {
+        "value": {
+          "type": "Num",
+          "value": 500
+        },
+        "texName": "k3"
+      },
+      "k4": {
+        "value": {
+          "type": "Num",
+          "value": 20000
+        },
+        "texName": "k4"
+      },
+      "k5": {
+        "value": {
+          "type": "Num",
+          "value": 1666
+        },
+        "texName": "k5"
+      },
+      "k6": {
+        "value": {
+          "type": "Num",
+          "value": 3500
+        },
+        "texName": "k6"
+      },
+      "k7": {
+        "value": {
+          "type": "Num",
+          "value": 175
+        },
+        "texName": "k7"
+      },
+      "k8": {
+        "value": {
+          "type": "Num",
+          "value": 1750
+        },
+        "texName": "k8"
+      },
+      "k9": {
+        "value": {
+          "type": "Num",
+          "value": 35
+        },
+        "texName": "k9"
+      },
+      "k10": {
+        "value": {
+          "type": "Num",
+          "value": 5000
+        },
+        "texName": "k10"
+      },
+      "k11": {
+        "value": {
+          "type": "Num",
+          "value": 5000
+        },
+        "texName": "k11"
+      },
+      "k12": {
+        "value": {
+          "type": "Num",
+          "value": 150
+        },
+        "texName": "k12"
+      },
+      "k13": {
+        "value": {
+          "type": "Num",
+          "value": 100
+        },
+        "texName": "k13"
+      },
+      "k14": {
+        "value": {
+          "type": "Num",
+          "value": 150
+        },
+        "texName": "k14"
+      },
+      "k15": {
+        "value": {
+          "type": "Num",
+          "value": 100
+        },
+        "texName": "k15"
+      },
+      "k16": {
+        "value": {
+          "type": "Num",
+          "value": 150
+        },
+        "texName": "k16"
+      },
+      "k17": {
+        "value": {
+          "type": "Num",
+          "value": 100
+        },
+        "texName": "k17"
+      },
+      "k18": {
+        "value": {
+          "type": "Num",
+          "value": 150
+        },
+        "texName": "k18"
+      },
+      "k19": {
+        "value": {
+          "type": "Num",
+          "value": 100
+        },
+        "texName": "k19"
+      },
+      "k20": {
+        "value": {
+          "type": "Num",
+          "value": 150
+        },
+        "texName": "k20"
+      },
+      "k21": {
+        "value": {
+          "type": "Num",
+          "value": 100
+        },
+        "texName": "k21"
+      },
+      "k22": {
+        "value": {
+          "type": "Num",
+          "value": 150
+        },
+        "texName": "k22"
+      },
+      "k23": {
+        "value": {
+          "type": "Num",
+          "value": 100
+        },
+        "texName": "k23"
+      },
+      "k24": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "k24"
+      },
+      "k25": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "k25"
+      },
+      "k6n": {
+        "value": {
+          "type": "Num",
+          "value": 3500
+        },
+        "texName": "k6n"
+      },
+      "p": {
+        "value": {
+          "type": "Num",
+          "value": 0.55
+        },
+        "texName": "p"
+      }
+    },
+    "reactions": {
+      "v1": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k10"
+                },
+                {
+                  "type": "Name",
+                  "value": "y3"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "y1"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Minus",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "k1"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Minus",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "k17"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k16"
+                },
+                {
+                  "type": "Name",
+                  "value": "y11"
+                },
+                {
+                  "type": "Name",
+                  "value": "y9"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "y1": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v1"
+      },
+      "v2": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k1"
+                },
+                {
+                  "type": "Name",
+                  "value": "y1"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k11"
+                },
+                {
+                  "type": "Name",
+                  "value": "y4"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k7"
+                },
+                {
+                  "type": "Name",
+                  "value": "y3"
+                }
+              ]
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "y2"
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "k23"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k6"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k22"
+                },
+                {
+                  "type": "Name",
+                  "value": "y12"
+                },
+                {
+                  "type": "Name",
+                  "value": "y9"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "y2": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v2"
+      },
+      "v3": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k6"
+                },
+                {
+                  "type": "Name",
+                  "value": "y2"
+                }
+              ]
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "y3"
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "k10"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k2"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k7"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "y3": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v3"
+      },
+      "v4": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k2"
+                },
+                {
+                  "type": "Name",
+                  "value": "y3"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k9"
+                },
+                {
+                  "type": "Name",
+                  "value": "y5"
+                }
+              ]
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "y4"
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "k11"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k8"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "y4": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v4"
+      },
+      "v5": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k13"
+                },
+                {
+                  "type": "Name",
+                  "value": "y7"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k8"
+                },
+                {
+                  "type": "Name",
+                  "value": "y4"
+                }
+              ]
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "y5"
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "k12"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k3"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k9"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "y5": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v5"
+      },
+      "v6": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k19"
+                },
+                {
+                  "type": "Name",
+                  "value": "y8"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k3"
+                },
+                {
+                  "type": "Name",
+                  "value": "y5"
+                }
+              ]
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k18"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "y6"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "y6": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v6"
+      },
+      "v7": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k12"
+                },
+                {
+                  "type": "Name",
+                  "value": "y5"
+                }
+              ]
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "y7"
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "k13"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k14"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k4"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k15"
+                },
+                {
+                  "type": "Name",
+                  "value": "y10"
+                },
+                {
+                  "type": "Name",
+                  "value": "y11"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "y7": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v7"
+      },
+      "v8": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k18"
+                },
+                {
+                  "type": "Name",
+                  "value": "y6"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k4"
+                },
+                {
+                  "type": "Name",
+                  "value": "y7"
+                }
+              ]
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "y8"
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "k19"
+                        },
+                        {
+                          "type": "Name",
+                          "value": "k20"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k21"
+                },
+                {
+                  "type": "Name",
+                  "value": "y10"
+                },
+                {
+                  "type": "Name",
+                  "value": "y12"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "y8": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v8"
+      },
+      "v9": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k17"
+                },
+                {
+                  "type": "Name",
+                  "value": "y1"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k23"
+                },
+                {
+                  "type": "Name",
+                  "value": "y2"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k24"
+                },
+                {
+                  "type": "Name",
+                  "value": "y10"
+                }
+              ]
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "y9"
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "k25"
+                        },
+                        {
+                          "type": "Mul",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "k16"
+                            },
+                            {
+                              "type": "Name",
+                              "value": "y11"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Mul",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "k22"
+                            },
+                            {
+                              "type": "Name",
+                              "value": "y12"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "y9": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v9"
+      },
+      "v10": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k14"
+                },
+                {
+                  "type": "Name",
+                  "value": "y7"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k20"
+                },
+                {
+                  "type": "Name",
+                  "value": "y8"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k25"
+                },
+                {
+                  "type": "Name",
+                  "value": "y9"
+                }
+              ]
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "y10"
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Name",
+                          "value": "k24"
+                        },
+                        {
+                          "type": "Mul",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "k15"
+                            },
+                            {
+                              "type": "Name",
+                              "value": "y11"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Mul",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "k21"
+                            },
+                            {
+                              "type": "Name",
+                              "value": "y12"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "y10": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v10"
+      },
+      "v11": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k14"
+                },
+                {
+                  "type": "Name",
+                  "value": "y7"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k17"
+                },
+                {
+                  "type": "Name",
+                  "value": "y1"
+                }
+              ]
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "y11"
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Mul",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "k15"
+                            },
+                            {
+                              "type": "Name",
+                              "value": "y10"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Mul",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "k16"
+                            },
+                            {
+                              "type": "Name",
+                              "value": "y9"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "y11": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v11"
+      },
+      "v12": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k20"
+                },
+                {
+                  "type": "Name",
+                  "value": "y8"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k23"
+                },
+                {
+                  "type": "Name",
+                  "value": "y2"
+                }
+              ]
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "y12"
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Mul",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "k21"
+                            },
+                            {
+                              "type": "Name",
+                              "value": "y10"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Mul",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "k22"
+                            },
+                            {
+                              "type": "Name",
+                              "value": "y9"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "y12": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v12"
+      },
+      "v13": {
+        "fn": {
+          "type": "Minus",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "k6n"
+                },
+                {
+                  "type": "Name",
+                  "value": "y13"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "y13": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v13"
+      },
+      "v14": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "k6n"
+            },
+            {
+              "type": "Name",
+              "value": "y13"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "y14": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v14"
+      },
+      "v15": {
+        "fn": {
+          "type": "Num",
+          "value": 0
+        },
+        "stoichiometry": {
+          "y15": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v15"
+      }
+    },
+    "derived": {
+      "eprime": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "y12"
+            },
+            {
+              "type": "Name",
+              "value": "y14"
+            },
+            {
+              "type": "Name",
+              "value": "y2"
+            },
+            {
+              "type": "Name",
+              "value": "y4"
+            },
+            {
+              "type": "Name",
+              "value": "y6"
+            },
+            {
+              "type": "Name",
+              "value": "y8"
+            }
+          ]
+        },
+        "texName": "eprime"
+      },
+      "F": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "y15"
+            },
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "eprime"
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 1
+                        },
+                        {
+                          "type": "Minus",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "p"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 1
+                    },
+                    {
+                      "type": "Minus",
+                      "children": [
+                        {
+                          "type": "Mul",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "eprime"
+                            },
+                            {
+                              "type": "Name",
+                              "value": "p"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "F"
+      }
+    },
+    "readouts": {}
+  }
+}

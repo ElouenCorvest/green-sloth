@@ -3,6 +3,7 @@
   import { replaceState } from "$app/navigation";
   import { base } from "$app/paths";
   import { page } from "$app/state";
+  import { buildModel } from "$lib/loadModel";
   import { modelNames, models } from "$lib/models";
   import {
     Bold,
@@ -13,20 +14,7 @@
     Section,
     SectionHeader,
   } from "@computational-biology-aachen/design";
-  import type { KineticModelBuilder } from "@computational-biology-aachen/mxlweb-core";
   import { onMount } from "svelte";
-
-  // Eager glob so both models can be built on the client when selected.
-  const modelModules = import.meta.glob("../../lib/models/*/model.ts", {
-    eager: true,
-  }) as Record<string, { initModel: () => KineticModelBuilder }>;
-
-  function initFor(slug: string): KineticModelBuilder | null {
-    const key = Object.keys(modelModules).find(
-      (p) => p.match(/\/models\/([^/]+)\//)?.[1] === slug,
-    );
-    return key ? modelModules[key].initModel() : null;
-  }
 
   function validSlug(slug: string | null, fallback: string): string {
     return slug && modelNames.includes(slug) ? slug : fallback;
@@ -51,8 +39,8 @@
     if (url.href !== page.url.href) replaceState(url, {});
   });
 
-  const modelA = $derived(initFor(slugA));
-  const modelB = $derived(initFor(slugB));
+  const modelA = $derived(buildModel(slugA));
+  const modelB = $derived(buildModel(slugB));
 
   type Bucket = { aOnly: string[]; shared: string[]; bOnly: string[] };
 

@@ -1,0 +1,1726 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Computational-Biology-Aachen/mxl-schemas/main/v1/kinetic-model.schema.json",
+  "spec_version": "1.0",
+  "kind": "kinetic",
+  "model_id": "hahn1987",
+  "model": {
+    "variables": {
+      "RuBP": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "RuBP"
+      },
+      "PGA": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "PGA"
+      },
+      "ADP": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "ADP"
+      },
+      "Pi": {
+        "value": {
+          "type": "Num",
+          "value": 10
+        },
+        "texName": "Pi"
+      },
+      "TP": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "TP"
+      },
+      "HP": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "HP"
+      },
+      "GG": {
+        "value": {
+          "type": "Num",
+          "value": 100
+        },
+        "texName": "GG"
+      },
+      "Pio": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "Pio"
+      },
+      "TPo": {
+        "value": {
+          "type": "Num",
+          "value": 0.1
+        },
+        "texName": "TPo"
+      },
+      "HPo": {
+        "value": {
+          "type": "Num",
+          "value": 0.1
+        },
+        "texName": "HPo"
+      },
+      "UDP": {
+        "value": {
+          "type": "Num",
+          "value": 10
+        },
+        "texName": "UDP"
+      },
+      "GF": {
+        "value": {
+          "type": "Num",
+          "value": 77.3
+        },
+        "texName": "GF"
+      },
+      "GFV": {
+        "value": {
+          "type": "Num",
+          "value": 77.3
+        },
+        "texName": "GFV"
+      },
+      "TPGA": {
+        "value": {
+          "type": "Num",
+          "value": 0.1
+        },
+        "texName": "TPGA"
+      },
+      "E4P": {
+        "value": {
+          "type": "Num",
+          "value": 0.1
+        },
+        "texName": "E4P"
+      },
+      "S7P": {
+        "value": {
+          "type": "Num",
+          "value": 0.1
+        },
+        "texName": "S7P"
+      },
+      "Ru5P": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "Ru5P"
+      },
+      "PGl": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "PGl"
+      },
+      "Gl": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "Gl"
+      },
+      "Gx": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "Gx"
+      },
+      "Sn": {
+        "value": {
+          "type": "Num",
+          "value": 10
+        },
+        "texName": "Sn"
+      },
+      "Gn": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "Gn"
+      },
+      "GA": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "GA"
+      },
+      "GmA": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "GmA"
+      },
+      "Glm": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "Glm"
+      },
+      "OxA": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "OxA"
+      },
+      "NH3": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "NH3"
+      },
+      "CO2": {
+        "value": {
+          "type": "Num",
+          "value": 0.33
+        },
+        "texName": "CO2",
+        "slider": {
+          "min": "0.1",
+          "max": "1.0",
+          "step": "0.01"
+        }
+      },
+      "O2": {
+        "value": {
+          "type": "Num",
+          "value": 0.245
+        },
+        "texName": "O2"
+      },
+      "Ci": {
+        "value": {
+          "type": "Num",
+          "value": 0.4
+        },
+        "texName": "Ci"
+      },
+      "Oi": {
+        "value": {
+          "type": "Num",
+          "value": 101
+        },
+        "texName": "Oi"
+      },
+      "AP_tot": {
+        "value": {
+          "type": "Num",
+          "value": 11
+        },
+        "texName": "AP\\_tot"
+      },
+      "UP_tot": {
+        "value": {
+          "type": "Num",
+          "value": 20
+        },
+        "texName": "UP\\_tot"
+      }
+    },
+    "parameters": {
+      "k1": {
+        "value": {
+          "type": "Num",
+          "value": 0.344
+        },
+        "texName": "k1"
+      },
+      "k2": {
+        "value": {
+          "type": "Num",
+          "value": 0.046
+        },
+        "texName": "k2"
+      },
+      "k3": {
+        "value": {
+          "type": "Num",
+          "value": 0.0261
+        },
+        "texName": "k3"
+      },
+      "k4": {
+        "value": {
+          "type": "Num",
+          "value": 0.0455
+        },
+        "texName": "k4"
+      },
+      "k5": {
+        "value": {
+          "type": "Num",
+          "value": 0.0455
+        },
+        "texName": "k5"
+      },
+      "k6": {
+        "value": {
+          "type": "Num",
+          "value": 0.455
+        },
+        "texName": "k6"
+      },
+      "k7": {
+        "value": {
+          "type": "Num",
+          "value": 0.455
+        },
+        "texName": "k7"
+      },
+      "k8": {
+        "value": {
+          "type": "Num",
+          "value": 0.909
+        },
+        "texName": "k8"
+      },
+      "k9": {
+        "value": {
+          "type": "Num",
+          "value": 0.0136
+        },
+        "texName": "k9"
+      },
+      "k10": {
+        "value": {
+          "type": "Num",
+          "value": 0.004
+        },
+        "texName": "k10"
+      },
+      "k11": {
+        "value": {
+          "type": "Num",
+          "value": 0.00004
+        },
+        "texName": "k11"
+      },
+      "k12": {
+        "value": {
+          "type": "Num",
+          "value": 0.0341
+        },
+        "texName": "k12"
+      },
+      "k13": {
+        "value": {
+          "type": "Num",
+          "value": 1.7
+        },
+        "texName": "k13"
+      },
+      "k14": {
+        "value": {
+          "type": "Num",
+          "value": 0.000852
+        },
+        "texName": "k14"
+      },
+      "k15": {
+        "value": {
+          "type": "Num",
+          "value": 0.00852
+        },
+        "texName": "k15"
+      },
+      "k16": {
+        "value": {
+          "type": "Num",
+          "value": 0.0928
+        },
+        "texName": "k16"
+      },
+      "k17": {
+        "value": {
+          "type": "Num",
+          "value": 0.0227
+        },
+        "texName": "k17"
+      },
+      "k18": {
+        "value": {
+          "type": "Num",
+          "value": 0.0467
+        },
+        "texName": "k18"
+      },
+      "k19": {
+        "value": {
+          "type": "Num",
+          "value": 0.00114
+        },
+        "texName": "k19"
+      },
+      "k20": {
+        "value": {
+          "type": "Num",
+          "value": 0.0114
+        },
+        "texName": "k20"
+      },
+      "k21": {
+        "value": {
+          "type": "Num",
+          "value": 0.00114
+        },
+        "texName": "k21"
+      },
+      "k22": {
+        "value": {
+          "type": "Num",
+          "value": 0.00114
+        },
+        "texName": "k22"
+      },
+      "k23": {
+        "value": {
+          "type": "Num",
+          "value": 0.0114
+        },
+        "texName": "k23"
+      },
+      "k24": {
+        "value": {
+          "type": "Num",
+          "value": 0.0114
+        },
+        "texName": "k24"
+      },
+      "kc1": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "kc1"
+      },
+      "kc2": {
+        "value": {
+          "type": "Num",
+          "value": 0.933
+        },
+        "texName": "kc2"
+      },
+      "rd": {
+        "value": {
+          "type": "Num",
+          "value": 0.000011
+        },
+        "texName": "rd"
+      },
+      "ko1": {
+        "value": {
+          "type": "Num",
+          "value": 0.01
+        },
+        "texName": "ko1"
+      },
+      "ko2": {
+        "value": {
+          "type": "Num",
+          "value": 4.31
+        },
+        "texName": "ko2"
+      },
+      "phic": {
+        "value": {
+          "type": "Num",
+          "value": 1.84
+        },
+        "texName": "phic"
+      },
+      "phio": {
+        "value": {
+          "type": "Num",
+          "value": 0.0453
+        },
+        "texName": "phio"
+      },
+      "phis": {
+        "value": {
+          "type": "Num",
+          "value": 0.0001
+        },
+        "texName": "phis"
+      },
+      "D": {
+        "value": {
+          "type": "Num",
+          "value": 0.0001
+        },
+        "texName": "D"
+      },
+      "E": {
+        "value": {
+          "type": "Num",
+          "value": 0.5
+        },
+        "texName": "E"
+      },
+      "Oa": {
+        "value": {
+          "type": "Num",
+          "value": 100
+        },
+        "texName": "Oa"
+      },
+      "Ca": {
+        "value": {
+          "type": "Num",
+          "value": 0.45
+        },
+        "texName": "Ca"
+      },
+      "PAg": {
+        "value": {
+          "type": "Num",
+          "value": 0.001
+        },
+        "texName": "PAg"
+      },
+      "PAr": {
+        "value": {
+          "type": "Num",
+          "value": 0.0002
+        },
+        "texName": "PAr"
+      },
+      "h": {
+        "value": {
+          "type": "Num",
+          "value": 0.0002
+        },
+        "texName": "h"
+      }
+    },
+    "reactions": {
+      "v1": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "CO2"
+            },
+            {
+              "type": "Name",
+              "value": "RuBP"
+            },
+            {
+              "type": "Name",
+              "value": "k1"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "RuBP": {
+            "type": "Num",
+            "value": -1
+          },
+          "PGA": {
+            "type": "Num",
+            "value": 2
+          },
+          "CO2": {
+            "type": "Num",
+            "value": -1
+          },
+          "O2": {
+            "type": "Num",
+            "value": -0.5
+          }
+        },
+        "texName": "v1"
+      },
+      "v2": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "ADP"
+            },
+            {
+              "type": "Name",
+              "value": "Pi"
+            },
+            {
+              "type": "Name",
+              "value": "k2"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "ADP": {
+            "type": "Num",
+            "value": -1
+          },
+          "Pi": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "v2"
+      },
+      "v3": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "ATP"
+            },
+            {
+              "type": "Name",
+              "value": "PGA"
+            },
+            {
+              "type": "Name",
+              "value": "k3"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "PGA": {
+            "type": "Num",
+            "value": -1
+          },
+          "ADP": {
+            "type": "Num",
+            "value": 1
+          },
+          "Pi": {
+            "type": "Num",
+            "value": 1
+          },
+          "TP": {
+            "type": "Num",
+            "value": 1
+          },
+          "O2": {
+            "type": "Num",
+            "value": 0.5
+          }
+        },
+        "texName": "v3"
+      },
+      "v4": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "k4"
+            },
+            {
+              "type": "Pow",
+              "left": {
+                "type": "Name",
+                "value": "TP"
+              },
+              "right": {
+                "type": "Num",
+                "value": 2
+              }
+            }
+          ]
+        },
+        "stoichiometry": {
+          "TP": {
+            "type": "Num",
+            "value": -2
+          },
+          "Pi": {
+            "type": "Num",
+            "value": 1
+          },
+          "HP": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v4"
+      },
+      "v5": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "HP"
+            },
+            {
+              "type": "Name",
+              "value": "k5"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "HP": {
+            "type": "Num",
+            "value": -1
+          },
+          "TPGA": {
+            "type": "Num",
+            "value": 1
+          },
+          "E4P": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v5"
+      },
+      "v6": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "E4P"
+            },
+            {
+              "type": "Name",
+              "value": "TP"
+            },
+            {
+              "type": "Name",
+              "value": "k6"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "E4P": {
+            "type": "Num",
+            "value": -1
+          },
+          "TP": {
+            "type": "Num",
+            "value": -1
+          },
+          "S7P": {
+            "type": "Num",
+            "value": 1
+          },
+          "Pi": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v6"
+      },
+      "v7": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "S7P"
+            },
+            {
+              "type": "Name",
+              "value": "k7"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "S7P": {
+            "type": "Num",
+            "value": -1
+          },
+          "TPGA": {
+            "type": "Num",
+            "value": 1
+          },
+          "Ru5P": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v7"
+      },
+      "v8": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "TP"
+            },
+            {
+              "type": "Name",
+              "value": "TPGA"
+            },
+            {
+              "type": "Name",
+              "value": "k8"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "TPGA": {
+            "type": "Num",
+            "value": -1
+          },
+          "TP": {
+            "type": "Num",
+            "value": -1
+          },
+          "Ru5P": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v8"
+      },
+      "v9": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "ATP"
+            },
+            {
+              "type": "Name",
+              "value": "Ru5P"
+            },
+            {
+              "type": "Name",
+              "value": "k9"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Ru5P": {
+            "type": "Num",
+            "value": -1
+          },
+          "ADP": {
+            "type": "Num",
+            "value": 1
+          },
+          "RuBP": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v9"
+      },
+      "v10": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "ATP"
+            },
+            {
+              "type": "Name",
+              "value": "HP"
+            },
+            {
+              "type": "Name",
+              "value": "k10"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "ADP": {
+            "type": "Num",
+            "value": 1
+          },
+          "HP": {
+            "type": "Num",
+            "value": -1
+          },
+          "Pi": {
+            "type": "Num",
+            "value": 2
+          },
+          "GG": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v10"
+      },
+      "v11": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "GG"
+            },
+            {
+              "type": "Name",
+              "value": "Pi"
+            },
+            {
+              "type": "Name",
+              "value": "k11"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "HP": {
+            "type": "Num",
+            "value": 1
+          },
+          "GG": {
+            "type": "Num",
+            "value": -1
+          },
+          "Pi": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "v11"
+      },
+      "v12": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Pio"
+            },
+            {
+              "type": "Name",
+              "value": "TP"
+            },
+            {
+              "type": "Name",
+              "value": "k12"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "TP": {
+            "type": "Num",
+            "value": -1
+          },
+          "Pio": {
+            "type": "Num",
+            "value": -1
+          },
+          "Pi": {
+            "type": "Num",
+            "value": 1
+          },
+          "TPo": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v12"
+      },
+      "v13": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "k13"
+            },
+            {
+              "type": "Pow",
+              "left": {
+                "type": "Name",
+                "value": "TPo"
+              },
+              "right": {
+                "type": "Num",
+                "value": 2
+              }
+            }
+          ]
+        },
+        "stoichiometry": {
+          "TPo": {
+            "type": "Num",
+            "value": -2
+          },
+          "Pio": {
+            "type": "Num",
+            "value": 1
+          },
+          "HPo": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v13"
+      },
+      "v14": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Pio"
+            },
+            {
+              "type": "Name",
+              "value": "UDP"
+            },
+            {
+              "type": "Name",
+              "value": "k14"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "UDP": {
+            "type": "Num",
+            "value": -1
+          },
+          "Pio": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "v14"
+      },
+      "v15": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "HPo"
+            },
+            {
+              "type": "Name",
+              "value": "UTP"
+            },
+            {
+              "type": "Name",
+              "value": "k15"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "UDP": {
+            "type": "Num",
+            "value": 1
+          },
+          "HPo": {
+            "type": "Num",
+            "value": -2
+          },
+          "Pio": {
+            "type": "Num",
+            "value": 3
+          },
+          "GF": {
+            "type": "Num",
+            "value": 1
+          },
+          "O2": {
+            "type": "Num",
+            "value": 0.5
+          }
+        },
+        "texName": "v15"
+      },
+      "v16": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "O2"
+            },
+            {
+              "type": "Name",
+              "value": "RuBP"
+            },
+            {
+              "type": "Name",
+              "value": "k16"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "O2": {
+            "type": "Num",
+            "value": -1
+          },
+          "RuBP": {
+            "type": "Num",
+            "value": -1
+          },
+          "PGl": {
+            "type": "Num",
+            "value": 1
+          },
+          "PGA": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v16"
+      },
+      "v17": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "PGl"
+            },
+            {
+              "type": "Name",
+              "value": "k17"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "PGl": {
+            "type": "Num",
+            "value": -1
+          },
+          "Gl": {
+            "type": "Num",
+            "value": 1
+          },
+          "Pi": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v17"
+      },
+      "v18": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "O2"
+            },
+            {
+              "type": "Name",
+              "value": "k18"
+            },
+            {
+              "type": "Pow",
+              "left": {
+                "type": "Name",
+                "value": "Gl"
+              },
+              "right": {
+                "type": "Num",
+                "value": 2
+              }
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Gl": {
+            "type": "Num",
+            "value": -2
+          },
+          "Gx": {
+            "type": "Num",
+            "value": 2
+          }
+        },
+        "texName": "v18"
+      },
+      "v19": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Gx"
+            },
+            {
+              "type": "Name",
+              "value": "Sn"
+            },
+            {
+              "type": "Name",
+              "value": "k19"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Gx": {
+            "type": "Num",
+            "value": -1
+          },
+          "Sn": {
+            "type": "Num",
+            "value": -1
+          },
+          "Gn": {
+            "type": "Num",
+            "value": 1
+          },
+          "GA": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v19"
+      },
+      "v20": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "k20"
+            },
+            {
+              "type": "Pow",
+              "left": {
+                "type": "Name",
+                "value": "Gn"
+              },
+              "right": {
+                "type": "Num",
+                "value": 2
+              }
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Gn": {
+            "type": "Num",
+            "value": -2
+          },
+          "Sn": {
+            "type": "Num",
+            "value": 1
+          },
+          "NH3": {
+            "type": "Num",
+            "value": 1
+          },
+          "CO2": {
+            "type": "Num",
+            "value": 1
+          },
+          "O2": {
+            "type": "Num",
+            "value": -0.5
+          }
+        },
+        "texName": "v20"
+      },
+      "v21": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "ATP"
+            },
+            {
+              "type": "Name",
+              "value": "GA"
+            },
+            {
+              "type": "Name",
+              "value": "k21"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "ADP": {
+            "type": "Num",
+            "value": 1
+          },
+          "GA": {
+            "type": "Num",
+            "value": -1
+          },
+          "PGA": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v21"
+      },
+      "v22": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "ATP"
+            },
+            {
+              "type": "Name",
+              "value": "GmA"
+            },
+            {
+              "type": "Name",
+              "value": "NH3"
+            },
+            {
+              "type": "Name",
+              "value": "k22"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "ADP": {
+            "type": "Num",
+            "value": 1
+          },
+          "GmA": {
+            "type": "Num",
+            "value": -1
+          },
+          "NH3": {
+            "type": "Num",
+            "value": -1
+          },
+          "Pi": {
+            "type": "Num",
+            "value": 1
+          },
+          "Glm": {
+            "type": "Num",
+            "value": 1
+          },
+          "O2": {
+            "type": "Num",
+            "value": 0.5
+          }
+        },
+        "texName": "v22"
+      },
+      "v23": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Glm"
+            },
+            {
+              "type": "Name",
+              "value": "OxA"
+            },
+            {
+              "type": "Name",
+              "value": "k23"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Glm": {
+            "type": "Num",
+            "value": -1
+          },
+          "OxA": {
+            "type": "Num",
+            "value": -1
+          },
+          "GmA": {
+            "type": "Num",
+            "value": 2
+          }
+        },
+        "texName": "v23"
+      },
+      "v24": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "GmA"
+            },
+            {
+              "type": "Name",
+              "value": "Gx"
+            },
+            {
+              "type": "Name",
+              "value": "k24"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Gx": {
+            "type": "Num",
+            "value": -1
+          },
+          "GmA": {
+            "type": "Num",
+            "value": -1
+          },
+          "Gn": {
+            "type": "Num",
+            "value": 1
+          },
+          "OxA": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v24"
+      },
+      "vrd": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "GF"
+            },
+            {
+              "type": "Name",
+              "value": "rd"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "GF": {
+            "type": "Num",
+            "value": -1
+          },
+          "CO2": {
+            "type": "Num",
+            "value": 12
+          },
+          "O2": {
+            "type": "Num",
+            "value": -12
+          }
+        },
+        "texName": "vrd"
+      },
+      "vphis": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "phis"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "GF"
+                },
+                {
+                  "type": "Minus",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "E"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "GF": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "vphis"
+      },
+      "vD": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "D"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "GF"
+                },
+                {
+                  "type": "Minus",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "GFV"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "GF": {
+            "type": "Num",
+            "value": -1
+          },
+          "GFV": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vD"
+      },
+      "vc1": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Ci"
+            },
+            {
+              "type": "Name",
+              "value": "kc1"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Ci": {
+            "type": "Num",
+            "value": -1
+          },
+          "CO2": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vc1"
+      },
+      "vc2": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "CO2"
+            },
+            {
+              "type": "Name",
+              "value": "kc2"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "CO2": {
+            "type": "Num",
+            "value": -1
+          },
+          "Ci": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vc2"
+      },
+      "vo1": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Oi"
+            },
+            {
+              "type": "Name",
+              "value": "ko1"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Oi": {
+            "type": "Num",
+            "value": -1
+          },
+          "O2": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vo1"
+      },
+      "vo2": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "O2"
+            },
+            {
+              "type": "Name",
+              "value": "ko2"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "O2": {
+            "type": "Num",
+            "value": -1
+          },
+          "Oi": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vo2"
+      },
+      "vphic": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "phic"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "Ca"
+                },
+                {
+                  "type": "Minus",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Ci"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Ci": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vphic"
+      },
+      "vphio": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "phio"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "Oa"
+                },
+                {
+                  "type": "Minus",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Oi"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Oi": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vphio"
+      }
+    },
+    "derived": {
+      "ATP": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "AP_tot"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "ADP"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "ATP"
+      },
+      "UTP": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "UP_tot"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "UDP"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "UTP"
+      }
+    },
+    "readouts": {}
+  }
+}

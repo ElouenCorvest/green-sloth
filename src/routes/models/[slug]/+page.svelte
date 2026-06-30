@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { buildModel } from "$lib/loadModel";
   import ModelDashboard from "$lib/ModelDashboard.svelte";
   import ModelTables from "$lib/ModelTables.svelte";
   import {
@@ -73,12 +74,6 @@
 
   // Eager glob so the KineticModelBuilder is available both at prerender (tables) and
   // on the client (interactive dashboard).
-  const modelModules = import.meta.glob("../../../lib/models/*/model.ts", {
-    eager: true,
-  }) as Record<string, { initModel: () => KineticModelBuilder }>;
-
-  // Eager glob so the KineticModelBuilder is available both at prerender (tables) and
-  // on the client (interactive dashboard).
   const modelPaperFigs = import.meta.glob(
     "$lib/models/*/figs/*.{png,jpg,svg,jpeg}",
     {
@@ -108,14 +103,10 @@
   );
 
   function initFor(slug: string): KineticModelBuilder {
-    const key = Object.keys(modelModules).find(
-      (p) => p.match(/\/models\/([^/]+)\//)?.[1] === slug,
-    );
-    if (key === undefined) {
+    const model = buildModel(slug);
+    if (model === null) {
       error(404, `Model "${slug}" not found`);
     }
-    const model = modelModules[key].initModel();
-
     return model;
   }
 
