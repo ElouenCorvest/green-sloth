@@ -68,6 +68,7 @@
           "type": "Num",
           "value": 100
         },
+        "displayName": "PPFD",
         "texName": "PPFD"
       },
       "cPPFD": {

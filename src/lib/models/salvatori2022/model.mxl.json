@@ -54,6 +54,7 @@
           "type": "Num",
           "value": 0
         },
+        "displayName": "PPFD",
         "texName": "PAR"
       },
       "alpha": {

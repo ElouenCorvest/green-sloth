@@ -222,6 +222,7 @@
           "type": "Num",
           "value": 50
         },
+        "displayName": "PPFD",
         "texName": "PPFD"
       },
       "PPFD_add": {

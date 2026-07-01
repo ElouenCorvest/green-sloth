@@ -130,6 +130,7 @@
           "type": "Num",
           "value": 1.5
         },
+        "displayName": "AP_tot",
         "texName": "AP\\_tot"
       },
       "Pi_tot": {
@@ -137,6 +138,7 @@
           "type": "Num",
           "value": 15
         },
+        "displayName": "Pi_tot",
         "texName": "Pi\\_tot"
       },
       "p_o2": {
@@ -165,6 +167,7 @@
           "type": "Num",
           "value": 1500
         },
+        "displayName": "PPFD",
         "texName": "PPFD",
         "slider": {
           "min": "100",

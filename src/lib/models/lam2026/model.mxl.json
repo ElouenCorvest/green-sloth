@@ -591,6 +591,7 @@
           "type": "Num",
           "value": 0
         },
+        "displayName": "PPFD",
         "texName": "ppfd"
       },
       "tau_0": {

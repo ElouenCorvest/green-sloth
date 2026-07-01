@@ -719,6 +719,7 @@
           "type": "Num",
           "value": 0
         },
+        "displayName": "PPFD",
         "texName": "LightIntensity"
       },
       "P680neut": {
