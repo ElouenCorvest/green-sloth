@@ -80,6 +80,15 @@ export interface PamAnalysis {
   timeoutInSeconds?: number;
 }
 
+export type Contributor = {
+  key: string;
+  name: string;
+  homepage?: string;
+  orcid?: string;
+  github?: string;
+  gitlab?: string;
+};
+
 export type ModelAnalysis = TimeCourseAnalysis | PamAnalysis;
 
 export type Part =
@@ -110,4 +119,5 @@ export interface ModelMeta {
   tags: Tags;
   /** Analyses auto-run on the model's dashboard. */
   analyses: ModelAnalysis[];
+  contributors: Array<{ desc: string; date: Date; contributor: Contributor }>;
 }

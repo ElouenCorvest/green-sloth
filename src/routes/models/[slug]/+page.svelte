@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from "$app/paths";
   import { buildModel } from "$lib/loadModel";
   import ModelDashboard from "$lib/ModelDashboard.svelte";
   import ModelTables from "$lib/ModelTables.svelte";
@@ -111,6 +112,19 @@
   }
 
   const model = $derived(initFor(data.slug));
+
+  const curationHistory = $derived(
+    [...data.meta.contributors].sort(
+      (a, b) => b.date.getTime() - a.date.getTime(),
+    ),
+  );
+
+  function formatCurationDate(date: Date): string {
+    return date.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+    });
+  }
 
   let citationCount: number | null = $state(null);
   let citationLoading = $state(false);
@@ -295,6 +309,20 @@
         plugins={mdPlugins}
       />
     </InfoBox>
+  {/if}
+
+  <H2>Curation</H2>
+  {#if curationHistory.length !== 0}
+    <Ul>
+      {#each curationHistory as entry (entry.date.getTime() + entry.contributor.key)}
+        <Li>
+          {formatCurationDate(entry.date)}: {entry.desc} by
+          <Link href="{base}/contributors#{entry.contributor.key}"
+            >{entry.contributor.name}</Link
+          >
+        </Li>
+      {/each}
+    </Ul>
   {/if}
   {#if paperFigures.length !== 0}
     <InfoBox header="Curator's note">

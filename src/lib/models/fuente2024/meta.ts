@@ -1,3 +1,4 @@
+import contributors from "$lib/contributors";
 import type { ModelMeta } from "$lib/types";
 
 // No code-gen yet — model.ts pending. Listed for tag/filter purposes only.
@@ -22,6 +23,18 @@ export const meta: ModelMeta = {
       // Variables span several orders of magnitude; auto-split them into
       // per-magnitude subplots so small-valued species stay readable.
       plot: { type: "magnitude" },
+    },
+  ],
+  contributors: [
+    {
+      desc: "Initial implementation",
+      date: new Date(2026, 5),
+      contributor: contributors.elouencorvest,
+    },
+    {
+      desc: "Maintenance",
+      date: new Date(2026, 6),
+      contributor: contributors.marvinvanaalst,
     },
   ],
 };

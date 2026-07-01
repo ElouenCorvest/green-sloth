@@ -1,3 +1,4 @@
+import contributors from "$lib/contributors";
 import { defaultPamProtocol } from "$lib/models/pamProtocols";
 import type { ModelMeta } from "$lib/types";
 
@@ -34,6 +35,18 @@ export const meta: ModelMeta = {
       normalizedKeys: ["Fluo"],
       nTimePoints: 100,
       timeoutInSeconds: 60,
+    },
+  ],
+  contributors: [
+    {
+      desc: "Initial implementation",
+      date: new Date(2026, 5),
+      contributor: contributors.marvinvanaalst,
+    },
+    {
+      desc: "Maintenance",
+      date: new Date(2026, 6),
+      contributor: contributors.marvinvanaalst,
     },
   ],
 };

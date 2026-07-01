@@ -1,3 +1,4 @@
+import contributors from "$lib/contributors";
 import type { ModelMeta } from "$lib/types";
 
 export const meta: ModelMeta = {
@@ -15,6 +16,18 @@ export const meta: ModelMeta = {
       // Ci is ~an order of magnitude larger than the other variables, so it
       // gets its own subplot; everything else shares the second one.
       plot: { type: "grid", groups: [["Ci"]] },
+    },
+  ],
+  contributors: [
+    {
+      desc: "Initial implementation",
+      date: new Date(2026, 5),
+      contributor: contributors.elouencorvest,
+    },
+    {
+      desc: "Maintenance",
+      date: new Date(2026, 6),
+      contributor: contributors.marvinvanaalst,
     },
   ],
 };
