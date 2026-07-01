@@ -1,7 +1,7 @@
 import type { ModelMeta } from "$lib/types";
 
 export const meta: ModelMeta = {
-  slug: "nedbal2021induction",
+  slug: "nedbal2021_induction",
   title: "Nedbal 2021 (Induction)",
   DOI: "fixme",
   tags: {
