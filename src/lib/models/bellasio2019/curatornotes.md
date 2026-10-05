@@ -1,0 +1,1 @@
+The original model was created on an available Excel spreadsheet, which is not easy to transform into Python using solvers. Specifically, the JATP and JNADPH calculations could not be easily translated, as they exist as a limited ODE system. Therefore, the recreation of the figures is not entirely succesful.
